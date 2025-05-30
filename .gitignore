@@ -1,0 +1,6 @@
+__pycache__/
+tempCodeRunnerFile.py
+venv/
+output/
+*.xlsx
+*.xlsm
