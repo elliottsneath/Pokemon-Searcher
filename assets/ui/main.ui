@@ -478,6 +478,7 @@
    <addaction name="separator"/>
    <addaction name="actionVersion"/>
    <addaction name="actionSettings"/>
+   <addaction name="actionHelp"/>
   </widget>
   <action name="actionVersion">
    <property name="enabled">
@@ -493,6 +494,14 @@
    </property>
    <property name="toolTip">
     <string>Settings</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::ApplicationSpecificRole</enum>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
    </property>
    <property name="menuRole">
     <enum>QAction::MenuRole::ApplicationSpecificRole</enum>

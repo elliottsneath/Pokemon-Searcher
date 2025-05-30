@@ -69,7 +69,7 @@ class PokemonListItem(QWidget):
         self.setLayout(layout)
 
 class SettingsPokemonListItem(QWidget):
-    def __init__(self, pokemon_data: PokemonData, parent=None):
+    def __init__(self, pokemon_data, parent=None):
         super(SettingsPokemonListItem, self).__init__(parent)
 
         layout = QHBoxLayout(self)
@@ -80,13 +80,9 @@ class SettingsPokemonListItem(QWidget):
         self.checkbox = QCheckBox()
         layout.addWidget(self.checkbox)
 
-        num_label = QLabel(str(pokemon_data[0]))
-        num_label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-        layout.addWidget(num_label)
-
-        name_label = QLabel(pokemon_data[1])
-        name_label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-        layout.addWidget(name_label)
+        self.name_label = QLabel(pokemon_data)
+        self.name_label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        layout.addWidget(self.name_label)
 
         spacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         layout.addItem(spacer)

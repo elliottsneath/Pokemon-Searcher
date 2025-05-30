@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>412</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Paste a URL to a draft league sheet, or a list of pokemon. See the &quot;Help&quot; tab for more information</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="textEdit"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="AnimatedHoverButton" name="fromFileButton">
+       <property name="text">
+        <string>Import from .pkmnlist</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="AnimatedHoverButton" name="fromGoogleSheetButton">
+       <property name="text">
+        <string>Import from Google Sheet</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="AnimatedHoverButton" name="fromPlainTextButton">
+       <property name="text">
+        <string>Import from plain text</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AnimatedHoverButton</class>
+   <extends>QPushButton</extends>
+   <header>assets.ui.animated_button</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

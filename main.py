@@ -8,7 +8,7 @@ from assets.ui.pokemon_popup_ui import Ui_PokemonPopup
 from assets.ui.clickable_label import ClickableLabel
 from PySide6.QtWidgets import QMainWindow, QApplication, QListWidgetItem, QCompleter, QWidget, \
                               QHBoxLayout, QDialog, QLabel, QSizePolicy, QSplashScreen, \
-                              QMessageBox
+                              QMessageBox, QFileDialog, QTextEdit, QVBoxLayout, QPushButton
 from PySide6.QtGui import Qt, QPixmap, QColor, QIcon
 from PySide6.QtCore import QStringListModel, QTimer, Signal
 
@@ -25,6 +25,7 @@ TODO:
 - import
 - export
 - fix splash screen
+- update pokemon learnset based on evos
 """
 
 class MainWindow(QMainWindow, Ui_PokemonSearcher):
@@ -59,12 +60,12 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         self.load_pokemon_data()
 
-    def load_pokemon_data(self, init = True, load_selected = True):
+    def load_pokemon_data(self, init = True):
         try:
             with open(POKEDEX_PATH, 'r') as f:
                 pokedex = json.load(f)
             with open(SELECTED_POKEMON_PATH, 'r') as f:
-                if load_selected:
+                if init:
                     data = json.load(f)
                     self.selected_pokemon = data.get("selected_pokemon", [])
             with open(LEARNSET_PATH, 'r') as f:
@@ -82,8 +83,8 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                 if init:
                     num = data.get("num", -1)
                     name = data.get("name", "")
-                    self.pokedex.append((num, pokemon))
-                    custom_widget = SettingsPokemonListItem((num, name))
+                    self.pokedex.append(pokemon)
+                    custom_widget = SettingsPokemonListItem(pokemon)
                     if pokemon in self.selected_pokemon:
                         custom_widget.checkbox.setChecked(True)
                     list_item = QListWidgetItem(self.settingsPokemonListWidget)
@@ -176,6 +177,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.bstLabel.clicked.connect(lambda: self.sort_by_trait("bst"))
 
         # settings page
+        self.applyButton.clicked.connect(self.apply_pokemon_list)
         self.exportPokemonButton.clicked.connect(self.export_pokemon_list)
         self.importPokemonButton.clicked.connect(self.import_pokemon_list)
         self.resetPokemonButton.clicked.connect(self.reset_pokemon_list)
@@ -183,17 +185,152 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
     def toggle_settings(self, i):
         self.stackedWidget.setCurrentIndex(i)
 
+    def apply_pokemon_list(self, popup = True):
+        """Applies the current filtered pokemon list to the main page."""
+        if popup:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Warning)
+            msg.setWindowTitle("Confirm Apply")
+            msg.setText("Are you sure you want to apply the changes to the Pokémon list?")
+            msg.setInformativeText("This will overwrite the selected Pokémon list and changes will remain after restarting the app.")
+            msg.setStandardButtons(QMessageBox.Yes | QMessageBox.Cancel)
+            msg.setDefaultButton(QMessageBox.Cancel)
+            result = msg.exec()
+            if result == QMessageBox.Cancel:
+                return
+        
+        self.master_list = []
+        self.filtered_sorted_list = []
+        self.applied_filters = []
+        self.selected_trait = None
+        self.trait_reverse = True
+        self.selected_pokemon = []
+
+        for i in range(self.settingsPokemonListWidget.count()):
+            item = self.settingsPokemonListWidget.item(i)
+            widget = self.settingsPokemonListWidget.itemWidget(item)
+            widget:SettingsPokemonListItem
+            if widget.checkbox.isChecked():
+                name = widget.name_label.text()
+                self.selected_pokemon.append(name)
+
+        try:
+            with open(SELECTED_POKEMON_PATH, "w") as f:
+                json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+        except Exception as e:
+            print(f"Error saving selected Pokémon: {e}")
+
+        self.load_pokemon_data(False)
+        self.update_filtered_pokemon()
+
     def export_pokemon_list(self):
-        """Exports current filtered pokemon list to a json file."""
-        None
+        """Exports current filtered pokemon list to a custom file type (.pkmnlist)."""
+        self.apply_pokemon_list(False)
+        options = QFileDialog.Options()
+        file_path, _ = QFileDialog.getSaveFileName(
+            self,
+            "Export Pokémon List",
+            "",
+            "Pokémon List Files (*.pkmnlist);;JSON Files (*.json);;All Files (*)",
+            options=options
+        )
+        if not file_path:
+            return
+
+        if not file_path.endswith(".pkmnlist"):
+            file_path += ".pkmnlist"
+
+        try:
+            with open(file_path, "w") as f:
+                json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+        except Exception as e:
+            QMessageBox.critical(self, "Export Error", f"Failed to export Pokémon list:\n{e}")
 
     def import_pokemon_list(self):
-        """Opens a popup which allows users to import a filtered pokemon list from a:
-        - json file
-        - a list of pokemon names
-        - a tomsprite draft doc using the page 'board'
-        """
-        None
+        """Opens a popup for importing Pokémon list via text, file, or Google Sheet."""
+        dialog = QDialog(self)
+        dialog.setWindowTitle("Import Pokémon List")
+        layout = QVBoxLayout(dialog)
+
+        label = QLabel("Paste a comma-separated list of Pokémon names below:")
+        layout.addWidget(label)
+
+        text_edit = QTextEdit()
+        layout.addWidget(text_edit)
+
+        button_layout = QHBoxLayout()
+        layout.addLayout(button_layout)
+
+        file_button = QPushButton("Import from File")
+        google_button = QPushButton("Import from Google Sheet")
+        apply_button = QPushButton("Apply List")
+        button_layout.addWidget(file_button)
+        button_layout.addWidget(google_button)
+        button_layout.addWidget(apply_button)
+
+        self.master_list = []
+        self.filtered_sorted_list = []
+        self.applied_filters = []
+        self.selected_trait = None
+        self.trait_reverse = True
+        self.selected_pokemon = []
+
+        def import_from_file():
+            options = QFileDialog.Options()
+            file_path, _ = QFileDialog.getOpenFileName(
+                self,
+                "Import Pokémon List",
+                "",
+                "Pokémon List Files (*.pkmnlist);;JSON Files (*.json);;All Files (*)",
+                options=options
+            )
+            if not file_path:
+                return
+            try:
+                with open(file_path, "r") as f:
+                    data = json.load(f)
+                selected = data.get("selected_pokemon")
+                if not isinstance(selected, list):
+                    raise ValueError("Invalid file format: 'selected_pokemon' not found or not a list.")
+                
+                self.selected_pokemon = selected
+                for widget in self.settingsPokemonListWidget.findChildren(SettingsPokemonListItem):
+                    if widget.name_label.text() in self.selected_pokemon:
+                        widget.checkbox.setChecked(True)
+
+                with open(SELECTED_POKEMON_PATH, "w") as f:
+                    json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+
+                self.load_pokemon_data(False)
+                self.update_filtered_pokemon()
+                QMessageBox.information(self, "Import Successful", "Pokémon list imported successfully.")
+                dialog.accept()
+
+            except Exception as e:
+                QMessageBox.critical(self, "Import Error", f"Failed to import Pokémon list:\n{e}")
+
+        def import_from_text():
+            text = text_edit.toPlainText()
+            names = [name.strip() for name in text.split(",") if name.strip()]
+            if not names:
+                QMessageBox.warning(self, "Input Error", "Please enter at least one Pokémon name.")
+                return
+            self.selected_pokemon = names
+            with open(SELECTED_POKEMON_PATH, "w") as f:
+                json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+            self.load_pokemon_data(False)
+            self.update_filtered_pokemon()
+            QMessageBox.information(self, "Import Successful", "Pokémon list imported successfully.")
+            dialog.accept()
+
+        def import_from_google():
+            QMessageBox.information(self, "Coming Soon", "Google Sheets import will be implemented later.")
+
+        file_button.clicked.connect(import_from_file)
+        google_button.clicked.connect(import_from_google)
+        apply_button.clicked.connect(import_from_text)
+
+        dialog.exec()
 
     def reset_pokemon_list(self):
         """Resets the filtered pokemon list to the original pokedex"""
@@ -220,12 +357,15 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.selected_trait = None
         self.trait_reverse = True
 
-        self.all_names = []
-        self.all_moves = set()
-        self.all_abilities = set()
+        self.selected_pokemon = [name for name in self.pokedex.values()]
 
-        self.selected_pokemon = [pokemon[1] for pokemon in self.pokedex]
-        self.load_pokemon_data(False, False)
+        try:
+            with open(SELECTED_POKEMON_PATH, "w") as f:
+                json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+        except Exception as e:
+            print(f"Error saving selected Pokémon: {e}")
+
+        self.load_pokemon_data(False)
         self.update_filtered_pokemon()
 
     def add_to_applied_filters(self, selected_item):

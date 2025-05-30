@@ -35,6 +35,9 @@ class Ui_PokemonSearcher(object):
         self.actionSettings = QAction(PokemonSearcher)
         self.actionSettings.setObjectName(u"actionSettings")
         self.actionSettings.setMenuRole(QAction.MenuRole.ApplicationSpecificRole)
+        self.actionHelp = QAction(PokemonSearcher)
+        self.actionHelp.setObjectName(u"actionHelp")
+        self.actionHelp.setMenuRole(QAction.MenuRole.ApplicationSpecificRole)
         self.centralwidget = QWidget(PokemonSearcher)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -302,6 +305,7 @@ class Ui_PokemonSearcher(object):
         self.toolBar.addSeparator()
         self.toolBar.addAction(self.actionVersion)
         self.toolBar.addAction(self.actionSettings)
+        self.toolBar.addAction(self.actionHelp)
 
         self.retranslateUi(PokemonSearcher)
 
@@ -318,6 +322,7 @@ class Ui_PokemonSearcher(object):
 #if QT_CONFIG(tooltip)
         self.actionSettings.setToolTip(QCoreApplication.translate("PokemonSearcher", u"Settings", None))
 #endif // QT_CONFIG(tooltip)
+        self.actionHelp.setText(QCoreApplication.translate("PokemonSearcher", u"Help", None))
         self.searchBar.setPlaceholderText(QCoreApplication.translate("PokemonSearcher", u"Search Pokemon, Move, Type, Ability, etc...", None))
         self.clearFiltersButton.setText(QCoreApplication.translate("PokemonSearcher", u"Clear Filters", None))
         self.label_5.setText(QCoreApplication.translate("PokemonSearcher", u"Leave all blank to search for all:", None))
