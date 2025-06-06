@@ -21,8 +21,6 @@ CONFIG_FILE_PATH = os.path.join(BASE_DIR, "data/config.json")
 
 """
 TODO:
-- help button - instructions + my dev info
-- import from file update settings list
 - import from google sheet
 - import from text
 - fix splash screen
@@ -341,6 +339,8 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                 for widget in self.settingsPokemonListWidget.findChildren(SettingsPokemonListItem):
                     if widget.name_label.text() in self.selected_pokemon:
                         widget.checkbox.setChecked(True)
+                    else:
+                        widget.checkbox.setChecked(False)
 
                 with open(SELECTED_POKEMON_PATH, "w") as f:
                     json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
