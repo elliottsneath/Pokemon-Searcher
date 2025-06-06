@@ -163,6 +163,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
     def initialise_connections(self):
         self.actionSettings.triggered.connect(lambda: self.toggle_settings(1))
+        self.actionHelp.triggered.connect(self.show_help)
         self.backButton.clicked.connect(lambda: self.toggle_settings(0))
 
         # main page
@@ -201,6 +202,32 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
     def toggle_settings(self, i):
         self.stackedWidget.setCurrentIndex(i)
+
+    def show_help(self):
+        """Shows a help dialog with instructions on how to use the app."""
+        help_dialog = QDialog(self)
+        help_dialog.setWindowTitle("Help")
+        layout = QVBoxLayout(help_dialog)
+
+        instructions = (
+            "Developed by elliottsneath\n"
+            "    discord: vapelordell\n\n"
+            "Welcome to the Pokémon Searcher!\n\n"
+            "To choose a selection of pokémon, visit the settings page, and either \n"
+            "manually select pokémon from the list, or import a list of pokémon from a file."
+            "This includes using a .pkmlist file or a TomSprite Google Sheet.\n"
+            "If you wish to make your own google sheet, select the pokémon you want, and\n"
+            "export as a google sheet."
+        )
+
+        label = QLabel(instructions)
+        layout.addWidget(label)
+
+        close_button = QPushButton("Close")
+        close_button.clicked.connect(help_dialog.close)
+        layout.addWidget(close_button)
+
+        help_dialog.exec()
 
     def apply_pokemon_list(self, popup = True):
         """Applies the current filtered pokemon list to the main page."""
