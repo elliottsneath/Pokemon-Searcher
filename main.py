@@ -9,8 +9,8 @@ from assets.ui.clickable_label import ClickableLabel
 from PySide6.QtWidgets import QMainWindow, QApplication, QListWidgetItem, QCompleter, QWidget, \
                               QHBoxLayout, QDialog, QLabel, QSizePolicy, QSplashScreen, \
                               QMessageBox, QFileDialog, QTextEdit, QVBoxLayout, QPushButton
-from PySide6.QtGui import Qt, QPixmap, QColor, QIcon
-from PySide6.QtCore import QStringListModel, QTimer, Signal
+from PySide6.QtGui import Qt, QPixmap, QColor, QIcon, QMovie
+from PySide6.QtCore import QStringListModel, QTimer, Signal, QSize
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -21,9 +21,10 @@ CONFIG_FILE_PATH = os.path.join(BASE_DIR, "data/config.json")
 
 """
 TODO:
-- Loading bar / wheel on sort filter pokemon list
-- import
-- export
+- help button - instructions + my dev info
+- import from file update settings list
+- import from google sheet
+- import from text
 - fix splash screen
 - update pokemon learnset based on evos
 """
@@ -39,6 +40,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.initialise_vars()
         self.initialise_completer()
         self.initialise_connections()
+        self.initialise_spinner()
 
         self.update_filtered_pokemon()
 
@@ -181,6 +183,21 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.exportPokemonButton.clicked.connect(self.export_pokemon_list)
         self.importPokemonButton.clicked.connect(self.import_pokemon_list)
         self.resetPokemonButton.clicked.connect(self.reset_pokemon_list)
+
+    def initialise_spinner(self):
+        sl = 100 # side length
+        self.spinner_label = QLabel(self)
+        self.spinner_label.setFixedSize(sl, sl) # spinner gif is 200 by 200 pixels
+        self.spinner_label.setStyleSheet("background-color: transparent;")
+        self.spinner_label.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+        self.spinner_label.setVisible(False)
+
+        spinner_path = os.path.join("assets", "loading", "spinner.gif")
+        self.spinner_movie = QMovie(spinner_path)
+        self.spinner_movie.setScaledSize(QSize(sl, sl))
+        self.spinner_label.setMovie(self.spinner_movie)
+
+        self.spinner_label.move(max(0, self.width() / 2 - sl/2), max(0, self.height() / 2 - sl/2))
 
     def toggle_settings(self, i):
         self.stackedWidget.setCurrentIndex(i)
@@ -357,7 +374,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.selected_trait = None
         self.trait_reverse = True
 
-        self.selected_pokemon = [name for name in self.pokedex.values()]
+        self.selected_pokemon = [name for name in self.pokedex]
 
         try:
             with open(SELECTED_POKEMON_PATH, "w") as f:
@@ -496,22 +513,47 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         else:
             stats = ["hp","atk","def","spa","spd","spe"]
             sort_key = lambda pokemon: pokemon.stats[stats.index(self.selected_trait)]
-            reverse = self.trait_reverse        
+            reverse = self.trait_reverse
 
         self.filtered_sorted_list = sorted(self.filtered_sorted_list, key=sort_key, reverse=reverse)
         self.filtered_sorted_list = [p for p in self.filtered_sorted_list if p.favourite] + [p for p in self.filtered_sorted_list if not p.favourite]
         
         self.update_pokemon_list_ui()
 
+    def show_spinner(self):
+        self.spinner_label.setVisible(True)
+        self.spinner_movie.start()
+        QApplication.processEvents()
+
+    def hide_spinner(self):
+        self.spinner_movie.stop()
+        self.spinner_label.setVisible(False)
+
     def update_pokemon_list_ui(self):
         self.pokemonListWidget.clear()
+        self.list_build_index = 0
+        self.list_build_batch_size = 10
 
-        for pokemon in self.filtered_sorted_list:
+        self.show_spinner()
+        self._build_pokemon_list_batch()
+
+    def _build_pokemon_list_batch(self):
+        start = self.list_build_index
+        end = start + self.list_build_batch_size
+        subset = self.filtered_sorted_list[start:end]
+
+        for pokemon in subset:
             custom_widget = PokemonListItem(pokemon)
             list_item = QListWidgetItem(self.pokemonListWidget)
             list_item.setSizeHint(custom_widget.sizeHint())
             self.pokemonListWidget.addItem(list_item)
             self.pokemonListWidget.setItemWidget(list_item, custom_widget)
+
+        self.list_build_index = end
+        if self.list_build_index < len(self.filtered_sorted_list):
+            QTimer.singleShot(0, self._build_pokemon_list_batch)
+        else:
+            self.hide_spinner()
 
     def filter_completer(self, text: str):
         def get_filtered_list(items, label):
