@@ -24,7 +24,7 @@ CONFIG_FILE_PATH = os.path.join(BASE_DIR, "data/config.json")
 
 """
 TODO:
-- fix splash screen (including new logo)
+- fix list item spacings
 """
 
 class MainWindow(QMainWindow, Ui_PokemonSearcher):
@@ -204,14 +204,14 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.resetPokemonButton.clicked.connect(self.reset_pokemon_list)
 
     def initialise_spinner(self):
-        sl = 100 # side length
+        sl = 250 # side length
         self.spinner_label = QLabel(self)
         self.spinner_label.setFixedSize(sl, sl) # spinner gif is 200 by 200 pixels
         self.spinner_label.setStyleSheet("background-color: transparent;")
         self.spinner_label.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
         self.spinner_label.setVisible(False)
 
-        spinner_path = os.path.join("assets", "loading", "spinner.gif")
+        spinner_path = os.path.join("assets", "loading", "loading.gif")
         self.spinner_movie = QMovie(spinner_path)
         self.spinner_movie.setScaledSize(QSize(sl, sl))
         self.spinner_label.setMovie(self.spinner_movie)
@@ -896,10 +896,10 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 
 def main():
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon('assets/icons/JCB_Logo.ico'))
+    app.setWindowIcon(QIcon('assets/icons/pokemon_searcher.ico'))
 
-    icon = QPixmap('assets/icons/JCB_Logo.png')
-    resized_icon = icon.scaled(icon.size() * 0.2, Qt.KeepAspectRatio)
+    icon = QPixmap('assets/icons/pokemon_searcher.png')
+    resized_icon = icon.scaled(icon.size() * 0.5, Qt.KeepAspectRatio)
 
     spl = QSplashScreen(resized_icon)
     spl.show()
