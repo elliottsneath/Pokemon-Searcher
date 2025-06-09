@@ -11,7 +11,7 @@ from assets.ui.help_popup_ui import Ui_helpDialog
 from assets.ui.clickable_label import ClickableLabel
 from PySide6.QtWidgets import QMainWindow, QApplication, QListWidgetItem, QCompleter, QWidget, \
                               QHBoxLayout, QDialog, QLabel, QSizePolicy, QSplashScreen, \
-                              QMessageBox, QFileDialog, QVBoxLayout, QPushButton
+                              QMessageBox, QFileDialog
 from PySide6.QtGui import Qt, QPixmap, QColor, QIcon, QMovie
 from PySide6.QtCore import QStringListModel, QTimer, Signal, QSize
 
@@ -171,9 +171,9 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.completer = QCompleter(self)
         self.completer.setCaseSensitivity(Qt.CaseInsensitive)
         self.completer.setFilterMode(Qt.MatchContains)
-        #self.completer.activated.connect(self.add_to_applied_filters)
-        self.completer.highlighted.connect(self.add_to_applied_filters)
+        self.completer.activated.connect(self.add_to_applied_filters)
         self.searchBar.setCompleter(self.completer)
+        self.filter_completer()
 
     def initialise_connections(self):
         self.actionSettings.triggered.connect(lambda: self.toggle_settings(1))
@@ -183,7 +183,10 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         # main page
         self.pokemonListWidget.itemClicked.connect(self.open_pokemon_popup)
         self.clearFiltersButton.clicked.connect(self.clear_filters)
-        self.searchBar.textChanged.connect(self.filter_completer)
+        self.pokemonCheckbox.stateChanged.connect(self.filter_completer)
+        self.movesCheckbox.stateChanged.connect(self.filter_completer)
+        self.typesCheckbox.stateChanged.connect(self.filter_completer)
+        self.abilitiesCheckbox.stateChanged.connect(self.filter_completer)
         self.nameLabel.clicked.connect(lambda: self.sort_by_trait("name"))
         self.hpLabel.clicked.connect(lambda: self.sort_by_trait("hp"))
         self.atkLabel.clicked.connect(lambda: self.sort_by_trait("atk"))
@@ -586,6 +589,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         self.add_filter_to_ui(selected_item)
         self.update_filtered_pokemon()
+        QTimer.singleShot(0, self.searchBar.clear)
 
     def add_filter_to_ui(self, selected_item):
         filter_widget = QWidget(self)
@@ -626,8 +630,6 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.filterLayout.insertWidget(spacer_index, filter_widget)
 
         remove_label.mousePressEvent = lambda event: self.remove_filter(filter_widget, selected_item)
-
-        QTimer.singleShot(10, lambda: self.searchBar.setText(""))
 
     def remove_filter(self, filter_widget, selected_item):
         keyword, category = selected_item.split(" - ")
@@ -748,7 +750,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         else:
             self.hide_spinner()
 
-    def filter_completer(self, text: str):
+    def filter_completer(self):
         def get_filtered_list(items, label):
             return [f"{item} - {label}" for item in items]
 
@@ -774,9 +776,9 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                 + get_filtered_list(self.all_abilities, "Ability")
             )
 
-        refined_list = [item for item in filter_list if text.lower() in item.lower()]
+        #refined_list = [item for item in filter_list if text.lower() in item.lower()]
 
-        self.completer.setModel(QStringListModel(refined_list))
+        self.completer.setModel(QStringListModel(filter_list))
 
     def open_pokemon_popup(self, item):
         index = self.pokemonListWidget.row(item)
