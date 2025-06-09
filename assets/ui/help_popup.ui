@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>helpDialog</class>
+ <widget class="QDialog" name="helpDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>399</width>
+    <height>326</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Help</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Developed by Elliott Sneath
+GitHub: elliottsneath
+Discord: vapelordell
+
+Welcome to the Pokémon Searcher!
+
+To choose a selection of pokémon, visit the settings page, and either manually select pokémon from the list, or import a list of pokémon from a file. This includes using a .pkmlist file or a Google Sheet draft doc.
+
+To import from a draft doc, download a copy as a .xlsx, and make sure the sheet with the necessary pokémon on is called &quot;Board&quot;. Once your selection has been made, if you wish to share, you can export your list to a .pkmnlist file in settings, which can be shared to other players in the draft league etc.
+
+When importing from a draft board, pokémon under the column header &quot;Banned&quot; will be ignored.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

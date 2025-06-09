@@ -6,10 +6,12 @@ from assets.ui.pokemon_list_item import PokemonListItem, SettingsPokemonListItem
 from data.pokemon_obj import PokemonData
 from assets.ui.main_ui import Ui_PokemonSearcher
 from assets.ui.pokemon_popup_ui import Ui_PokemonPopup
+from assets.ui.import_popup_ui import Ui_Form
+from assets.ui.help_popup_ui import Ui_helpDialog
 from assets.ui.clickable_label import ClickableLabel
 from PySide6.QtWidgets import QMainWindow, QApplication, QListWidgetItem, QCompleter, QWidget, \
                               QHBoxLayout, QDialog, QLabel, QSizePolicy, QSplashScreen, \
-                              QMessageBox, QFileDialog, QTextEdit, QVBoxLayout, QPushButton
+                              QMessageBox, QFileDialog, QVBoxLayout, QPushButton
 from PySide6.QtGui import Qt, QPixmap, QColor, QIcon, QMovie
 from PySide6.QtCore import QStringListModel, QTimer, Signal, QSize
 
@@ -22,10 +24,10 @@ CONFIG_FILE_PATH = os.path.join(BASE_DIR, "data/config.json")
 
 """
 TODO:
-- make sure help popup explain how to use import from google sheet
 - fix splash screen
+- settings search bar
+- make banned column not import
 - update pokemon learnset based on evos
-- make settings import popup in QDesigner
 """
 
 class MainWindow(QMainWindow, Ui_PokemonSearcher):
@@ -204,29 +206,11 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
     def show_help(self):
         """Shows a help dialog with instructions on how to use the app."""
-        help_dialog = QDialog(self)
-        help_dialog.setWindowTitle("Help")
-        layout = QVBoxLayout(help_dialog)
+        dialog = QDialog(self)
+        ui = Ui_helpDialog()
+        ui.setupUi(dialog)
 
-        instructions = (
-            "Developed by elliottsneath\n"
-            "    discord: vapelordell\n\n"
-            "Welcome to the Pokémon Searcher!\n\n"
-            "To choose a selection of pokémon, visit the settings page, and either \n"
-            "manually select pokémon from the list, or import a list of pokémon from a file."
-            "This includes using a .pkmlist file or a TomSprite Google Sheet.\n"
-            "If you wish to make your own google sheet, select the pokémon you want, and\n"
-            "export as a google sheet."
-        )
-
-        label = QLabel(instructions)
-        layout.addWidget(label)
-
-        close_button = QPushButton("Close")
-        close_button.clicked.connect(help_dialog.close)
-        layout.addWidget(close_button)
-
-        help_dialog.exec()
+        dialog.exec()
 
     def apply_pokemon_list(self, popup = True):
         """Applies the current filtered pokemon list to the main page."""
@@ -292,24 +276,8 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
     def import_pokemon_list(self):
         """Opens a popup for importing Pokémon list via text, file, or Google Sheet."""
         dialog = QDialog(self)
-        dialog.setWindowTitle("Import Pokémon List")
-        layout = QVBoxLayout(dialog)
-
-        label = QLabel("Paste a comma-separated list of Pokémon names below:")
-        layout.addWidget(label)
-
-        text_edit = QTextEdit()
-        layout.addWidget(text_edit)
-
-        button_layout = QHBoxLayout()
-        layout.addLayout(button_layout)
-
-        file_button = QPushButton("Import from File")
-        google_button = QPushButton("Import from Google Sheet")
-        apply_button = QPushButton("Apply List")
-        button_layout.addWidget(file_button)
-        button_layout.addWidget(google_button)
-        button_layout.addWidget(apply_button)
+        ui = Ui_Form()
+        ui.setupUi(dialog)
 
         self.master_list = []
         self.filtered_sorted_list = []
@@ -375,7 +343,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
             except Exception as e:
                 QMessageBox.critical(self, "Import Error", f"Failed to import Pokémon list:\n{e}")
 
-        def import_from_google():
+        def import_from_doc():
             # download sheet. take "BOARD" flatten all cells into list, remove empty and unwanted strings,
             # compare to pokedex, set checkboxes accordingly
             file_path, _ = QFileDialog.getOpenFileName(
@@ -387,13 +355,21 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
             if not file_path:
                 return
             try:
-                df = pd.read_excel(file_path, sheet_name="Board", engine='openpyxl')
+                xls = pd.ExcelFile(file_path, engine='openpyxl')
+                available_sheets = xls.sheet_names
+                target_sheet = "Draft Board" if "Draft Board" in available_sheets else "Board" 
+
+                df = pd.read_excel(xls, sheet_name=target_sheet, engine='openpyxl')
                 raw_list = df.astype(str).values.flatten().tolist()
                 unwanted_strings = {
                     "normal", "fire", "water", "electric", "grass", "ice", "fighting",
                     "poison", "ground", "flying", "psychic", "bug", "rock", "ghost",
                     "dragon", "dark", "steel", "fairy", "formatting", "drafted",
-                    "terarestricted", "complex", "fullyevolved", "0", "nfes", "nan", "↑"
+                    "terarestricted", "complex", "fullyevolved", "0", "nfes", "nan", "↑", "20.0",
+                    "19.0", "18.0", "17.0", "16.0", "15.0", "14.0", "13.0", "12.0", "11.0", "10.0",
+                    "9.0", "8.0", "7.0", "6.0", "5.0", "4.0", "3.0", "2.0", "1.0", "1pointnfes",
+                    "20", "19", "18", "17", "16", "15", "14", "13", "12", "11", "10",
+                    "9", "8", "7", "6", "5", "4", "3", "2", "1", "<3", "28", "banned", "tb", ""
                 }
                 
                 def regional_pokemon(pokemon):
@@ -408,16 +384,69 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                             return True, normalised
                     return False, None
                 
+                def mega_pokemon(pokemon):
+                    if "Mega " in pokemon:
+                        return f"{pokemon[5:]}mega"
+                    else:
+                        return pokemon
+                    
+                def unique_cases(pokemon):
+                    if "lycanroc" in pokemon.lower():
+                        return pokemon.replace("rock", "roc")
+                    elif pokemon.lower() == "mime jr.":
+                        return "mimejr"
+                    elif "bloodmoon" in pokemon.lower():
+                        return "ursalunabloodmoon"
+                    elif "defence" in pokemon.lower():
+                        return pokemon.replace("Defence", "defense")
+                    elif " rotom" in pokemon.lower():
+                        form = pokemon.split(" ")[0]
+                        return f"rotom{form}"
+                    elif " ogerpon" in pokemon.lower():
+                        if "teal" in pokemon.lower():
+                            return "ogerpon"
+                        form = pokemon.split(" ")[0]
+                        return f"ogerpon{form}"
+                    elif " kyurem" in pokemon.lower():
+                        form = pokemon.split(" ")[0]
+                        return f"kyurem{form}"
+                    elif "incarnate" in pokemon.lower():
+                        return pokemon.split(" ")[0]
+                    elif pokemon.lower() == "cheems-pao":
+                        return "chienpao"
+                    elif pokemon.lower() == "mega charizard x":
+                        return "charizardmegax"
+                    elif pokemon.lower() == "mega charizard y":
+                        return "charizardmegay"
+                    elif pokemon == "Mega Mewtwo X":
+                        return "mewtwomegax"
+                    elif pokemon == "Mega Mewtwo Y":
+                        return "mewtwomegay"
+                    elif "dawn wings" in pokemon.lower():
+                        return "necrozmadawnwings"
+                    elif "dusk mane" in pokemon.lower():
+                        return "necrozmaduskmane"
+                    elif "single strike" in pokemon.lower():
+                        return "urshifu"
+                    elif "ice rider" in pokemon.lower():
+                        return "calyrexice"
+                    elif "shadow rider" in pokemon.lower():
+                        return "calyrexshadow"
+                    elif "eternal" in pokemon.lower():
+                        return "floetteeternal"
+                    elif "paldean tauros" in pokemon.lower():
+                        return f"taurospaldea{pokemon.split(' ')[2]}"
+                    
+                    return pokemon
+                
                 def normalise_pokemon(pokemon):
                     if not isinstance(pokemon, str):
                         return None
 
                     pokemon = pokemon.strip()
 
-                    if "lycanroc" in pokemon.lower():
-                        pokemon = pokemon.replace("rock", "roc")
-                    if pokemon.lower() == "mime jr.":
-                        pokemon = "mimejr"
+                    pokemon = unique_cases(pokemon)
+                    pokemon = mega_pokemon(pokemon)
 
                     pokemon = (pokemon
                         .replace("'", "")
@@ -425,7 +454,9 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                         .replace("-", "")
                         .replace("é", "e")
                         .replace("♀", "f")
-                        .replace("♂", "m"))
+                        .replace("♂", "m")
+                        .replace("%", "")
+                        .replace(": ", ""))
 
                     regional, region = regional_pokemon(pokemon)
                     if regional:
@@ -475,9 +506,9 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                 QMessageBox.critical(self, "Import Error", f"Failed to import Pokémon list from Google Sheet:\n{e}")
                 return
 
-        file_button.clicked.connect(import_from_file)
-        google_button.clicked.connect(import_from_google)
-        apply_button.clicked.connect(import_from_text)
+        ui.fromFileButton.clicked.connect(import_from_file)
+        ui.fromGoogleSheetButton.clicked.connect(import_from_doc)
+        ui.fromPlainTextButton.clicked.connect(import_from_text)
 
         dialog.exec()
 
