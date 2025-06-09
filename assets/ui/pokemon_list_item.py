@@ -14,7 +14,6 @@ class PokemonListItem(QWidget):
 
         # Name Label
         name_label = QLabel(pokemon_data.name)
-        name_label.setFont(QFont("Arial", 12, QFont.Bold))
         name_label.setFixedWidth(120)
         name_label.setAlignment(Qt.AlignCenter)
         layout.addWidget(name_label)
