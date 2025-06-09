@@ -1,6 +1,7 @@
 import sys
 import json
 import os
+import pandas as pd
 from assets.ui.pokemon_list_item import PokemonListItem, SettingsPokemonListItem
 from data.pokemon_obj import PokemonData
 from assets.ui.main_ui import Ui_PokemonSearcher
@@ -21,10 +22,10 @@ CONFIG_FILE_PATH = os.path.join(BASE_DIR, "data/config.json")
 
 """
 TODO:
-- import from google sheet
-- import from text
+- make sure help popup explain how to use import from google sheet
 - fix splash screen
 - update pokemon learnset based on evos
+- make settings import popup in QDesigner
 """
 
 class MainWindow(QMainWindow, Ui_PokemonSearcher):
@@ -318,13 +319,11 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.selected_pokemon = []
 
         def import_from_file():
-            options = QFileDialog.Options()
             file_path, _ = QFileDialog.getOpenFileName(
                 self,
                 "Import Pokémon List",
                 "",
-                "Pokémon List Files (*.pkmnlist);;JSON Files (*.json);;All Files (*)",
-                options=options
+                "Pokémon List Files (*.pkmnlist);;JSON Files (*.json);;All Files (*)"
             )
             if not file_path:
                 return
@@ -354,21 +353,127 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                 QMessageBox.critical(self, "Import Error", f"Failed to import Pokémon list:\n{e}")
 
         def import_from_text():
-            text = text_edit.toPlainText()
-            names = [name.strip() for name in text.split(",") if name.strip()]
-            if not names:
-                QMessageBox.warning(self, "Input Error", "Please enter at least one Pokémon name.")
-                return
-            self.selected_pokemon = names
-            with open(SELECTED_POKEMON_PATH, "w") as f:
-                json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
-            self.load_pokemon_data(False)
-            self.update_filtered_pokemon()
-            QMessageBox.information(self, "Import Successful", "Pokémon list imported successfully.")
-            dialog.accept()
+            try:
+                text = text_edit.toPlainText()
+                names = [name.strip() for name in text.split(",") if name.strip()]
+                if not names:
+                    QMessageBox.warning(self, "Input Error", "Please enter at least one Pokémon name.")
+                    return
+                self.selected_pokemon = names
+                for widget in self.settingsPokemonListWidget.findChildren(SettingsPokemonListItem):
+                    if widget.name_label.text() in self.selected_pokemon:
+                        widget.checkbox.setChecked(True)
+                    else:
+                        widget.checkbox.setChecked(False)
+
+                with open(SELECTED_POKEMON_PATH, "w") as f:
+                    json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+                self.load_pokemon_data(False)
+                self.update_filtered_pokemon()
+                QMessageBox.information(self, "Import Successful", "Pokémon list imported successfully.")
+                dialog.accept()
+            except Exception as e:
+                QMessageBox.critical(self, "Import Error", f"Failed to import Pokémon list:\n{e}")
 
         def import_from_google():
-            QMessageBox.information(self, "Coming Soon", "Google Sheets import will be implemented later.")
+            # download sheet. take "BOARD" flatten all cells into list, remove empty and unwanted strings,
+            # compare to pokedex, set checkboxes accordingly
+            file_path, _ = QFileDialog.getOpenFileName(
+                self,
+                "Draft Board Excel",
+                "",
+                "Microsoft Excel Worksheet (*.xlsx);;All Files (*)"
+            )
+            if not file_path:
+                return
+            try:
+                df = pd.read_excel(file_path, sheet_name="Board", engine='openpyxl')
+                raw_list = df.astype(str).values.flatten().tolist()
+                unwanted_strings = {
+                    "normal", "fire", "water", "electric", "grass", "ice", "fighting",
+                    "poison", "ground", "flying", "psychic", "bug", "rock", "ghost",
+                    "dragon", "dark", "steel", "fairy", "formatting", "drafted",
+                    "terarestricted", "complex", "fullyevolved", "0", "nfes", "nan", "↑"
+                }
+                
+                def regional_pokemon(pokemon):
+                    region_map = {
+                        "Alolan": "alola",
+                        "Galarian": "galar",
+                        "Hisuian": "hisui",
+                        "Paldean": "paldea"
+                    }
+                    for region, normalised in region_map.items():
+                        if region in pokemon:
+                            return True, normalised
+                    return False, None
+                
+                def normalise_pokemon(pokemon):
+                    if not isinstance(pokemon, str):
+                        return None
+
+                    pokemon = pokemon.strip()
+
+                    if "lycanroc" in pokemon.lower():
+                        pokemon = pokemon.replace("rock", "roc")
+                    if pokemon.lower() == "mime jr.":
+                        pokemon = "mimejr"
+
+                    pokemon = (pokemon
+                        .replace("'", "")
+                        .replace(". ", "")
+                        .replace("-", "")
+                        .replace("é", "e")
+                        .replace("♀", "f")
+                        .replace("♂", "m"))
+
+                    regional, region = regional_pokemon(pokemon)
+                    if regional:
+                        parts = pokemon.split(" ")
+                        if len(parts) > 1:
+                            pokemon = f"{parts[1]}{region}"
+                        else:
+                            return None
+
+                    return pokemon.replace(" ", "").lower()
+                
+                imported_list = []
+                excluded_list = []
+                seen = set()
+
+                for raw in raw_list:
+                    normalised = normalise_pokemon(raw)
+                    if normalised and normalised not in unwanted_strings \
+                        and normalised in self.pokedex \
+                        and normalised not in seen:
+                            imported_list.append(normalised)
+                    elif normalised not in unwanted_strings and normalised not in seen:
+                        excluded_list.append(raw)
+                    seen.add(normalised)
+
+                if len(excluded_list) > 0:
+                    QMessageBox.warning(self, "Excluded Pokémon", 
+                        f"The following Pokémon failed to be normalised and imported:\n"
+                        f"{', '.join(excluded_list)}")
+                    
+                self.selected_pokemon = imported_list
+                for widget in self.settingsPokemonListWidget.findChildren(SettingsPokemonListItem):
+                    if widget.name_label.text() in self.selected_pokemon:
+                        widget.checkbox.setChecked(True)
+                    else:
+                        widget.checkbox.setChecked(False)
+
+                with open(SELECTED_POKEMON_PATH, "w") as f:
+                    json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+
+                self.load_pokemon_data(False)
+                self.update_filtered_pokemon()
+                QMessageBox.information(self, "Import Successful", "Pokémon list imported successfully.")
+                dialog.accept()
+
+            except Exception as e:
+                QMessageBox.critical(self, "Import Error", f"Failed to import Pokémon list from Google Sheet:\n{e}")
+                return
 
         file_button.clicked.connect(import_from_file)
         google_button.clicked.connect(import_from_google)
@@ -675,10 +780,10 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
             lowest = self.lowest_stats[i]
             highest = self.highest_stats[i]
 
-            normalized_value = (stat - lowest) / (highest - lowest) if highest > lowest else 0
+            normalised_value = (stat - lowest) / (highest - lowest) if highest > lowest else 0
 
-            red = int(255 * (1 - normalized_value))
-            green = int(255 * normalized_value)
+            red = int(255 * (1 - normalised_value))
+            green = int(255 * normalised_value)
             color = QColor(red, green, 0)
 
             stat_bars[i].set_value(stat, max_stat=highest)
