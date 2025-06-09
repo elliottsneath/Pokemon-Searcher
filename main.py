@@ -24,9 +24,8 @@ CONFIG_FILE_PATH = os.path.join(BASE_DIR, "data/config.json")
 
 """
 TODO:
-- fix splash screen
+- fix splash screen (including new logo)
 - settings search bar
-- make banned column not import
 - update pokemon learnset based on evos
 """
 
@@ -182,6 +181,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         # settings page
         self.applyButton.clicked.connect(self.apply_pokemon_list)
+        self.settingsSearchBar.textChanged.connect(self.search_settings)
         self.exportPokemonButton.clicked.connect(self.export_pokemon_list)
         self.importPokemonButton.clicked.connect(self.import_pokemon_list)
         self.resetPokemonButton.clicked.connect(self.reset_pokemon_list)
@@ -249,6 +249,14 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         self.load_pokemon_data(False)
         self.update_filtered_pokemon()
+
+    def search_settings(self, text):
+        search_text = text.lower()
+        for i in range(self.settingsPokemonListWidget.count()):
+            item = self.settingsPokemonListWidget.item(i)
+            widget = self.settingsPokemonListWidget.itemWidget(item)
+            name = widget.name_label.text().lower()
+            item.setHidden(search_text not in name)
 
     def export_pokemon_list(self):
         """Exports current filtered pokemon list to a custom file type (.pkmnlist)."""
@@ -361,6 +369,14 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
                 df = pd.read_excel(xls, sheet_name=target_sheet, engine='openpyxl')
                 raw_list = df.astype(str).values.flatten().tolist()
+
+                if any(isinstance(val, str) and val.strip().lower() == "banned" for val in df.iloc[:, 1]):
+                    banned_set = {
+                        val for val in df.iloc[:, 2]
+                        if isinstance(val, str) and val.strip() and val.strip().lower() != "banned"
+                    }
+                    raw_list = [val for val in raw_list if val not in banned_set]
+
                 unwanted_strings = {
                     "normal", "fire", "water", "electric", "grass", "ice", "fighting",
                     "poison", "ground", "flying", "psychic", "bug", "rock", "ghost",
@@ -864,10 +880,10 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 
 def main():
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon('assets/icons/JCB_Logo'))
+    app.setWindowIcon(QIcon('assets/icons/JCB_Logo.ico'))
 
-    icon = QPixmap('assets/icons/JCB_Logo')
-    resized_icon = icon.scaled(icon.size() * 0.5, Qt.KeepAspectRatio)
+    icon = QPixmap('assets/icons/JCB_Logo.png')
+    resized_icon = icon.scaled(icon.size() * 0.2, Qt.KeepAspectRatio)
 
     spl = QSplashScreen(resized_icon)
     spl.show()
