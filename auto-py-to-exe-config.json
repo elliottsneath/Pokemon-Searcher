@@ -7,7 +7,7 @@
   },
   {
    "optionDest": "filenames",
-   "value": "C:/Code Folder/One Pointer Pokemon Searcher/main.py"
+   "value": "C:/Code Folder/Pokemon-Searcher/main.py"
   },
   {
    "optionDest": "onefile",
@@ -19,11 +19,7 @@
   },
   {
    "optionDest": "icon_file",
-   "value": "C:/Code Folder/One Pointer Pokemon Searcher/assets/icons/JCB_Logo.ico"
-  },
-  {
-   "optionDest": "contents_directory",
-   "value": "."
+   "value": "C:/Code Folder/Pokemon-Searcher/assets/icons/pokemon_searcher.ico"
   },
   {
    "optionDest": "clean_build",
@@ -39,6 +35,10 @@
   },
   {
    "optionDest": "disable_windowed_traceback",
+   "value": false
+  },
+  {
+   "optionDest": "embed_manifest",
    "value": false
   },
   {
@@ -58,8 +58,24 @@
    "value": false
   },
   {
+   "optionDest": "win_private_assemblies",
+   "value": false
+  },
+  {
+   "optionDest": "win_no_prefer_redirects",
+   "value": false
+  },
+  {
+   "optionDest": "ascii",
+   "value": false
+  },
+  {
    "optionDest": "datas",
-   "value": "C:/Code Folder/One Pointer Pokemon Searcher;One Pointer Pokemon Searcher/"
+   "value": "C:/Code Folder/Pokemon-Searcher/data;data/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Code Folder/Pokemon-Searcher/assets;assets/"
   }
  ],
  "nonPyinstallerOptions": {
