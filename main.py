@@ -25,8 +25,6 @@ CONFIG_FILE_PATH = os.path.join(BASE_DIR, "data/config.json")
 """
 TODO:
 - fix splash screen (including new logo)
-- settings search bar
-- update pokemon learnset based on evos
 """
 
 class MainWindow(QMainWindow, Ui_PokemonSearcher):
@@ -112,7 +110,23 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                         base_abilities.append(value)
 
                 stats = list(data.get("baseStats", {}).values())
-                moves = learnset_data.get(pokemon, [])
+
+                def get_all_prevo_moves(pokemon_key, pokedex, learnset_data, visited=None):
+                    if visited is None:
+                        visited = set()
+                    if pokemon_key in visited:
+                        return set()
+                    visited.add(pokemon_key)
+
+                    moves = set(learnset_data.get(pokemon_key, []))
+                    prevo_name = pokedex[pokemon_key].get("prevo", None)
+                    if prevo_name:
+                        for prevo_key, prevo_data in pokedex.items():
+                            if prevo_data.get("name", "") == prevo_name:
+                                moves.update(get_all_prevo_moves(prevo_key, pokedex, learnset_data, visited))
+                                break
+                    return sorted(moves)
+                moves = list(get_all_prevo_moves(pokemon, pokedex, learnset_data))
 
                 favourite = True if name in favourites.get("favourites") else False
 
