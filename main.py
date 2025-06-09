@@ -322,7 +322,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         def import_from_text():
             try:
-                text = text_edit.toPlainText()
+                text = ui.textEdit.toPlainText()
                 names = [name.strip() for name in text.split(",") if name.strip()]
                 if not names:
                     QMessageBox.warning(self, "Input Error", "Please enter at least one Pokémon name.")
