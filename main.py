@@ -15,6 +15,10 @@ from PySide6.QtWidgets import QMainWindow, QApplication, QListWidgetItem, QCompl
 from PySide6.QtGui import Qt, QPixmap, QColor, QIcon, QMovie
 from PySide6.QtCore import QStringListModel, QTimer, Signal, QSize
 
+import ctypes
+appid = 'Pokémon-Searcher'
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(appid)
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 POKEDEX_PATH = os.path.join(BASE_DIR, "data/pokedex.json")
