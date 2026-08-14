@@ -46,6 +46,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.update_filtered_pokemon()
 
         self.loaded.emit()
+        pass
 
     def initialise_vars(self):
         self.master_list = []
