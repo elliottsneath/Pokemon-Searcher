@@ -2,7 +2,11 @@ import sys
 import traceback
 import datetime
 
+from PySide6.QtCore import QLoggingCategory
 from common.custom_widgets import error_msg_box
+
+def suppress_qt_warnings() -> None:
+    QLoggingCategory.setFilterRules("qt.gui.imageio=false")
 
 def install_exception_hook() -> None:
     def exception_hook(type_, value, tb):

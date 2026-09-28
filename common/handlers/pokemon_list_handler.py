@@ -231,8 +231,9 @@ class PokemonListHandler:
     # ── popup ──────────────────────────────────────────────────────────────
 
     def open_pokemon_popup(self, item) -> None:
-        pokemon = self.filtered_sorted_list[self.wg.pokemon_list_widget.row(item)]
+        self.open_popup(self.filtered_sorted_list[self.wg.pokemon_list_widget.row(item)])
 
+    def open_popup(self, pokemon: PokemonData) -> None:
         self._popup_dialog = QDialog(self.w)
         self._popup_ui = Ui_PokemonPopup()
         self._popup_ui.setupUi(self._popup_dialog)
@@ -240,6 +241,13 @@ class PokemonListHandler:
 
         ui.lineEdit.textChanged.connect(lambda text: self._filter_moves(text, pokemon))
         ui.starLabel.clicked.connect(lambda: self._toggle_favourite(pokemon))
+
+        dh = self.w.draft_handler
+        in_draft = dh.is_drafted(pokemon)
+        ui.addToDraftButton.setVisible(not in_draft)
+        ui.RemoveFromDraftButton.setVisible(in_draft)
+        ui.addToDraftButton.clicked.connect(lambda: (dh.add_to_draft(pokemon), self._popup_dialog.accept()))
+        ui.RemoveFromDraftButton.clicked.connect(lambda: (dh.remove_from_draft(pokemon), self._popup_dialog.accept()))
 
         title = pokemon.name
         if pokemon.cost is not None:

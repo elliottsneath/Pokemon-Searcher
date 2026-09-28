@@ -17,8 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QGridLayout,
     QHBoxLayout, QLabel, QLineEdit, QListWidget,
-    QListWidgetItem, QSizePolicy, QSpacerItem, QVBoxLayout,
-    QWidget)
+    QListWidgetItem, QSizePolicy, QSpacerItem, QToolButton,
+    QVBoxLayout, QWidget)
 
 from assets.ui.clickable_label import ClickableLabel
 from assets.ui.stats_bar_widget import StatBar
@@ -27,7 +27,7 @@ class Ui_PokemonPopup(object):
     def setupUi(self, PokemonPopup):
         if not PokemonPopup.objectName():
             PokemonPopup.setObjectName(u"PokemonPopup")
-        PokemonPopup.resize(400, 338)
+        PokemonPopup.resize(400, 448)
         self.verticalLayout = QVBoxLayout(PokemonPopup)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.sprite_label = QLabel(PokemonPopup)
@@ -74,15 +74,31 @@ class Ui_PokemonPopup(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
+        self.RemoveFromDraftButton = QToolButton(PokemonPopup)
+        self.RemoveFromDraftButton.setObjectName(u"RemoveFromDraftButton")
+        icon = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.ListRemove))
+        self.RemoveFromDraftButton.setIcon(icon)
+        self.RemoveFromDraftButton.setAutoRaise(True)
+
+        self.horizontalLayout.addWidget(self.RemoveFromDraftButton)
+
+        self.addToDraftButton = QToolButton(PokemonPopup)
+        self.addToDraftButton.setObjectName(u"addToDraftButton")
+        icon1 = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.ListAdd))
+        self.addToDraftButton.setIcon(icon1)
+        self.addToDraftButton.setAutoRaise(True)
+
+        self.horizontalLayout.addWidget(self.addToDraftButton)
+
 
         self.verticalLayout.addLayout(self.horizontalLayout)
 
-        self.line = QFrame(PokemonPopup)
-        self.line.setObjectName(u"line")
-        self.line.setFrameShape(QFrame.Shape.HLine)
-        self.line.setFrameShadow(QFrame.Shadow.Sunken)
+        self.line_3 = QFrame(PokemonPopup)
+        self.line_3.setObjectName(u"line_3")
+        self.line_3.setFrameShape(QFrame.Shape.HLine)
+        self.line_3.setFrameShadow(QFrame.Shadow.Sunken)
 
-        self.verticalLayout.addWidget(self.line)
+        self.verticalLayout.addWidget(self.line_3)
 
         self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
@@ -221,6 +237,8 @@ class Ui_PokemonPopup(object):
         self.starLabel.setText(QCoreApplication.translate("PokemonPopup", u"star", None))
         self.type1Label.setText(QCoreApplication.translate("PokemonPopup", u"TextLabel", None))
         self.type2Label.setText(QCoreApplication.translate("PokemonPopup", u"TextLabel", None))
+        self.RemoveFromDraftButton.setText(QCoreApplication.translate("PokemonPopup", u"...", None))
+        self.addToDraftButton.setText(QCoreApplication.translate("PokemonPopup", u"...", None))
         self.label_5.setText(QCoreApplication.translate("PokemonPopup", u"Special Attack", None))
         self.label_2.setText(QCoreApplication.translate("PokemonPopup", u"HP", None))
         self.label_7.setText(QCoreApplication.translate("PokemonPopup", u"Speed", None))

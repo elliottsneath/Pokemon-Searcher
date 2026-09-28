@@ -1,104 +1,151 @@
-"""Pure functions for normalising Pokémon names and parsing the DDL draft board Excel sheet."""
+from __future__ import annotations
+import json
+import os
+from typing import TYPE_CHECKING
 
-import re
-import pandas as pd
+from PySide6.QtGui import QPixmap, Qt
+from PySide6.QtWidgets import QLabel
 
+from common.paths import DRAFT_STATE_PATH
+from common.sprite_loader import get_sprite
+from common.widget_groups import DraftHandlerWidgets, PickSlot
+from data.pokemon_obj import PokemonData
 
-UNWANTED_STRINGS = {
-    "normal", "fire", "water", "electric", "grass", "ice", "fighting",
-    "poison", "ground", "flying", "psychic", "bug", "rock", "ghost",
-    "dragon", "dark", "steel", "fairy", "formatting", "drafted",
-    "terarestricted", "complex", "fullyevolved", "0", "nfes", "nan", "↑", "20.0",
-    "19.0", "18.0", "17.0", "16.0", "15.0", "14.0", "13.0", "12.0", "11.0", "10.0",
-    "9.0", "8.0", "7.0", "6.0", "5.0", "4.0", "3.0", "2.0", "1.0", "1pointnfes",
-    "20", "19", "18", "17", "16", "15", "14", "13", "12", "11", "10",
-    "9", "8", "7", "6", "5", "4", "3", "2", "1", "<3", "28", "banned", "tb", "",
-    "20 points", "19 points", "p1", "p2", "p3", "p4", "p5", "18 points", "17 points", "16 points",
-    "15 points", "14 points", "13 points", "12 points", "11 points", "10 points", "9 points",
-    "8 points", "7 points", "6 points", "5 points", "4 points", "3 points", "2 points",
-    "1 point", "x", "✓",
-}
-
-_REGION_MAP = {"Alolan": "alola", "Galarian": "galar", "Hisuian": "hisui", "Paldean": "paldea"}
+if TYPE_CHECKING:
+    from main import MainWindow
 
 
-def _unique_cases(p: str) -> str:
-    lp = p.lower()
-    if "lycanroc" in lp:        return p.replace("rock", "roc")
-    if lp == "mime jr.":         return "mimejr"
-    if "bloodmoon" in lp:       return "ursalunabloodmoon"
-    if "defence" in lp:         return p.replace("Defence", "defense")
-    if " rotom" in lp:          return f"rotom{p.split(' ')[0]}"
-    if " ogerpon" in lp:        return "ogerpon" if "teal" in lp else f"ogerpon{p.split(' ')[0]}"
-    if " kyurem" in lp:         return f"kyurem{p.split(' ')[0]}"
-    if "incarnate" in lp:       return p.split(" ")[0]
-    if lp == "cheems-pao":      return "chienpao"
-    if lp == "mega charizard x": return "charizardmegax"
-    if lp == "mega charizard y": return "charizardmegay"
-    if p == "Mega Mewtwo X":    return "mewtwomegax"
-    if p == "Mega Mewtwo Y":    return "mewtwomegay"
-    if "dawn wings" in lp:      return "necrozmadawnwings"
-    if "dusk mane" in lp:       return "necrozmaduskmane"
-    if "single strike" in lp:   return "urshifu"
-    if "ice rider" in lp:       return "calyrexice"
-    if "shadow rider" in lp:    return "calyrexshadow"
-    if "eternal" in lp:         return "floetteeternal"
-    if "paldean tauros" in lp:  return f"taurospaldea{p.split(' ')[2]}"
-    if lp in ("meowstic-mega", "mega meowstic"): return "meowsticmmega"
-    return p
+class DraftHandler:
+    def __init__(self, window: MainWindow, widgets: DraftHandlerWidgets):
+        self.w = window
+        self.wg = widgets
+        self.drafted_pokemon: list[PokemonData | None] = [None] * 12
+        for i, slot in enumerate(self.wg.picks):
+            slot.name.setAlignment(Qt.AlignCenter)
+            slot.name.setText(f"Pick {i + 1}")
+            slot.widget.setStyleSheet(
+                f"QWidget#{slot.widget.objectName()} {{ border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; }}"
+            )
+            slot.widget.mousePressEvent = self._make_slot_click_handler(i)
+        self._connect_signals()
 
+    def _connect_signals(self) -> None:
+        self.wg.budget_line_edit.textChanged.connect(self.update_budget)
+        self._load_draft_state()
 
-def normalise_pokemon(pokemon) -> str | None:
-    if not isinstance(pokemon, str):
+    # ── public ────────────────────────────────────────────────────────────────
+
+    def is_drafted(self, pokemon: PokemonData) -> bool:
+        return pokemon in self.drafted_pokemon
+
+    def add_to_draft(self, pokemon: PokemonData) -> None:
+        idx = self.get_next_blank()
+        if idx is None:
+            return
+        self.drafted_pokemon[idx] = pokemon
+        self._populate_slot(self.wg.picks[idx], pokemon)
+        self.update_budget()
+        self.update_picks_label()
+
+    def remove_from_draft(self, pokemon: PokemonData) -> None:
+        try:
+            idx = self.drafted_pokemon.index(pokemon)
+        except ValueError:
+            return
+        self.drafted_pokemon[idx] = None
+        self._clear_slot(self.wg.picks[idx], idx)
+        self.update_budget()
+        self.update_picks_label()
+
+    def update_budget(self) -> None:
+        text = self.wg.budget_line_edit.text()
+        budget = int(text) if text else 0
+        spent = sum(p.cost for p in self.drafted_pokemon if p is not None and p.cost is not None)
+        self.wg.pts_label.setText(f"{budget - spent} Pts Remaining")
+        self._save_draft_state()
+
+    def _save_draft_state(self) -> None:
+        try:
+            with open(DRAFT_STATE_PATH, "w") as f:
+                json.dump({
+                    "drafted": [p.species_id if p is not None else None for p in self.drafted_pokemon],
+                    "budget": self.wg.budget_line_edit.text(),
+                }, f, indent=4)
+        except Exception as e:
+            print(f"Draft state save failed: {e}")
+
+    def _load_draft_state(self) -> None:
+        if not os.path.exists(DRAFT_STATE_PATH):
+            return
+        try:
+            with open(DRAFT_STATE_PATH) as f:
+                data = json.load(f)
+            species_map = {p.species_id: p for p in self.w.master_list}
+            for i, sid in enumerate(data.get("drafted", [])):
+                if sid and sid in species_map:
+                    self.drafted_pokemon[i] = species_map[sid]
+                    self._populate_slot(self.wg.picks[i], species_map[sid])
+            if budget := data.get("budget"):
+                self.wg.budget_line_edit.setText(str(budget))
+            self.update_picks_label()
+        except Exception as e:
+            print(f"Draft state load failed: {e}")
+
+    def update_picks_label(self) -> None:
+        count = sum(1 for p in self.drafted_pokemon if p is not None)
+        self.wg.picks_label.setText(f"{count}/12 Picks")
+
+    def _make_slot_click_handler(self, idx: int):
+        def handler(_):
+            pokemon = self.drafted_pokemon[idx]
+            if pokemon is not None:
+                self.w.pokemon_list_handler.open_popup(pokemon)
+        return handler
+
+    def get_next_blank(self) -> int | None:
+        for i, p in enumerate(self.drafted_pokemon):
+            if p is None:
+                return i
         return None
-    p = pokemon.strip()
-    p = _unique_cases(p)
-    if "Mega " in p:
-        p = f"{p[5:]}mega"
-    p = (p.replace("'", "").replace(". ", "").replace("-", "")
-          .replace("é", "e").replace("♀", "f").replace("♂", "m")
-          .replace("%", "").replace(": ", ""))
-    for region, suffix in _REGION_MAP.items():
-        if region in p:
-            parts = p.split(" ")
-            return f"{parts[1]}{suffix}".lower() if len(parts) > 1 else None
-    return p.replace(" ", "").lower()
 
+    # ── slot rendering ────────────────────────────────────────────────────────
 
-def parse_draft_board(xls, target_sheet: str, pokedex: list) -> tuple[dict, int]:
-    """Returns (draft_board dict, draft_pools count) from a draft board Excel sheet.
+    def _populate_slot(self, slot: PickSlot, pokemon: PokemonData) -> None:
+        sprite = get_sprite(pokemon.species_id, pokemon.name)
+        if sprite:
+            slot.sprite.setPixmap(sprite.scaled(80, 80, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+            slot.sprite.setAlignment(Qt.AlignCenter)
 
-    draft_board: {species_id: {"cost": int, "drafted_in": [pool_numbers]}}
-    """
-    grid = pd.read_excel(xls, sheet_name=target_sheet, header=None, engine='openpyxl')
-    draft_board: dict = {}
-    draft_pools: int = 0
+        slot.name.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        font = slot.name.font()
+        font.setBold(True)
+        slot.name.setFont(font)
+        slot.name.setText(pokemon.name)
+        slot.pts.setText(f"{pokemon.cost} pts" if pokemon.cost is not None else "")
 
-    for header_row in range(grid.shape[0]):
-        for col in range(grid.shape[1] - 1):
-            match = re.fullmatch(r"(\d+) Points?", str(grid.iat[header_row, col]).strip())
-            if not match:
-                continue
-            cost = int(match.group(1))
+        self._set_type_icons(slot, pokemon.types)
 
-            pool_cols: list[tuple[int, int]] = []
-            pc = col + 2
-            while pc < grid.shape[1]:
-                pm = re.fullmatch(r"P(\d+)", str(grid.iat[header_row, pc]).strip())
-                if not pm:
-                    break
-                pool_cols.append((int(pm.group(1)), pc))
-                pc += 1
-            draft_pools = max(draft_pools, len(pool_cols))
+    def _clear_slot(self, slot: PickSlot, idx: int) -> None:
+        slot.sprite.clear()
+        slot.name.setAlignment(Qt.AlignCenter)
+        font = slot.name.font()
+        font.setBold(False)
+        slot.name.setFont(font)
+        slot.name.setText(f"Pick {idx + 1}")
+        slot.pts.setText("")
+        self._set_type_icons(slot, [])
 
-            for row in range(header_row + 1, grid.shape[0]):
-                key = normalise_pokemon(grid.iat[row, col + 1])
-                if key not in pokedex:
-                    continue
-                draft_board[key] = {
-                    "cost": cost,
-                    "drafted_in": [p for p, c in pool_cols
-                                   if str(grid.iat[row, c]).strip().upper() == "X"],
-                }
-
-    return draft_board, draft_pools
+    def _set_type_icons(self, slot: PickSlot, types: list[str]) -> None:
+        layout = slot.type_widget.layout()
+        while layout.count():
+            item = layout.takeAt(0)
+            if item.widget():
+                item.widget().deleteLater()
+        for t in types:
+            lbl = QLabel()
+            pix = QPixmap(os.path.join("assets", "icons", f"{t.lower()}.svg"))
+            if not pix.isNull():
+                lbl.setPixmap(pix.scaled(24, 24))
+            else:
+                lbl.setText(t)
+            layout.addWidget(lbl)

@@ -8,14 +8,16 @@ from PySide6.QtCore import Signal
 from assets.ui.main_ui import Ui_PokemonSearcher
 from assets.ui.help_popup_ui import Ui_helpDialog
 from common.version_control import VersionControl, APP_NAME
-from common.widget_groups import MainWidgets, SettingsWidgets
+from common.widget_groups import MainWidgets, SettingsWidgets, DraftHandlerWidgets
 from common.handlers.data_handler import DataHandler
+from common.handlers.draft_handler import DraftHandler
 from common.handlers.pokemon_list_handler import PokemonListHandler
 from common.handlers.settings_handler import SettingsHandler
-from common.helpers import install_exception_hook
+from common.helpers import install_exception_hook, suppress_qt_warnings
 
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(APP_NAME)
 install_exception_hook()
+suppress_qt_warnings()
 
 class MainWindow(QMainWindow, Ui_PokemonSearcher):
     loaded = Signal()
@@ -27,10 +29,16 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         self._init_vars()
         self.data_handler = DataHandler(self)
+        self.draft_handler = DraftHandler(self, DraftHandlerWidgets(self))
         self.pokemon_list_handler = PokemonListHandler(self, MainWidgets(self))
         self.settings_handler = SettingsHandler(self, SettingsWidgets(self))
 
-        self.actionSettings.triggered.connect(lambda: self.toggle_settings(1))
+        for action, page in [
+            (self.actionHome, 0),
+            (self.actionSettings, 1),
+            (self.actionCurrentDraft, 2),
+        ]:
+            action.triggered.connect(lambda checked=False, i=page: self.toggle_settings(i))
         self.actionHelp.triggered.connect(self.show_help)
 
         self.pokemon_list_handler.update()

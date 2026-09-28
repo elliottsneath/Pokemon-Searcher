@@ -11,7 +11,7 @@ from PySide6.QtWidgets import (
 
 from assets.ui.import_popup_ui import Ui_Form
 from assets.ui.pokemon_list_item import SettingsPokemonListItem
-from common.handlers.draft_handler import normalise_pokemon, parse_draft_board, UNWANTED_STRINGS
+from common.handlers.draft_parser import normalise_pokemon, parse_draft_board, UNWANTED_STRINGS
 from common.widget_groups import SettingsWidgets
 
 if TYPE_CHECKING:
@@ -25,7 +25,6 @@ class SettingsHandler:
         self._connect_signals()
 
     def _connect_signals(self) -> None:
-        self.wg.back_button.clicked.connect(lambda: self.w.toggle_settings(0))
         self.wg.apply_button.clicked.connect(self.apply_pokemon_list)
         self.wg.search_bar.textChanged.connect(self.search_settings)
         self.wg.export_button.clicked.connect(self.export_pokemon_list)
