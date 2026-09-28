@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget, QHBoxLayout, QLabel, \
-    QVBoxLayout, QSpacerItem, QSizePolicy, QCheckBox
+    QVBoxLayout, QSpacerItem, QSizePolicy, QCheckBox, QGraphicsOpacityEffect
 from PySide6.QtGui import QFont, QPixmap, Qt
 import os
 from data.pokemon_obj import PokemonData
@@ -17,6 +17,19 @@ class PokemonListItem(QWidget):
         name_label.setFixedWidth(120)
         name_label.setAlignment(Qt.AlignCenter)
         layout.addWidget(name_label)
+
+        # Draft cost
+        cost_label = QLabel(str(pokemon_data.cost) if pokemon_data.cost is not None else "-")
+        cost_label.setFixedWidth(30)
+        cost_label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(cost_label)
+
+        # grey out pokemon already drafted in the selected pool
+        if pokemon_data.drafted:
+            opacity = QGraphicsOpacityEffect(self)
+            opacity.setOpacity(0.35)
+            self.setGraphicsEffect(opacity)
+            self.setToolTip("Drafted in your pool")
 
         # Types
         types_layout = QHBoxLayout()

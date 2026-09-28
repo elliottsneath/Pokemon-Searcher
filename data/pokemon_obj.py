@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import List
+from typing import List, Optional
 
 @dataclass
 class PokemonData:
@@ -11,3 +11,6 @@ class PokemonData:
     stats: List[int]
     moves: List[str]
     favourite: bool = False
+    species_id: str = ""
+    cost: Optional[int] = None
+    drafted: bool = False

@@ -1,3 +1,5 @@
 {
-    "favourites": []
+    "favourites": [],
+    "pool": 3,
+    "hide_drafted": true
 }

@@ -158,6 +158,19 @@
             </property>
            </spacer>
           </item>
+          <item>
+           <widget class="QCheckBox" name="hideDraftedCheckbox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Hide drafted</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </item>
         <item>
@@ -190,6 +203,28 @@
             </property>
             <property name="text">
              <string>Name</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ClickableLabel" name="costLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Pts</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -436,13 +471,23 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,1">
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,0,0,1">
           <item>
            <widget class="QLineEdit" name="settingsSearchBar">
             <property name="placeholderText">
              <string>Search Pokemon...</string>
             </property>
            </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="poolLabel">
+            <property name="text">
+             <string>Draft pool:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="poolComboBox"/>
           </item>
           <item>
            <widget class="AnimatedHoverButton" name="resetPokemonButton">

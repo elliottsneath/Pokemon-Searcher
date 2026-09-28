@@ -1145,5 +1145,5069 @@
         "zoruahisui",
         "zubat",
         "zweilous"
-    ]
+    ],
+    "draft_pools": 5,
+    "draft_board": {
+        "absolmegaz": {
+            "cost": 19,
+            "drafted_in": [
+                1,
+                4,
+                5
+            ]
+        },
+        "delphoxmega": {
+            "cost": 19,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "gallademega": {
+            "cost": 19,
+            "drafted_in": [
+                3
+            ]
+        },
+        "greattusk": {
+            "cost": 19,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "ironvaliant": {
+            "cost": 19,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "meowscarada": {
+            "cost": 19,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "tapukoko": {
+            "cost": 19,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "terapagos": {
+            "cost": 19,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "darkrai": {
+            "cost": 18,
+            "drafted_in": [
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "dianciemega": {
+            "cost": 18,
+            "drafted_in": [
+                3,
+                4
+            ]
+        },
+        "garchomp": {
+            "cost": 18,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "garchompmegaz": {
+            "cost": 18,
+            "drafted_in": [
+                1,
+                2,
+                4,
+                5
+            ]
+        },
+        "greninjamega": {
+            "cost": 18,
+            "drafted_in": [
+                1,
+                2,
+                4,
+                5
+            ]
+        },
+        "landorustherian": {
+            "cost": 18,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                5
+            ]
+        },
+        "latiosmega": {
+            "cost": 18,
+            "drafted_in": [
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "lopunnymega": {
+            "cost": 18,
+            "drafted_in": [
+                3,
+                4,
+                5
+            ]
+        },
+        "palafin": {
+            "cost": 18,
+            "drafted_in": [
+                3
+            ]
+        },
+        "scizormega": {
+            "cost": 18,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "tornadustherian": {
+            "cost": 18,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "chiyu": {
+            "cost": 17,
+            "drafted_in": [
+                1,
+                2,
+                3
+            ]
+        },
+        "deoxysspeed": {
+            "cost": 17,
+            "drafted_in": [
+                3
+            ]
+        },
+        "gholdengo": {
+            "cost": 17,
+            "drafted_in": [
+                2,
+                3
+            ]
+        },
+        "gougingfire": {
+            "cost": 17,
+            "drafted_in": [
+                5
+            ]
+        },
+        "greninja": {
+            "cost": 17,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                5
+            ]
+        },
+        "ironbundle": {
+            "cost": 17,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "kyurem": {
+            "cost": 17,
+            "drafted_in": []
+        },
+        "landorus": {
+            "cost": 17,
+            "drafted_in": [
+                1,
+                2,
+                4,
+                5
+            ]
+        },
+        "mawilemega": {
+            "cost": 17,
+            "drafted_in": [
+                4
+            ]
+        },
+        "medichammega": {
+            "cost": 17,
+            "drafted_in": [
+                1
+            ]
+        },
+        "mew": {
+            "cost": 17,
+            "drafted_in": [
+                3,
+                5
+            ]
+        },
+        "sneasler": {
+            "cost": 17,
+            "drafted_in": [
+                2,
+                3,
+                4
+            ]
+        },
+        "baxcaliburmega": {
+            "cost": 16,
+            "drafted_in": [
+                1,
+                2,
+                4
+            ]
+        },
+        "celesteela": {
+            "cost": 16,
+            "drafted_in": [
+                1,
+                5
+            ]
+        },
+        "cinderace": {
+            "cost": 16,
+            "drafted_in": [
+                2,
+                4,
+                5
+            ]
+        },
+        "froslassmega": {
+            "cost": 16,
+            "drafted_in": [
+                1
+            ]
+        },
+        "irontreads": {
+            "cost": 16,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "latios": {
+            "cost": 16,
+            "drafted_in": [
+                5
+            ]
+        },
+        "melmetal": {
+            "cost": 16,
+            "drafted_in": [
+                1,
+                4
+            ]
+        },
+        "roaringmoon": {
+            "cost": 16,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "slowkinggalar": {
+            "cost": 16,
+            "drafted_in": [
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "staraptormega": {
+            "cost": 16,
+            "drafted_in": []
+        },
+        "tapulele": {
+            "cost": 16,
+            "drafted_in": [
+                2
+            ]
+        },
+        "tinglu": {
+            "cost": 16,
+            "drafted_in": [
+                2,
+                3
+            ]
+        },
+        "urshifu": {
+            "cost": 16,
+            "drafted_in": [
+                3
+            ]
+        },
+        "urshifurapidstrike": {
+            "cost": 16,
+            "drafted_in": [
+                3,
+                4
+            ]
+        },
+        "zapdos": {
+            "cost": 16,
+            "drafted_in": [
+                1,
+                2,
+                4,
+                5
+            ]
+        },
+        "zeraora": {
+            "cost": 16,
+            "drafted_in": [
+                5
+            ]
+        },
+        "aegislash": {
+            "cost": 15,
+            "drafted_in": [
+                3,
+                5
+            ]
+        },
+        "alomomola": {
+            "cost": 15,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "baxcalibur": {
+            "cost": 15,
+            "drafted_in": []
+        },
+        "charizardmegax": {
+            "cost": 15,
+            "drafted_in": []
+        },
+        "corviknight": {
+            "cost": 15,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "dragalgemega": {
+            "cost": 15,
+            "drafted_in": [
+                1,
+                2
+            ]
+        },
+        "enamorus": {
+            "cost": 15,
+            "drafted_in": [
+                2
+            ]
+        },
+        "feraligatrmega": {
+            "cost": 15,
+            "drafted_in": [
+                1,
+                2
+            ]
+        },
+        "gliscor": {
+            "cost": 15,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "golisopodmega": {
+            "cost": 15,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "ironmoth": {
+            "cost": 15,
+            "drafted_in": [
+                1,
+                2,
+                3
+            ]
+        },
+        "kartana": {
+            "cost": 15,
+            "drafted_in": []
+        },
+        "necrozma": {
+            "cost": 15,
+            "drafted_in": [
+                5
+            ]
+        },
+        "ogerponwellspring": {
+            "cost": 15,
+            "drafted_in": [
+                2,
+                4,
+                5
+            ]
+        },
+        "quaquaval": {
+            "cost": 15,
+            "drafted_in": []
+        },
+        "rillaboom": {
+            "cost": 15,
+            "drafted_in": [
+                2,
+                3
+            ]
+        },
+        "slowbro": {
+            "cost": 15,
+            "drafted_in": [
+                2,
+                4
+            ]
+        },
+        "tapufini": {
+            "cost": 15,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "ursalunabloodmoon": {
+            "cost": 15,
+            "drafted_in": []
+        },
+        "victini": {
+            "cost": 15,
+            "drafted_in": [
+                5
+            ]
+        },
+        "weavile": {
+            "cost": 15,
+            "drafted_in": [
+                1,
+                2
+            ]
+        },
+        "zygarde": {
+            "cost": 15,
+            "drafted_in": []
+        },
+        "aerodactylmega": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "annihilape": {
+            "cost": 14,
+            "drafted_in": [
+                2
+            ]
+        },
+        "barbaraclemega": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "blaziken": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "charizardmegay": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "clefable": {
+            "cost": 14,
+            "drafted_in": [
+                4
+            ]
+        },
+        "clefablemega": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "darmanitangalar": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "dragonite": {
+            "cost": 14,
+            "drafted_in": [
+                4,
+                5
+            ]
+        },
+        "excadrill": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "excadrillmega": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "ferrothorn": {
+            "cost": 14,
+            "drafted_in": [
+                3,
+                5
+            ]
+        },
+        "floettemega": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "garchompmega": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "gardevoirmega": {
+            "cost": 14,
+            "drafted_in": [
+                1
+            ]
+        },
+        "glimmora": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "glimmoramega": {
+            "cost": 14,
+            "drafted_in": [
+                5
+            ]
+        },
+        "heatran": {
+            "cost": 14,
+            "drafted_in": [
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "hydreigon": {
+            "cost": 14,
+            "drafted_in": [
+                3
+            ]
+        },
+        "ironhands": {
+            "cost": 14,
+            "drafted_in": [
+                2
+            ]
+        },
+        "latias": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "manaphy": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "ogerponcornerstone": {
+            "cost": 14,
+            "drafted_in": [
+                4
+            ]
+        },
+        "ogerponhearthflame": {
+            "cost": 14,
+            "drafted_in": [
+                2
+            ]
+        },
+        "pelipper": {
+            "cost": 14,
+            "drafted_in": [
+                4
+            ]
+        },
+        "ragingbolt": {
+            "cost": 14,
+            "drafted_in": [
+                1,
+                4
+            ]
+        },
+        "rotomwash": {
+            "cost": 14,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "samurotthisui": {
+            "cost": 14,
+            "drafted_in": [
+                1,
+                3,
+                5
+            ]
+        },
+        "scizor": {
+            "cost": 14,
+            "drafted_in": [
+                1,
+                3,
+                5
+            ]
+        },
+        "skarmorymega": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "ursaluna": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "venusaurmega": {
+            "cost": 14,
+            "drafted_in": [
+                3
+            ]
+        },
+        "walkingwake": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "altariamega": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "archaludon": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "azumarill": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "blacephalon": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "dracovish": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "dragonitemega": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "infernape": {
+            "cost": 13,
+            "drafted_in": [
+                3
+            ]
+        },
+        "ironboulder": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "jirachi": {
+            "cost": 13,
+            "drafted_in": [
+                1,
+                2,
+                5
+            ]
+        },
+        "keldeo": {
+            "cost": 13,
+            "drafted_in": [
+                1,
+                2,
+                5
+            ]
+        },
+        "kingambit": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "kommoo": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "meganiummega": {
+            "cost": 13,
+            "drafted_in": [
+                3
+            ]
+        },
+        "pecharunt": {
+            "cost": 13,
+            "drafted_in": [
+                2,
+                4,
+                5
+            ]
+        },
+        "primarina": {
+            "cost": 13,
+            "drafted_in": [
+                1,
+                2,
+                4,
+                5
+            ]
+        },
+        "raichumegax": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "salamence": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "skarmory": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "slowking": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "swampertmega": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "thundurus": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "tyranitar": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "volcarona": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "zapdosgalar": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "blastoisemega": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "dracozolt": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "empoleon": {
+            "cost": 12,
+            "drafted_in": [
+                4
+            ]
+        },
+        "goodrahisui": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "hawlucha": {
+            "cost": 12,
+            "drafted_in": [
+                2
+            ]
+        },
+        "hawluchamega": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "hoopaunbound": {
+            "cost": 12,
+            "drafted_in": [
+                5
+            ]
+        },
+        "ironcrown": {
+            "cost": 12,
+            "drafted_in": [
+                1
+            ]
+        },
+        "krookodile": {
+            "cost": 12,
+            "drafted_in": [
+                2
+            ]
+        },
+        "mandibuzz": {
+            "cost": 12,
+            "drafted_in": [
+                1,
+                3
+            ]
+        },
+        "metagross": {
+            "cost": 12,
+            "drafted_in": [
+                3
+            ]
+        },
+        "mienshao": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "nidoking": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "nidoqueen": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "nihilego": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "raikou": {
+            "cost": 12,
+            "drafted_in": [
+                3
+            ]
+        },
+        "rotomheat": {
+            "cost": 12,
+            "drafted_in": [
+                3
+            ]
+        },
+        "sylveon": {
+            "cost": 12,
+            "drafted_in": [
+                4
+            ]
+        },
+        "terrakion": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "thundurustherian": {
+            "cost": 12,
+            "drafted_in": [
+                1,
+                2
+            ]
+        },
+        "togekiss": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "torkoal": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "toxapex": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "tyranitarmega": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "zoroarkhisui": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "aggronmega": {
+            "cost": 11,
+            "drafted_in": [
+                2
+            ]
+        },
+        "alakazam": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "arcaninehisui": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "azelf": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "basculegion": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "beedrillmega": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "buzzwole": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "ceruledge": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "deoxysdefense": {
+            "cost": 11,
+            "drafted_in": [
+                1
+            ]
+        },
+        "gengar": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "gothitelle": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "gyaradosmega": {
+            "cost": 11,
+            "drafted_in": [
+                5
+            ]
+        },
+        "hatterene": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "heracrossmega": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "klefki": {
+            "cost": 11,
+            "drafted_in": [
+                2
+            ]
+        },
+        "lilliganthisui": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "lycanrocdusk": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "mamoswine": {
+            "cost": 11,
+            "drafted_in": [
+                3
+            ]
+        },
+        "moltres": {
+            "cost": 11,
+            "drafted_in": [
+                3
+            ]
+        },
+        "ogerpon": {
+            "cost": 11,
+            "drafted_in": [
+                1,
+                5
+            ]
+        },
+        "pidgeotmega": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "pyroarmega": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "reuniclus": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "sandyshocks": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "screamtail": {
+            "cost": 11,
+            "drafted_in": [
+                3
+            ]
+        },
+        "skeledirge": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "swampert": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "tangrowth": {
+            "cost": 11,
+            "drafted_in": [
+                1
+            ]
+        },
+        "tinkaton": {
+            "cost": 11,
+            "drafted_in": [
+                3
+            ]
+        },
+        "volcanion": {
+            "cost": 11,
+            "drafted_in": [
+                4
+            ]
+        },
+        "amoonguss": {
+            "cost": 10,
+            "drafted_in": [
+                3
+            ]
+        },
+        "arcanine": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "barraskewda": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "blastoise": {
+            "cost": 10,
+            "drafted_in": [
+                5
+            ]
+        },
+        "chesnaughtmega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "chimechomega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "clodsire": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "cobalion": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "cresselia": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "crobat": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "dondozo": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "enamorustherian": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "fezandipiti": {
+            "cost": 10,
+            "drafted_in": [
+                1,
+                3,
+                4
+            ]
+        },
+        "grimmsnarl": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "hippowdon": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "kangaskhanmega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "kleavor": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "milotic": {
+            "cost": 10,
+            "drafted_in": [
+                2,
+                3
+            ]
+        },
+        "moltresgalar": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "mukalola": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "ninetalesalola": {
+            "cost": 10,
+            "drafted_in": [
+                1
+            ]
+        },
+        "sableyemega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "scolipede": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "serperior": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "sharpedomega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "silvally": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "slowbromega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "snorlax": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "tapubulu": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "uxie": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "weezinggalar": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "zarude": {
+            "cost": 10,
+            "drafted_in": [
+                2
+            ]
+        },
+        "aerodactyl": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "breloom": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "bronzong": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "celebi": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "chandelure": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "cyclizar": {
+            "cost": 9,
+            "drafted_in": [
+                1,
+                3
+            ]
+        },
+        "darmanitan": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "diggersby": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "donphan": {
+            "cost": 9,
+            "drafted_in": [
+                1,
+                2,
+                3
+            ]
+        },
+        "dugtrio": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "entei": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "floetteeternal": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "florges": {
+            "cost": 9,
+            "drafted_in": [
+                2,
+                3
+            ]
+        },
+        "gardevoir": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "hydrapple": {
+            "cost": 9,
+            "drafted_in": [
+                3
+            ]
+        },
+        "incineroar": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "ironjugulis": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "lokix": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "magnezone": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "mesprit": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "munkidori": {
+            "cost": 9,
+            "drafted_in": [
+                1
+            ]
+        },
+        "overqwil": {
+            "cost": 9,
+            "drafted_in": [
+                3
+            ]
+        },
+        "porygon2": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "registeel": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "roserade": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "rotommow": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "scolipedemega": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "scraftymega": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "sinistcha": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "slitherwing": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "starmie": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "suicune": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "talonflame": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "tentacruel": {
+            "cost": 9,
+            "drafted_in": [
+                3
+            ]
+        },
+        "umbreon": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "vaporeon": {
+            "cost": 9,
+            "drafted_in": [
+                3
+            ]
+        },
+        "xurkitree": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "araquanid": {
+            "cost": 8,
+            "drafted_in": [
+                3
+            ]
+        },
+        "armarouge": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "chandeluremega": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "cloyster": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "conkeldurr": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "diancie": {
+            "cost": 8,
+            "drafted_in": [
+                2
+            ]
+        },
+        "drapion": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "gallade": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "garganacl": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "gastrodon": {
+            "cost": 8,
+            "drafted_in": [
+                1
+            ]
+        },
+        "gyarados": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "haxorus": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "heracross": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "jellicent": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "meloetta": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "mudsdale": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "ninetales": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "noivern": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "okidogi": {
+            "cost": 8,
+            "drafted_in": [
+                2
+            ]
+        },
+        "pawmot": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "pinsirmega": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "porygonz": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "revavroom": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "ribombee": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "salazzle": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "seismitoad": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "shaymin": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "staraptor": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "swellow": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "taurospaldeaaqua": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "tornadus": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "toxtricity": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "tsareena": {
+            "cost": 8,
+            "drafted_in": [
+                2,
+                4
+            ]
+        },
+        "vikavolt": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "arctozolt": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "aromatisse": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "bisharp": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "blissey": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "braviaryhisui": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "cofagrigus": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "comfey": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "crawdaunt": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "dragalge": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "drampamega": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "dudunsparce": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "eelektrossmega": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "emboarmega": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "escavalier": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "espathra": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "falinksmega": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "feraligatr": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "gigalith": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "goodra": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "heliolisk": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "hitmontop": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "indeedee": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "ironleaves": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "kilowattrel": {
+            "cost": 7,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "kingdra": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "lucario": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "maushold": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "meowsticmmega": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "miltank": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "mimikyu": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "obstagoon": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "politoed": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "regieleki": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "rhyperior": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "scovillainmega": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "steelix": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "steelixmega": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "taurospaldeablaze": {
+            "cost": 7,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "torterra": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "vanilluxe": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "venusaur": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "whimsicott": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "zoroark": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "abomasnow": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "absolmega": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "bellibolt": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "bewear": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "braviary": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "brutebonnet": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "chansey": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "chesnaught": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "crabominablemega": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "delphox": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "espeon": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "flygon": {
+            "cost": 6,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "forretress": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "froslass": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "galvantula": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "gligar": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "golurkmega": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "houndoommega": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "ironthorns": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "manectricmega": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "mismagius": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "orthworm": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "palossand": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "pangoro": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "persianalola": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "polteageist": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "qwilfish": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "qwilfishhisui": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "regidrago": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "rotomfrost": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "sceptilemega": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "scrafty": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "slowbrogalar": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "slurpuff": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "stakataka": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "victreebelmega": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "weezing": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "wochien": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "yanmega": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "zygarde10": {
+            "cost": 6,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "arboliva": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "articunogalar": {
+            "cost": 5,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "bombirdier": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "brambleghast": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "cetitan": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "cinccino": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "decidueye": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "dhelmise": {
+            "cost": 5,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "ditto": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "drampa": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "eelektross": {
+            "cost": 5,
+            "drafted_in": [
+                2
+            ]
+        },
+        "electrodehisui": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "emboar": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "farigiraf": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "flamigo": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "hariyama": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "hitmonlee": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "inteleon": {
+            "cost": 5,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "lanturn": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "lickilicky": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "machamp": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "medicham": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "muk": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "passimian": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "piloswine": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "quagsire": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "rotom": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "rotomfan": {
+            "cost": 5,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "sableye": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "sharpedo": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "sigilyph": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "sirfetchd": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "skuntank": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "tyrantrum": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "ursaring": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "venomoth": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "vileplume": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "virizion": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "xatu": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "accelgor": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "alcremie": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "ampharosmega": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "audino": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "audinomega": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "banettemega": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "barbaracle": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "cameruptmega": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "centiskorch": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "decidueyehisui": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "drednaw": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "drifblim": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "druddigon": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "duraludon": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "electivire": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "exploud": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "floatzel": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "garbodor": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "glaliemega": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "glastrier": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "golurk": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "gothorita": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "gourgeist": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "grafaiai": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "granbull": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "hitmonchan": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "hoopa": {
+            "cost": 4,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "jolteon": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "lilligant": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "mabosstiff": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "magmortar": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "magneton": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "marowakalola": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "musharna": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "omastar": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "oricorio": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "primeape": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "pyroar": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "raichualola": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "sandaconda": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "sawk": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "stunfisk": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "tangela": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "toedscruel": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "toxicroak": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "typhlosionhisui": {
+            "cost": 4,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "abomasnowmega": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "ambipom": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "appletun": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "archeops": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "arctovish": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "articuno": {
+            "cost": 3,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "aurorus": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "bouffalant": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "charizard": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "clawitzer": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "claydol": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "copperajah": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "cradily": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "crustle": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "cryogonal": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "doublade": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "durant": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "dusknoir": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "eldegoss": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "golemalola": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "golisopod": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "guzzlord": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "honchkrow": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "houndstone": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "kangaskhan": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "komala": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "liepard": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "linoone": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "ludicolo": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "lycanroc": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "malamar": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "malamarmega": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "minior": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "orbeetle": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "perrserker": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "pincurchin": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "raichu": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "rapidash": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "rapidashgalar": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "regigigas": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "roselia": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "runerigus": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "sceptile": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "scyther": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "smeargle": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "sneasel": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "sneaselhisui": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "spiritomb": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "stoutland": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "stunfiskgalar": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "tatsugiri": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "tauros": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "taurospaldeacombat": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "turtonator": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "typenull": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "typhlosion": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "victreebel": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "vivillon": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "zangoose": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "absol": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "aggron": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "altaria": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "ampharos": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "arbok": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "ariados": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "armaldo": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "avalugg": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "avalugghisui": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "basculin": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "beartic": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "beheeyem": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "bellossom": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "bibarel": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "boltund": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "bruxish": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "calyrex": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "camerupt": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "carbink": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "carracosta": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "charjabug": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "chimecho": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "coalossal": {
+            "cost": 2,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "corsolagalar": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "crabominable": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "cramorant": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "crocalor": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "cursola": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "dachsbun": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "dipplin": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "dodrio": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "dolliv": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "dottler": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "dubwool": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "dugtrioalola": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "dunsparce": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "duosion": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "dusclops": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "eiscue": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "electabuzz": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "electrode": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "emolga": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "exeggutor": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "exeggutoralola": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "falinks": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "flapple": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "flareon": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "fraxure": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "frogadier": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "frosmoth": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "girafarig": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "glaceon": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "gogoat": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "golbat": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "golduck": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "golem": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "gorebyss": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "grotle": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "gurdurr": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "haunter": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "houndoom": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "huntail": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "illumise": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "jynx": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "kabutops": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "kadabra": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "kecleon": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "kingler": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "klawf": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "klinklang": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "lapras": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "leafeon": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "leavanny": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "lickitung": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "lurantis": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "luxray": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "lycanrocmidnight": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "machoke": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "magmar": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "manectric": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "mantine": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "marowak": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "masquerain": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "mawile": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "meganium": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "meowstic": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "misdreavus": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "monferno": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "morpeko": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "mrmime": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "mrmimegalar": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "mrrime": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "murkrow": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "naclstack": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "oinkologne": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "oranguru": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "persian": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "pikachu": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "pinsir": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "poliwrath": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "probopass": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "purugly": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "pyukumuku": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "quaxwell": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "quilladin": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "rabsca": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "rampardos": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "raticate": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "raticatealola": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "regice": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "regirock": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "rhydon": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "samurott": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "sandslash": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "sandslashalola": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "sawsbuck": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "scovillain": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "shedinja": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "shelgon": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "shiftry": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "shiinotic": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "shuckle": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "simipour": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "simisage": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "simisear": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "slaking": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "sliggoohisui": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "spidops": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "squawkabilly": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "stantler": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "stonjourner": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "sudowoodo": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "swoobat": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "thievul": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "throh": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "thwackey": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "togedemaru": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "toucannon": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "trapinch": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "trevenant": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "veluza": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "vespiquen": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "vigoroth": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "volbeat": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "vullaby": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "walrein": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "wartortle": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "whiscash": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "wigglytuff": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "wishiwashi": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "wobbuffet": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "wormadam": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "wugtrio": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "wyrdeer": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "zebstrika": {
+            "cost": 2,
+            "drafted_in": []
+        },
+        "abra": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "aipom": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "amaura": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "anorith": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "applin": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "archen": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "arctibax": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "aron": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "arrokuda": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "axew": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "azurill": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bagon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "baltoy": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "banette": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "barboach": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bastiodon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bayleef": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "beautifly": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "beedrill": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "beldum": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bellsprout": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bergmite": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bidoof": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "binacle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "blipbug": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "blitzle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "boldore": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bonsly": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bounsweet": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "braixen": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bramblin": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "brionne": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bronzor": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "budew": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "buizel": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bulbasaur": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "buneary": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bunnelby": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "burmy": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "butterfree": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cacnea": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cacturne": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "capsakid": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "carkol": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "carnivine": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "carvanha": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cascoon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "castform": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "caterpie": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cetoddle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "charcadet": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "charmander": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "charmeleon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "chatot": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cherrim": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cherubi": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "chespin": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "chewtle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "chikorita": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "chimchar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "chinchou": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "chingling": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "clamperl": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "clauncher": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "clefairy": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cleffa": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "clobbopus": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "combee": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "combusken": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "corphish": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "corsola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "corvisquire": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cosmoem": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cosmog": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cottonee": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "crabrawler": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cranidos": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "croagunk": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "croconaw": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cubchoo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cubone": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cufant": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cutiefly": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "cyndaquil": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dartrix": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "darumaka": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "darumakagalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dedenne": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "deerling": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "deino": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "delcatty": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "delibird": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dewgong": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dewott": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dewpider": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "diglett": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "diglettalola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "doduo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dragonair": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "drakloak": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dratini": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dreepy": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "drifloon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "drilbur": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "drizzile": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "drowzee": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ducklett": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "duskull": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dustox": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dwebble": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "eelektrik": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "eevee": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ekans": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "electrike": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "elekid": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "elgyem": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "espurr": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "exeggcute": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "farfetchd": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "farfetchdgalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "fearow": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "feebas": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "fennekin": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ferroseed": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "fidough": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "finizen": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "finneon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "flaaffy": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "flabebe": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "fletchinder": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "fletchling": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "flittle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "floette": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "floragato": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "fomantis": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "foongus": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "frigibax": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "frillish": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "froakie": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "fuecoco": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "furfrou": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "furret": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "gabite": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "gastly": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "geodude": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "geodudealola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "gible": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "gimmighoul": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "glalie": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "glameow": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "glimmet": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "gloom": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "goldeen": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "golett": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "goomy": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "gossifleur": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "gothita": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "grapploct": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "graveler": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "graveleralola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "greavard": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "greedent": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "grimer": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "grimeralola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "grookey": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "grovyle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "growlithe": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "growlithehisui": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "grubbin": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "grumpig": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "gulpin": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "gumshoos": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "hakamoo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "happiny": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "hatenna": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "hattrem": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "heatmor": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "helioptile": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "herdier": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "hippopotas": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "honedge": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "hoothoot": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "hoppip": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "horsea": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "houndour": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "hypno": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "igglybuff": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "impidimp": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "inkay": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ivysaur": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "jangmoo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "jigglypuff": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "joltik": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "jumpluff": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "kabuto": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "kakuna": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "karrablast": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "kirlia": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "klang": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "klink": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "koffing": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "krabby": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "kricketot": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "kricketune": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "krokorok": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "kubfu": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "lairon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "lampent": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "larvesta": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "larvitar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "lechonk": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ledian": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ledyba": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "lileep": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "lillipup": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "linoonegalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "litleo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "litten": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "litwick": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "lombre": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "lopunny": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "lotad": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "loudred": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "lumineon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "lunatone": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "luvdisc": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "luxio": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "machop": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "magby": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "magcargo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "magikarp": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "magnemite": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "makuhita": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "mankey": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "mantyke": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "maractus": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "mareanie": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "mareep": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "marill": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "marshtomp": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "maschiff": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "meditite": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "meltan": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "meowth": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "meowthalola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "meowthgalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "metang": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "metapod": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "mienfoo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "mightyena": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "milcery": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "mimejr": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "minccino": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "minun": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "morelull": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "morgrem": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "mothim": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "mudbray": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "mudkip": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "munchlax": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "munna": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "nacli": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "natu": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "nickit": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "nidoranf": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "nidoranm": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "nidorina": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "nidorino": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "nincada": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ninjask": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "noctowl": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "noibat": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "nosepass": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "numel": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "nuzleaf": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "nymble": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "octillery": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "oddish": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "omanyte": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "onix": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "oshawott": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pachirisu": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "palpitoad": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pancham": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "panpour": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pansage": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pansear": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "paras": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "parasect": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "patrat": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pawmi": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pawmo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pawniard": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "petilil": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "phanpy": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "phantump": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "phione": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pichu": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pidgeot": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pidgeotto": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pidgey": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pidove": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pignite": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pikipek": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pineco": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "piplup": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "plusle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "poipole": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "poliwag": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "poliwhirl": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "poltchageist": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ponyta": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ponytagalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "poochyena": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "popplio": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "porygon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "prinplup": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "psyduck": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pumpkaboo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "pupitar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "purrloin": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "quaxly": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "quilava": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "raboot": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ralts": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "rattata": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "rattataalola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "relicanth": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "rellor": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "remoraid": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "rhyhorn": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "riolu": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "rockruff": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "roggenrola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "rolycoly": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "rookidee": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "rowlet": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "rufflet": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "salandit": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sandile": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sandshrew": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sandshrewalola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sandygast": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "scatterbug": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "scorbunny": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "scraggy": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "seadra": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "seaking": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sealeo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "seedot": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "seel": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sentret": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "servine": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "seviper": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sewaddle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "shellder": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "shellos": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "shelmet": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "shieldon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "shinx": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "shroodle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "shroomish": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "shuppet": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "silcoon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "silicobra": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sinistea": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sizzlipede": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "skiddo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "skiploom": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "skitty": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "skorupi": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "skrelp": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "skwovet": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "slakoth": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sliggoo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "slowpoke": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "slowpokegalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "slugma": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "smoliv": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "smoochum": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "snivy": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "snom": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "snorunt": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "snover": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "snubbull": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sobble": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "solosis": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "solrock": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "spearow": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "spewpa": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "spheal": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "spinarak": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "spinda": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "spoink": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sprigatito": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "spritzee": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "squirtle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "staravia": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "starly": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "staryu": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "steenee": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "stufful": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "stunky": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sunflora": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sunkern": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "surskit": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "swablu": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "swadloon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "swalot": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "swanna": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "swinub": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "swirlix": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tadbulb": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "taillow": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tandemaus": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tarountula": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "teddiursa": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tentacool": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tepig": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "timburr": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tinkatink": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tinkatuff": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tirtouga": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "toedscool": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "togepi": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "togetic": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "torchic": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "torracat": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "totodile": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "toxel": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tranquill": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "treecko": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tropius": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "trubbish": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "trumbeak": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "turtwig": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tympole": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tynamo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tyrogue": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "tyrunt": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "unfezant": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "vanillish": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "vanillite": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "varoom": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "venipede": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "venonat": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "vibrava": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "voltorb": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "voltorbhisui": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "vulpix": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "vulpixalola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wailmer": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wailord": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "watchog": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wattrel": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "weedle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "weepinbell": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "whirlipede": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "whismur": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wiglett": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wimpod": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wingull": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "woobat": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wooloo": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wooper": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wooperpaldea": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wurmple": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wynaut": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "yamask": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "yamaskgalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "yamper": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "yanma": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "yungoos": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "zigzagoon": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "zigzagoongalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "zorua": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "zoruahisui": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "zubat": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "zweilous": {
+            "cost": 1,
+            "drafted_in": []
+        }
+    }
 }

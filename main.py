@@ -1,6 +1,7 @@
 import sys
 import json
 import os
+import re
 import pandas as pd
 from assets.ui.pokemon_list_item import PokemonListItem, SettingsPokemonListItem
 from data.pokemon_obj import PokemonData
@@ -11,7 +12,7 @@ from assets.ui.help_popup_ui import Ui_helpDialog
 from assets.ui.clickable_label import ClickableLabel
 from PySide6.QtWidgets import QMainWindow, QApplication, QListWidgetItem, QCompleter, QWidget, \
                               QHBoxLayout, QDialog, QLabel, QSizePolicy, QSplashScreen, \
-                              QMessageBox, QFileDialog
+                              QMessageBox, QFileDialog, QInputDialog
 from PySide6.QtGui import Qt, QPixmap, QColor, QIcon, QMovie
 from PySide6.QtCore import QStringListModel, QTimer, Signal, QSize
 
@@ -62,6 +63,12 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                          "Steel", "Water"]
         self.all_abilities = set()
 
+        # draft board imported from a sheet: {species_id: {"cost": int, "drafted_in": [pool numbers]}}
+        self.draft_board = {}
+        self.draft_pools = 0
+        self.pool = None
+        self.hide_drafted = False
+
         self.load_pokemon_data()
 
     def load_pokemon_data(self, init = True):
@@ -72,10 +79,15 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                 if init:
                     data = json.load(f)
                     self.selected_pokemon = data.get("selected_pokemon", [])
+                    self.draft_board = data.get("draft_board", {})
+                    self.draft_pools = data.get("draft_pools", 0)
             with open(LEARNSET_PATH, 'r') as f:
                 learnset_data = json.load(f)
             with open(CONFIG_FILE_PATH, 'r') as f:
                 favourites = json.load(f)
+            if init:
+                self.pool = favourites.get("pool")
+                self.hide_drafted = favourites.get("hide_drafted", False)
 
             self.highest_stats = [-float('inf')] * 6
             self.lowest_stats = [float('inf')] * 6
@@ -134,6 +146,8 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
                 favourite = True if name in favourites.get("favourites") else False
 
+                draft_info = self.draft_board.get(pokemon, {})
+
                 # update highest and lowest stats
                 for i, stat in enumerate(stats):
                     if stat > self.highest_stats[i]:
@@ -150,7 +164,10 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                     hidden_abilities=hidden_abilities,
                     stats=stats,
                     moves=moves,
-                    favourite=favourite
+                    favourite=favourite,
+                    species_id=pokemon,
+                    cost=draft_info.get("cost"),
+                    drafted=self.pool in draft_info.get("drafted_in", [])
                 )
 
                 # populate lists of pokemon
@@ -199,6 +216,9 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.spdLabel.clicked.connect(lambda: self.sort_by_trait("spd"))
         self.speLabel.clicked.connect(lambda: self.sort_by_trait("spe"))
         self.bstLabel.clicked.connect(lambda: self.sort_by_trait("bst"))
+        self.costLabel.clicked.connect(lambda: self.sort_by_trait("cost"))
+        self.hideDraftedCheckbox.setChecked(self.hide_drafted)
+        self.hideDraftedCheckbox.stateChanged.connect(self.toggle_hide_drafted)
 
         # settings page
         self.applyButton.clicked.connect(self.apply_pokemon_list)
@@ -206,6 +226,8 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.exportPokemonButton.clicked.connect(self.export_pokemon_list)
         self.importPokemonButton.clicked.connect(self.import_pokemon_list)
         self.resetPokemonButton.clicked.connect(self.reset_pokemon_list)
+        self.populate_pool_combobox()
+        self.poolComboBox.currentIndexChanged.connect(self.change_pool)
 
     def initialise_spinner(self):
         sl = 250 # side length
@@ -221,6 +243,58 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.spinner_label.setMovie(self.spinner_movie)
 
         self.spinner_label.move(max(0, self.width() / 2 - sl/2), max(0, self.height() / 2 - sl/2))
+
+    def selected_pokemon_json(self):
+        return {
+            "selected_pokemon": self.selected_pokemon,
+            "draft_pools": self.draft_pools,
+            "draft_board": self.draft_board
+        }
+
+    def save_config(self):
+        # keep saved favourites for pokemon that aren't currently loaded
+        loaded_names = {pokemon.name for pokemon in self.master_list}
+        try:
+            with open(CONFIG_FILE_PATH, 'r') as f:
+                saved_favourites = json.load(f).get("favourites", [])
+        except (FileNotFoundError, json.JSONDecodeError):
+            saved_favourites = []
+        favourite_names = [name for name in saved_favourites if name not in loaded_names] + \
+                          [pokemon.name for pokemon in self.master_list if pokemon.favourite]
+        with open(CONFIG_FILE_PATH, 'w') as f:
+            json.dump({
+                "favourites": favourite_names,
+                "pool": self.pool,
+                "hide_drafted": self.hide_drafted
+            }, f, indent=4)
+
+    def populate_pool_combobox(self):
+        """Fills the settings pool dropdown with the pools from the imported draft board."""
+        self.poolComboBox.blockSignals(True)
+        self.poolComboBox.clear()
+        self.poolComboBox.addItem("None")
+        for pool in range(1, self.draft_pools + 1):
+            self.poolComboBox.addItem(f"P{pool}")
+        self.poolComboBox.setCurrentIndex(self.pool if self.pool and self.pool <= self.draft_pools else 0)
+        self.poolComboBox.blockSignals(False)
+
+    def change_pool(self, index):
+        self.pool = index if index > 0 else None
+        self.save_config()
+        self.refresh_draft_status()
+
+    def refresh_draft_status(self):
+        """Updates cost and drafted state of loaded pokemon from the draft board and selected pool."""
+        for pokemon in self.master_list:
+            draft_info = self.draft_board.get(pokemon.species_id, {})
+            pokemon.cost = draft_info.get("cost")
+            pokemon.drafted = self.pool in draft_info.get("drafted_in", [])
+        self.update_filtered_pokemon()
+
+    def toggle_hide_drafted(self):
+        self.hide_drafted = self.hideDraftedCheckbox.isChecked()
+        self.save_config()
+        self.update_filtered_pokemon()
 
     def toggle_settings(self, i):
         self.stackedWidget.setCurrentIndex(i)
@@ -264,7 +338,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         try:
             with open(SELECTED_POKEMON_PATH, "w") as f:
-                json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+                json.dump(self.selected_pokemon_json(), f, indent=4)
         except Exception as e:
             print(f"Error saving selected Pokémon: {e}")
 
@@ -298,7 +372,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         try:
             with open(file_path, "w") as f:
-                json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+                json.dump(self.selected_pokemon_json(), f, indent=4)
         except Exception as e:
             QMessageBox.critical(self, "Export Error", f"Failed to export Pokémon list:\n{e}")
 
@@ -332,6 +406,10 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                     raise ValueError("Invalid file format: 'selected_pokemon' not found or not a list.")
                 
                 self.selected_pokemon = selected
+                if "draft_board" in data:
+                    self.draft_board = data["draft_board"]
+                    self.draft_pools = data.get("draft_pools", 0)
+                    self.populate_pool_combobox()
                 for widget in self.settingsPokemonListWidget.findChildren(SettingsPokemonListItem):
                     if widget.name_label.text() in self.selected_pokemon:
                         widget.checkbox.setChecked(True)
@@ -339,7 +417,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                         widget.checkbox.setChecked(False)
 
                 with open(SELECTED_POKEMON_PATH, "w") as f:
-                    json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+                    json.dump(self.selected_pokemon_json(), f, indent=4)
 
                 self.load_pokemon_data(False)
                 self.update_filtered_pokemon()
@@ -364,7 +442,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                         widget.checkbox.setChecked(False)
 
                 with open(SELECTED_POKEMON_PATH, "w") as f:
-                    json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+                    json.dump(self.selected_pokemon_json(), f, indent=4)
                 self.load_pokemon_data(False)
                 self.update_filtered_pokemon()
                 QMessageBox.information(self, "Import Successful", "Pokémon list imported successfully.")
@@ -406,7 +484,11 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                     "19.0", "18.0", "17.0", "16.0", "15.0", "14.0", "13.0", "12.0", "11.0", "10.0",
                     "9.0", "8.0", "7.0", "6.0", "5.0", "4.0", "3.0", "2.0", "1.0", "1pointnfes",
                     "20", "19", "18", "17", "16", "15", "14", "13", "12", "11", "10",
-                    "9", "8", "7", "6", "5", "4", "3", "2", "1", "<3", "28", "banned", "tb", ""
+                    "9", "8", "7", "6", "5", "4", "3", "2", "1", "<3", "28", "banned", "tb", "",
+                    "20 Points", "19 Points", "P1", "P2", "P3", "P4", "P5", "18 Points", "17 Points", "16 Points",
+                    "15 Points", "14 Points", "13 Points", "12 Points", "11 Points", "10 Points", "9 Points",
+                    "8 Points", "7 Points", "6 Points", "5 Points", "4 Points", "3 Points", "2 Points",
+                    "1 Point", "X", "✓"
                 }
                 
                 def regional_pokemon(pokemon):
@@ -525,7 +607,48 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                     string = f"The following Pokémon failed to be normalised and imported:\n{', '.join(excluded_list)}"
                     QMessageBox.warning(self, "Excluded Pokémon", string)
                     print(string)
-                    
+
+                # read costs and drafted ticks: each "N Points" header sits above a column of names,
+                # followed by one column per pool (P1, P2, ...) marked ✓ if available or X if drafted
+                grid = pd.read_excel(xls, sheet_name=target_sheet, header=None, engine='openpyxl')
+                draft_board = {}
+                draft_pools = 0
+                for header_row in range(grid.shape[0]):
+                    for col in range(grid.shape[1] - 1):
+                        points_match = re.fullmatch(r"(\d+) Points?", str(grid.iat[header_row, col]).strip())
+                        if not points_match:
+                            continue
+                        cost = int(points_match.group(1))
+
+                        pool_cols = []
+                        pool_col = col + 2
+                        while pool_col < grid.shape[1]:
+                            pool_match = re.fullmatch(r"P(\d+)", str(grid.iat[header_row, pool_col]).strip())
+                            if not pool_match:
+                                break
+                            pool_cols.append((int(pool_match.group(1)), pool_col))
+                            pool_col += 1
+                        draft_pools = max(draft_pools, len(pool_cols))
+
+                        for row in range(header_row + 1, grid.shape[0]):
+                            normalised = normalise_pokemon(grid.iat[row, col + 1])
+                            if normalised not in self.pokedex:
+                                continue
+                            draft_board[normalised] = {
+                                "cost": cost,
+                                "drafted_in": [pool for pool, c in pool_cols
+                                               if str(grid.iat[row, c]).strip().upper() == "X"]
+                            }
+
+                self.draft_board = draft_board
+                self.draft_pools = draft_pools
+                if draft_pools and not (self.pool and self.pool <= draft_pools):
+                    pool_names = [f"P{pool}" for pool in range(1, draft_pools + 1)]
+                    choice, ok = QInputDialog.getItem(self, "Draft Pool", "Which pool are you in?", pool_names, 0, False)
+                    self.pool = pool_names.index(choice) + 1 if ok else None
+                self.save_config()
+                self.populate_pool_combobox()
+
                 self.selected_pokemon = imported_list
                 for widget in self.settingsPokemonListWidget.findChildren(SettingsPokemonListItem):
                     if widget.name_label.text() in self.selected_pokemon:
@@ -534,7 +657,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                         widget.checkbox.setChecked(False)
 
                 with open(SELECTED_POKEMON_PATH, "w") as f:
-                    json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+                    json.dump(self.selected_pokemon_json(), f, indent=4)
 
                 self.load_pokemon_data(False)
                 self.update_filtered_pokemon()
@@ -580,7 +703,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         try:
             with open(SELECTED_POKEMON_PATH, "w") as f:
-                json.dump({"selected_pokemon": self.selected_pokemon}, f, indent=4)
+                json.dump(self.selected_pokemon_json(), f, indent=4)
         except Exception as e:
             print(f"Error saving selected Pokémon: {e}")
 
@@ -701,6 +824,9 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
             if matches_filter:
                 self.filtered_sorted_list.append(pokemon)
 
+        if self.hide_drafted:
+            self.filtered_sorted_list = [p for p in self.filtered_sorted_list if not p.drafted]
+
         # now we have all filtered pokemon in self.filtered_sorted_list
         if self.selected_trait == None or self.selected_trait == "num":
             sort_key = lambda pokemon: pokemon.num
@@ -710,7 +836,10 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
             reverse = not self.trait_reverse
         elif self.selected_trait == "bst":
             sort_key = lambda pokemon: sum(pokemon.stats)
-            reverse = self.trait_reverse 
+            reverse = self.trait_reverse
+        elif self.selected_trait == "cost":
+            sort_key = lambda pokemon: pokemon.cost if pokemon.cost is not None else -1
+            reverse = self.trait_reverse
         else:
             stats = ["hp","atk","def","spa","spd","spe"]
             sort_key = lambda pokemon: pokemon.stats[stats.index(self.selected_trait)]
@@ -797,7 +926,12 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.ui.lineEdit.textChanged.connect(lambda text: self.update_moves_in_popup(text, selected_pokemon))
         self.ui.starLabel.clicked.connect(lambda: self.update_favourites(selected_pokemon))
 
-        self.ui.nameLabel.setText(selected_pokemon.name)
+        popup_title = selected_pokemon.name
+        if selected_pokemon.cost is not None:
+            popup_title += f" ({selected_pokemon.cost} pts)"
+        if selected_pokemon.drafted:
+            popup_title += " - Drafted"
+        self.ui.nameLabel.setText(popup_title)
         
         star_png = "star_filled.png" if selected_pokemon.favourite else "star.png"
         png_path = os.path.join("assets", "icons", star_png)
@@ -878,11 +1012,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
     def closeEvent(self, event):
         try:
-            favourite_names = [pokemon.name for pokemon in self.master_list if pokemon.favourite]
-
-            with open(CONFIG_FILE_PATH, 'w') as f:
-                json.dump({"favourites": favourite_names}, f, indent=4)
-
+            self.save_config()
             print("Favourites saved successfully.")
         except Exception as e:
             print(f"Error saving favourites: {e}")

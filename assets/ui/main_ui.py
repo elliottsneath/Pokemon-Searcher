@@ -16,10 +16,10 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QHBoxLayout, QLabel,
-    QLineEdit, QListWidget, QListWidgetItem, QMainWindow,
-    QSizePolicy, QSpacerItem, QStackedWidget, QToolBar,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QHBoxLayout,
+    QLabel, QLineEdit, QListWidget, QListWidgetItem,
+    QMainWindow, QSizePolicy, QSpacerItem, QStackedWidget,
+    QToolBar, QVBoxLayout, QWidget)
 
 from assets.ui.animated_button import AnimatedHoverButton
 from assets.ui.clickable_label import ClickableLabel
@@ -128,6 +128,13 @@ class Ui_PokemonSearcher(object):
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer)
 
+        self.hideDraftedCheckbox = QCheckBox(self.main)
+        self.hideDraftedCheckbox.setObjectName(u"hideDraftedCheckbox")
+        sizePolicy2.setHeightForWidth(self.hideDraftedCheckbox.sizePolicy().hasHeightForWidth())
+        self.hideDraftedCheckbox.setSizePolicy(sizePolicy2)
+
+        self.horizontalLayout_3.addWidget(self.hideDraftedCheckbox)
+
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
 
@@ -146,6 +153,15 @@ class Ui_PokemonSearcher(object):
         self.nameLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.horizontalLayout_2.addWidget(self.nameLabel)
+
+        self.costLabel = ClickableLabel(self.main)
+        self.costLabel.setObjectName(u"costLabel")
+        sizePolicy3.setHeightForWidth(self.costLabel.sizePolicy().hasHeightForWidth())
+        self.costLabel.setSizePolicy(sizePolicy3)
+        self.costLabel.setMinimumSize(QSize(30, 0))
+        self.costLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.horizontalLayout_2.addWidget(self.costLabel)
 
         self.typeLabel = QLabel(self.main)
         self.typeLabel.setObjectName(u"typeLabel")
@@ -277,13 +293,23 @@ class Ui_PokemonSearcher(object):
 
         self.horizontalLayout.addWidget(self.settingsSearchBar)
 
+        self.poolLabel = QLabel(self.settings)
+        self.poolLabel.setObjectName(u"poolLabel")
+
+        self.horizontalLayout.addWidget(self.poolLabel)
+
+        self.poolComboBox = QComboBox(self.settings)
+        self.poolComboBox.setObjectName(u"poolComboBox")
+
+        self.horizontalLayout.addWidget(self.poolComboBox)
+
         self.resetPokemonButton = AnimatedHoverButton(self.settings)
         self.resetPokemonButton.setObjectName(u"resetPokemonButton")
 
         self.horizontalLayout.addWidget(self.resetPokemonButton)
 
         self.horizontalLayout.setStretch(0, 2)
-        self.horizontalLayout.setStretch(1, 1)
+        self.horizontalLayout.setStretch(3, 1)
 
         self.verticalLayout_3.addLayout(self.horizontalLayout)
 
@@ -330,7 +356,9 @@ class Ui_PokemonSearcher(object):
         self.typesCheckbox.setText(QCoreApplication.translate("PokemonSearcher", u"Types", None))
         self.abilitiesCheckbox.setText(QCoreApplication.translate("PokemonSearcher", u"Abilities", None))
         self.movesCheckbox.setText(QCoreApplication.translate("PokemonSearcher", u"Moves", None))
+        self.hideDraftedCheckbox.setText(QCoreApplication.translate("PokemonSearcher", u"Hide drafted", None))
         self.nameLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Name", None))
+        self.costLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Pts", None))
         self.typeLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Types", None))
         self.ablilityLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Abilities", None))
         self.hpLabel.setText(QCoreApplication.translate("PokemonSearcher", u"HP", None))
@@ -345,6 +373,7 @@ class Ui_PokemonSearcher(object):
         self.importPokemonButton.setText(QCoreApplication.translate("PokemonSearcher", u"Import Pokemon List", None))
         self.backButton.setText(QCoreApplication.translate("PokemonSearcher", u"Back", None))
         self.settingsSearchBar.setPlaceholderText(QCoreApplication.translate("PokemonSearcher", u"Search Pokemon...", None))
+        self.poolLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Draft pool:", None))
         self.resetPokemonButton.setText(QCoreApplication.translate("PokemonSearcher", u"Reset Pokemon List", None))
         self.toolBar.setWindowTitle(QCoreApplication.translate("PokemonSearcher", u"toolBar", None))
     # retranslateUi
