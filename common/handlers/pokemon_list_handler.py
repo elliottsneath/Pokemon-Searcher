@@ -13,6 +13,7 @@ from PySide6.QtCore import QSize, QStringListModel, QTimer
 
 from assets.ui.pokemon_list_item import PokemonListItem
 from assets.ui.pokemon_popup_ui import Ui_PokemonPopup
+from common.sprite_loader import get_sprite
 from common.widget_groups import MainWidgets
 from data.pokemon_obj import PokemonData
 
@@ -270,6 +271,13 @@ class PokemonListHandler:
             stat_bars[i].color = QColor(int(255 * (1 - norm)), int(255 * norm), 0)
             stat_bars[i].set_value(stat, max_stat=hi)
             stat_bars[i].update()
+
+        sprite = get_sprite(pokemon.species_id, pokemon.name)
+        if sprite:
+            ui.sprite_label.setPixmap(sprite.scaled(120, 120, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+            ui.sprite_label.setAlignment(Qt.AlignCenter)
+        else:
+            ui.sprite_label.clear()
 
         ui.moveListWidget.clear()
         for move in pokemon.moves:

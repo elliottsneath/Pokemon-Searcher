@@ -8,3 +8,4 @@ error_log.txt
 .vscode/settings.json
 data/pokemon_cache.pkl
 data/learnsets_merged.json
+assets/sprites/

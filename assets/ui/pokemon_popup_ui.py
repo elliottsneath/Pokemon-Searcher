@@ -30,6 +30,11 @@ class Ui_PokemonPopup(object):
         PokemonPopup.resize(400, 338)
         self.verticalLayout = QVBoxLayout(PokemonPopup)
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.sprite_label = QLabel(PokemonPopup)
+        self.sprite_label.setObjectName(u"sprite_label")
+
+        self.verticalLayout.addWidget(self.sprite_label)
+
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.nameLabel = QLabel(PokemonPopup)
@@ -211,6 +216,7 @@ class Ui_PokemonPopup(object):
 
     def retranslateUi(self, PokemonPopup):
         PokemonPopup.setWindowTitle(QCoreApplication.translate("PokemonPopup", u"Dialog", None))
+        self.sprite_label.setText("")
         self.nameLabel.setText(QCoreApplication.translate("PokemonPopup", u"TextLabel", None))
         self.starLabel.setText(QCoreApplication.translate("PokemonPopup", u"star", None))
         self.type1Label.setText(QCoreApplication.translate("PokemonPopup", u"TextLabel", None))
