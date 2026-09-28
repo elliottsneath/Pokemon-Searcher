@@ -20,7 +20,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
     QGridLayout, QHBoxLayout, QLabel, QLineEdit,
     QListWidget, QListWidgetItem, QMainWindow, QSizePolicy,
     QSpacerItem, QStackedWidget, QStatusBar, QToolBar,
-    QVBoxLayout, QWidget)
+    QToolButton, QVBoxLayout, QWidget)
 
 from assets.ui.animated_button import AnimatedHoverButton
 from assets.ui.clickable_label import ClickableLabel
@@ -29,7 +29,7 @@ class Ui_PokemonSearcher(object):
     def setupUi(self, PokemonSearcher):
         if not PokemonSearcher.objectName():
             PokemonSearcher.setObjectName(u"PokemonSearcher")
-        PokemonSearcher.resize(756, 552)
+        PokemonSearcher.resize(756, 578)
         self.actionVersion = QAction(PokemonSearcher)
         self.actionVersion.setObjectName(u"actionVersion")
         self.actionVersion.setEnabled(False)
@@ -271,6 +271,21 @@ class Ui_PokemonSearcher(object):
 
         self.gridLayout_3.addWidget(self.label_3, 0, 2, 1, 1)
 
+        self.budgetLineEdit = QLineEdit(self.settings)
+        self.budgetLineEdit.setObjectName(u"budgetLineEdit")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.budgetLineEdit.sizePolicy().hasHeightForWidth())
+        self.budgetLineEdit.setSizePolicy(sizePolicy4)
+
+        self.gridLayout_3.addWidget(self.budgetLineEdit, 0, 3, 1, 1)
+
+        self.label_4 = QLabel(self.settings)
+        self.label_4.setObjectName(u"label_4")
+
+        self.gridLayout_3.addWidget(self.label_4, 0, 4, 1, 1)
+
         self.poolComboBox = QComboBox(self.settings)
         self.poolComboBox.setObjectName(u"poolComboBox")
 
@@ -281,15 +296,12 @@ class Ui_PokemonSearcher(object):
 
         self.gridLayout_3.addWidget(self.poolLabel, 0, 0, 1, 1)
 
-        self.budgetLineEdit = QLineEdit(self.settings)
-        self.budgetLineEdit.setObjectName(u"budgetLineEdit")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.budgetLineEdit.sizePolicy().hasHeightForWidth())
-        self.budgetLineEdit.setSizePolicy(sizePolicy4)
+        self.noOfPokemonLineEdit = QLineEdit(self.settings)
+        self.noOfPokemonLineEdit.setObjectName(u"noOfPokemonLineEdit")
+        sizePolicy4.setHeightForWidth(self.noOfPokemonLineEdit.sizePolicy().hasHeightForWidth())
+        self.noOfPokemonLineEdit.setSizePolicy(sizePolicy4)
 
-        self.gridLayout_3.addWidget(self.budgetLineEdit, 0, 3, 1, 1)
+        self.gridLayout_3.addWidget(self.noOfPokemonLineEdit, 0, 5, 1, 1)
 
 
         self.verticalLayout_3.addLayout(self.gridLayout_3)
@@ -421,10 +433,16 @@ class Ui_PokemonSearcher(object):
         self.widget_17.setObjectName(u"widget_17")
         self.verticalLayout_6 = QVBoxLayout(self.widget_17)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.verticalLayout_6.setContentsMargins(3, 3, 3, 3)
         self.label_8 = QLabel(self.widget_17)
         self.label_8.setObjectName(u"label_8")
 
         self.verticalLayout_6.addWidget(self.label_8)
+
+        self.weaknessesLayout = QHBoxLayout()
+        self.weaknessesLayout.setObjectName(u"weaknessesLayout")
+
+        self.verticalLayout_6.addLayout(self.weaknessesLayout)
 
 
         self.verticalLayout_4.addWidget(self.widget_17)
@@ -433,10 +451,16 @@ class Ui_PokemonSearcher(object):
         self.widget_18.setObjectName(u"widget_18")
         self.verticalLayout_7 = QVBoxLayout(self.widget_18)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.verticalLayout_7.setContentsMargins(3, 3, 3, 3)
         self.label_9 = QLabel(self.widget_18)
         self.label_9.setObjectName(u"label_9")
 
         self.verticalLayout_7.addWidget(self.label_9)
+
+        self.resistancesLayout = QHBoxLayout()
+        self.resistancesLayout.setObjectName(u"resistancesLayout")
+
+        self.verticalLayout_7.addLayout(self.resistancesLayout)
 
 
         self.verticalLayout_4.addWidget(self.widget_18)
@@ -445,13 +469,23 @@ class Ui_PokemonSearcher(object):
         self.widget_19.setObjectName(u"widget_19")
         self.verticalLayout_8 = QVBoxLayout(self.widget_19)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
+        self.verticalLayout_8.setContentsMargins(3, 3, 3, 3)
         self.label_10 = QLabel(self.widget_19)
         self.label_10.setObjectName(u"label_10")
 
         self.verticalLayout_8.addWidget(self.label_10)
 
+        self.immunitiesLayout = QHBoxLayout()
+        self.immunitiesLayout.setObjectName(u"immunitiesLayout")
+
+        self.verticalLayout_8.addLayout(self.immunitiesLayout)
+
 
         self.verticalLayout_4.addWidget(self.widget_19)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout_4.addItem(self.verticalSpacer)
 
 
         self.gridLayout.addWidget(self.typesFrame, 2, 0, 1, 1)
@@ -469,6 +503,127 @@ class Ui_PokemonSearcher(object):
         self.label_7.setObjectName(u"label_7")
 
         self.verticalLayout_5.addWidget(self.label_7)
+
+        self.widget = QWidget(self.recommendationsFrame)
+        self.widget.setObjectName(u"widget")
+        self.gridLayout_4 = QGridLayout(self.widget)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.gridLayout_4.setContentsMargins(3, 3, 3, 3)
+        self.recTypeLayout = QHBoxLayout()
+        self.recTypeLayout.setObjectName(u"recTypeLayout")
+
+        self.gridLayout_4.addLayout(self.recTypeLayout, 1, 1, 1, 1)
+
+        self.recReason_1 = QLabel(self.widget)
+        self.recReason_1.setObjectName(u"recReason_1")
+
+        self.gridLayout_4.addWidget(self.recReason_1, 2, 1, 1, 2)
+
+        self.recSprite_1 = QLabel(self.widget)
+        self.recSprite_1.setObjectName(u"recSprite_1")
+
+        self.gridLayout_4.addWidget(self.recSprite_1, 0, 0, 3, 1)
+
+        self.recName_1 = QLabel(self.widget)
+        self.recName_1.setObjectName(u"recName_1")
+
+        self.gridLayout_4.addWidget(self.recName_1, 0, 1, 1, 1)
+
+        self.recPts_1 = QLabel(self.widget)
+        self.recPts_1.setObjectName(u"recPts_1")
+
+        self.gridLayout_4.addWidget(self.recPts_1, 1, 2, 1, 1)
+
+        self.recAdd_1 = QToolButton(self.widget)
+        self.recAdd_1.setObjectName(u"recAdd_1")
+        icon = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.ListAdd))
+        self.recAdd_1.setIcon(icon)
+        self.recAdd_1.setAutoRaise(True)
+
+        self.gridLayout_4.addWidget(self.recAdd_1, 0, 3, 3, 1)
+
+
+        self.verticalLayout_5.addWidget(self.widget)
+
+        self.widget_2 = QWidget(self.recommendationsFrame)
+        self.widget_2.setObjectName(u"widget_2")
+        self.gridLayout_5 = QGridLayout(self.widget_2)
+        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.gridLayout_5.setContentsMargins(3, 3, 3, 3)
+        self.recTypeLayout_2 = QHBoxLayout()
+        self.recTypeLayout_2.setObjectName(u"recTypeLayout_2")
+
+        self.gridLayout_5.addLayout(self.recTypeLayout_2, 1, 1, 1, 1)
+
+        self.recReason_2 = QLabel(self.widget_2)
+        self.recReason_2.setObjectName(u"recReason_2")
+
+        self.gridLayout_5.addWidget(self.recReason_2, 2, 1, 1, 2)
+
+        self.recSprite_2 = QLabel(self.widget_2)
+        self.recSprite_2.setObjectName(u"recSprite_2")
+
+        self.gridLayout_5.addWidget(self.recSprite_2, 0, 0, 3, 1)
+
+        self.recName_2 = QLabel(self.widget_2)
+        self.recName_2.setObjectName(u"recName_2")
+
+        self.gridLayout_5.addWidget(self.recName_2, 0, 1, 1, 1)
+
+        self.recPts_2 = QLabel(self.widget_2)
+        self.recPts_2.setObjectName(u"recPts_2")
+
+        self.gridLayout_5.addWidget(self.recPts_2, 1, 2, 1, 1)
+
+        self.recAdd_2 = QToolButton(self.widget_2)
+        self.recAdd_2.setObjectName(u"recAdd_2")
+        self.recAdd_2.setIcon(icon)
+        self.recAdd_2.setAutoRaise(True)
+
+        self.gridLayout_5.addWidget(self.recAdd_2, 0, 3, 3, 1)
+
+
+        self.verticalLayout_5.addWidget(self.widget_2)
+
+        self.widget_3 = QWidget(self.recommendationsFrame)
+        self.widget_3.setObjectName(u"widget_3")
+        self.gridLayout_6 = QGridLayout(self.widget_3)
+        self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.gridLayout_6.setContentsMargins(3, 3, 3, 3)
+        self.recTypeLayout_3 = QHBoxLayout()
+        self.recTypeLayout_3.setObjectName(u"recTypeLayout_3")
+
+        self.gridLayout_6.addLayout(self.recTypeLayout_3, 1, 1, 1, 1)
+
+        self.recReason_3 = QLabel(self.widget_3)
+        self.recReason_3.setObjectName(u"recReason_3")
+
+        self.gridLayout_6.addWidget(self.recReason_3, 2, 1, 1, 2)
+
+        self.recSprite_3 = QLabel(self.widget_3)
+        self.recSprite_3.setObjectName(u"recSprite_3")
+
+        self.gridLayout_6.addWidget(self.recSprite_3, 0, 0, 3, 1)
+
+        self.recName_3 = QLabel(self.widget_3)
+        self.recName_3.setObjectName(u"recName_3")
+
+        self.gridLayout_6.addWidget(self.recName_3, 0, 1, 1, 1)
+
+        self.recPts_3 = QLabel(self.widget_3)
+        self.recPts_3.setObjectName(u"recPts_3")
+
+        self.gridLayout_6.addWidget(self.recPts_3, 1, 2, 1, 1)
+
+        self.recAdd_3 = QToolButton(self.widget_3)
+        self.recAdd_3.setObjectName(u"recAdd_3")
+        self.recAdd_3.setIcon(icon)
+        self.recAdd_3.setAutoRaise(True)
+
+        self.gridLayout_6.addWidget(self.recAdd_3, 0, 3, 3, 1)
+
+
+        self.verticalLayout_5.addWidget(self.widget_3)
 
 
         self.gridLayout.addWidget(self.recommendationsFrame, 2, 1, 1, 1)
@@ -906,6 +1061,7 @@ class Ui_PokemonSearcher(object):
         self.speLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Spe", None))
         self.bstLabel.setText(QCoreApplication.translate("PokemonSearcher", u"BST", None))
         self.label_3.setText(QCoreApplication.translate("PokemonSearcher", u"Budget:", None))
+        self.label_4.setText(QCoreApplication.translate("PokemonSearcher", u"No. of Pokemon", None))
         self.poolLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Draft pool:", None))
         self.applyButton.setText(QCoreApplication.translate("PokemonSearcher", u"Apply", None))
         self.exportPokemonButton.setText(QCoreApplication.translate("PokemonSearcher", u"Export Pokemon List", None))
@@ -922,6 +1078,21 @@ class Ui_PokemonSearcher(object):
         self.label_9.setText(QCoreApplication.translate("PokemonSearcher", u"Key Resistances", None))
         self.label_10.setText(QCoreApplication.translate("PokemonSearcher", u"Immunities", None))
         self.label_7.setText(QCoreApplication.translate("PokemonSearcher", u"Recommendations", None))
+        self.recReason_1.setText("")
+        self.recSprite_1.setText("")
+        self.recName_1.setText("")
+        self.recPts_1.setText("")
+        self.recAdd_1.setText(QCoreApplication.translate("PokemonSearcher", u"...", None))
+        self.recReason_2.setText("")
+        self.recSprite_2.setText("")
+        self.recName_2.setText("")
+        self.recPts_2.setText("")
+        self.recAdd_2.setText(QCoreApplication.translate("PokemonSearcher", u"...", None))
+        self.recReason_3.setText("")
+        self.recSprite_3.setText("")
+        self.recName_3.setText("")
+        self.recPts_3.setText("")
+        self.recAdd_3.setText(QCoreApplication.translate("PokemonSearcher", u"...", None))
         self.pick_01_sprite.setText("")
         self.pick_01_name.setText("")
         self.pick_01_pts.setText("")

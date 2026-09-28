@@ -204,6 +204,7 @@ class SettingsHandler:
                 self.w.data_handler.save_config()
                 self.populate_pool_combobox()
                 self._apply_imported_list(imported_list, dialog)
+                self.w.draft_handler.record_import()
                 QMessageBox.information(self.w, "Import Successful", "Pokémon list imported successfully.")
             except Exception as e:
                 QMessageBox.critical(

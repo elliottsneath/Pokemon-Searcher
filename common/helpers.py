@@ -3,7 +3,15 @@ import traceback
 import datetime
 
 from PySide6.QtCore import QLoggingCategory
+from PySide6.QtWidgets import QLayout
 from common.custom_widgets import error_msg_box
+
+def clear_layout(layout: QLayout) -> None:
+    while layout.count():
+        item = layout.takeAt(0)
+        if item.widget():
+            item.widget().deleteLater()
+
 
 def suppress_qt_warnings() -> None:
     QLoggingCategory.setFilterRules("qt.gui.imageio=false")

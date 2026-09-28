@@ -4,7 +4,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from PySide6.QtGui import QIntValidator
-from PySide6.QtWidgets import QLabel, QWidget
+from PySide6.QtWidgets import QHBoxLayout, QLabel, QToolButton, QWidget
 
 if TYPE_CHECKING:
     from main import MainWindow
@@ -31,6 +31,16 @@ class MainWidgets:
             "bst":  w.bstLabel,
             "cost": w.costLabel,
         }
+
+class RecSlot:
+    __slots__ = ("sprite", "name", "pts", "type_layout", "reason", "add_button")
+    def __init__(self, sprite: QLabel, name: QLabel, pts: QLabel, type_layout: QHBoxLayout, reason: QLabel, add_button: QToolButton):
+        self.sprite = sprite
+        self.name = name
+        self.pts = pts
+        self.type_layout = type_layout
+        self.reason = reason
+        self.add_button = add_button
 
 class PickSlot:
     __slots__ = ("widget", "sprite", "name", "type_widget", "pts")
@@ -60,16 +70,29 @@ class DraftHandlerWidgets:
             for i in range(1, 13)
         ]
 
-        self.weaknesses_widget = w.widget_17
-        self.resistances_widget = w.widget_18
-        self.immunities_widget = w.widget_19
-        self.recommendations_widget = w.recommendationsFrame
+        self.weaknesses_layout = w.weaknessesLayout
+        self.resistances_layout = w.resistancesLayout
+        self.immunities_layout = w.immunitiesLayout
         self.budget_line_edit = w.budgetLineEdit
+        self.number_of_pokemon_line_edit = w.noOfPokemonLineEdit
+
+        self.rec_slots = [
+            RecSlot(
+                getattr(w, f"recSprite_{i}"),
+                getattr(w, f"recName_{i}"),
+                getattr(w, f"recPts_{i}"),
+                getattr(w, "recTypeLayout" if i == 1 else f"recTypeLayout_{i}"),
+                getattr(w, f"recReason_{i}"),
+                getattr(w, f"recAdd_{i}"),
+            )
+            for i in range(1, 4)
+        ]
 
 class SettingsWidgets:
     def __init__(self, w: MainWindow):
         self.pool_combo = w.poolComboBox
         self.budget_line_edit = w.budgetLineEdit
+        self.number_of_pokemon_line_edit = w.noOfPokemonLineEdit
         self.apply_button = w.applyButton
         self.export_button = w.exportPokemonButton
         self.import_button = w.importPokemonButton
@@ -78,3 +101,4 @@ class SettingsWidgets:
         self.pokemon_list_widget = w.settingsPokemonListWidget
 
         self.budget_line_edit.setValidator(QIntValidator(0, 999))
+        self.number_of_pokemon_line_edit.setValidator(QIntValidator(0, 50))
