@@ -2,12 +2,17 @@
 
 from __future__ import annotations
 import json
+import os
 from typing import TYPE_CHECKING
 
 from PySide6.QtWidgets import QListWidgetItem
+from PySide6.QtCore import QTimer
 
 from assets.ui.pokemon_list_item import SettingsPokemonListItem
-from common.paths import POKEDEX_PATH, LEARNSET_PATH, SELECTED_POKEMON_PATH, CONFIG_FILE_PATH
+from common.paths import (
+    POKEDEX_PATH, LEARNSET_PATH, LEARNSETS_MERGED_PATH,
+    SELECTED_POKEMON_PATH, CONFIG_FILE_PATH,
+)
 from data.pokemon_obj import PokemonData
 
 if TYPE_CHECKING:
@@ -17,6 +22,8 @@ if TYPE_CHECKING:
 class DataHandler:
     def __init__(self, window: MainWindow):
         self.w = window
+        self._merged_learnsets: dict | None = None
+        self._settings_build_index = 0
         self.load_pokemon_data(init=True)
 
     # ── load ───────────────────────────────────────────────────────────────
@@ -49,40 +56,20 @@ class DataHandler:
             if init:
                 self.w.pokedex = []
 
-            def get_all_prevo_moves(pokemon_key, visited=None):
-                if visited is None:
-                    visited = set()
-                if pokemon_key in visited:
-                    return set()
-                visited.add(pokemon_key)
-                moves = set(learnset_data.get(pokemon_key, []))
-                prevo_name = pokedex[pokemon_key].get("prevo")
-                if prevo_name:
-                    for prevo_key, prevo_data in pokedex.items():
-                        if prevo_data.get("name") == prevo_name:
-                            moves.update(get_all_prevo_moves(prevo_key, visited))
-                            break
-                return moves
+            merged = self._ensure_merged_learnsets(pokedex, learnset_data)
 
             for pokemon, pdata in pokedex.items():
                 if init:
                     self.w.pokedex.append(pokemon)
-                    widget = SettingsPokemonListItem(pokemon)
-                    if pokemon in self.w.selected_pokemon:
-                        widget.checkbox.setChecked(True)
-                    item = QListWidgetItem(self.w.settingsPokemonListWidget)
-                    item.setSizeHint(widget.sizeHint())
-                    self.w.settingsPokemonListWidget.addItem(item)
-                    self.w.settingsPokemonListWidget.setItemWidget(item, widget)
 
                 if pokemon not in self.w.selected_pokemon:
                     continue
 
-                num   = pdata.get("num", -1)
-                name  = pdata.get("name", "")
+                num = pdata.get("num", -1)
+                name = pdata.get("name", "")
                 types = pdata.get("types", [])
                 stats = list(pdata.get("baseStats", {}).values())
-                moves = sorted(get_all_prevo_moves(pokemon))
+                moves = merged.get(pokemon, [])
 
                 base_abilities, hidden_abilities = [], []
                 for key, value in pdata.get("abilities", {}).items():
@@ -91,7 +78,7 @@ class DataHandler:
 
                 for i, stat in enumerate(stats):
                     if stat > self.w.highest_stats[i]: self.w.highest_stats[i] = stat
-                    if stat < self.w.lowest_stats[i]:  self.w.lowest_stats[i] = stat
+                    if stat < self.w.lowest_stats[i]: self.w.lowest_stats[i] = stat
 
                 draft_info = self.w.draft_board.get(pokemon, {})
                 self.w.master_list.append(PokemonData(
@@ -108,10 +95,75 @@ class DataHandler:
             for moves_list in learnset_data.values():
                 self.w.all_moves.update(moves_list)
 
+            if init:
+                self._populate_settings_list()
+
         except FileNotFoundError as e:
             print(f"Error: {e}")
         except json.JSONDecodeError as e:
             print(f"Error parsing JSON: {e}")
+
+    # ── merged learnsets ───────────────────────────────────────────────────
+
+    def _ensure_merged_learnsets(self, pokedex: dict, learnset_data: dict) -> dict:
+        if self._merged_learnsets is not None:
+            return self._merged_learnsets
+
+        if os.path.exists(LEARNSETS_MERGED_PATH):
+            source_mtime = max(os.path.getmtime(POKEDEX_PATH), os.path.getmtime(LEARNSET_PATH))
+            if os.path.getmtime(LEARNSETS_MERGED_PATH) > source_mtime:
+                with open(LEARNSETS_MERGED_PATH, 'r') as f:
+                    self._merged_learnsets = json.load(f)
+                return self._merged_learnsets
+
+        self._merged_learnsets = self._build_merged_learnsets(pokedex, learnset_data)
+        with open(LEARNSETS_MERGED_PATH, 'w') as f:
+            json.dump(self._merged_learnsets, f)
+        return self._merged_learnsets
+
+    def _build_merged_learnsets(self, pokedex: dict, learnset_data: dict) -> dict:
+        memo: dict[str, set] = {}
+
+        def get_moves(key, visiting=None):
+            if key in memo:
+                return memo[key]
+            if visiting is None:
+                visiting = set()
+            if key in visiting or key not in pokedex:
+                return set()
+            visiting.add(key)
+            moves = set(learnset_data.get(key, []))
+            prevo_name = pokedex[key].get("prevo")
+            if prevo_name:
+                for prevo_key, prevo_data in pokedex.items():
+                    if prevo_data.get("name") == prevo_name:
+                        moves.update(get_moves(prevo_key, visiting))
+                        break
+            memo[key] = moves
+            return moves
+
+        return {pk: sorted(get_moves(pk)) for pk in pokedex}
+
+    # ── settings list (batched) ────────────────────────────────────────────
+
+    def _populate_settings_list(self) -> None:
+        self._settings_build_index = 0
+        self._settings_batch()
+
+    def _settings_batch(self) -> None:
+        batch_size = 50
+        subset = self.w.pokedex[self._settings_build_index:self._settings_build_index + batch_size]
+        for pokemon in subset:
+            widget = SettingsPokemonListItem(pokemon)
+            if pokemon in self.w.selected_pokemon:
+                widget.checkbox.setChecked(True)
+            item = QListWidgetItem(self.w.settingsPokemonListWidget)
+            item.setSizeHint(widget.sizeHint())
+            self.w.settingsPokemonListWidget.addItem(item)
+            self.w.settingsPokemonListWidget.setItemWidget(item, widget)
+        self._settings_build_index += batch_size
+        if self._settings_build_index < len(self.w.pokedex):
+            QTimer.singleShot(0, self._settings_batch)
 
     # ── save ───────────────────────────────────────────────────────────────
 
@@ -147,7 +199,6 @@ class DataHandler:
     # ── refresh ────────────────────────────────────────────────────────────
 
     def refresh_draft_status(self) -> None:
-        """Updates cost and drafted state on master_list from draft_board + selected pool."""
         for pokemon in self.w.master_list:
             draft_info = self.w.draft_board.get(pokemon.species_id, {})
             pokemon.cost = draft_info.get("cost")

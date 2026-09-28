@@ -503,6 +503,7 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="currentDraft"/>
      </widget>
     </item>
    </layout>
@@ -522,6 +523,7 @@
    </attribute>
    <addaction name="separator"/>
    <addaction name="actionVersion"/>
+   <addaction name="actionCurrentDraft"/>
    <addaction name="actionSettings"/>
    <addaction name="actionHelp"/>
   </widget>
@@ -548,6 +550,14 @@
   <action name="actionHelp">
    <property name="text">
     <string>Help</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::ApplicationSpecificRole</enum>
+   </property>
+  </action>
+  <action name="actionCurrentDraft">
+   <property name="text">
+    <string>Current Draft</string>
    </property>
    <property name="menuRole">
     <enum>QAction::MenuRole::ApplicationSpecificRole</enum>

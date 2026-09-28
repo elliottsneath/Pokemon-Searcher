@@ -38,6 +38,9 @@ class Ui_PokemonSearcher(object):
         self.actionHelp = QAction(PokemonSearcher)
         self.actionHelp.setObjectName(u"actionHelp")
         self.actionHelp.setMenuRole(QAction.MenuRole.ApplicationSpecificRole)
+        self.actionCurrentDraft = QAction(PokemonSearcher)
+        self.actionCurrentDraft.setObjectName(u"actionCurrentDraft")
+        self.actionCurrentDraft.setMenuRole(QAction.MenuRole.ApplicationSpecificRole)
         self.centralwidget = QWidget(PokemonSearcher)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -319,6 +322,9 @@ class Ui_PokemonSearcher(object):
         self.verticalLayout_3.addWidget(self.settingsPokemonListWidget)
 
         self.stackedWidget.addWidget(self.settings)
+        self.currentDraft = QWidget()
+        self.currentDraft.setObjectName(u"currentDraft")
+        self.stackedWidget.addWidget(self.currentDraft)
 
         self.verticalLayout.addWidget(self.stackedWidget)
 
@@ -333,6 +339,7 @@ class Ui_PokemonSearcher(object):
 
         self.toolBar.addSeparator()
         self.toolBar.addAction(self.actionVersion)
+        self.toolBar.addAction(self.actionCurrentDraft)
         self.toolBar.addAction(self.actionSettings)
         self.toolBar.addAction(self.actionHelp)
 
@@ -352,6 +359,7 @@ class Ui_PokemonSearcher(object):
         self.actionSettings.setToolTip(QCoreApplication.translate("PokemonSearcher", u"Settings", None))
 #endif // QT_CONFIG(tooltip)
         self.actionHelp.setText(QCoreApplication.translate("PokemonSearcher", u"Help", None))
+        self.actionCurrentDraft.setText(QCoreApplication.translate("PokemonSearcher", u"Current Draft", None))
         self.searchBar.setPlaceholderText(QCoreApplication.translate("PokemonSearcher", u"Search Pokemon, Move, Type, Ability, etc...", None))
         self.clearFiltersButton.setText(QCoreApplication.translate("PokemonSearcher", u"Clear Filters", None))
         self.label_5.setText(QCoreApplication.translate("PokemonSearcher", u"Leave all blank to search for all:", None))
