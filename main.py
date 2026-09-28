@@ -473,7 +473,9 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                         return "floetteeternal"
                     elif "paldean tauros" in pokemon.lower():
                         return f"taurospaldea{pokemon.split(' ')[2]}"
-                    
+                    elif pokemon.lower() in ("meowstic-mega", "mega meowstic"):
+                        return "meowsticmmega"
+
                     return pokemon
                 
                 def normalise_pokemon(pokemon):
@@ -520,9 +522,9 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
                     seen.add(normalised)
 
                 if len(excluded_list) > 0:
-                    QMessageBox.warning(self, "Excluded Pokémon", 
-                        f"The following Pokémon failed to be normalised and imported:\n"
-                        f"{', '.join(excluded_list)}")
+                    string = f"The following Pokémon failed to be normalised and imported:\n{', '.join(excluded_list)}"
+                    QMessageBox.warning(self, "Excluded Pokémon", string)
+                    print(string)
                     
                 self.selected_pokemon = imported_list
                 for widget in self.settingsPokemonListWidget.findChildren(SettingsPokemonListItem):
