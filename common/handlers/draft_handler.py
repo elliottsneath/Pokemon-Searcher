@@ -41,6 +41,8 @@ class DraftHandler:
     def _connect_signals(self) -> None:
         self.wg.budget_line_edit.textChanged.connect(self.update_budget)
         self.wg.number_of_pokemon_line_edit.textChanged.connect(self.analyse_team_matchups)
+        self.wg.number_of_pokemon_line_edit.textChanged.connect(self.update_picks_label)
+        self.wg.number_of_pokemon_line_edit.textChanged.connect(self._save_draft_state)
         for i, slot in enumerate(self.wg.rec_slots):
             slot.add_button.clicked.connect(self._make_rec_add_handler(i))
         self._load_draft_state()
@@ -164,7 +166,9 @@ class DraftHandler:
 
     def update_picks_label(self) -> None:
         count = sum(1 for p in self.drafted_pokemon if p is not None)
-        self.wg.picks_label.setText(f"{count}/12 Picks")
+        text = self.wg.number_of_pokemon_line_edit.text()
+        total = int(text) if text else 12
+        self.wg.picks_label.setText(f"{count}/{total} Picks")
 
     def _make_slot_click_handler(self, idx: int):
         def handler(_):

@@ -49,6 +49,8 @@ class Ui_helpDialog(object):
 "\n"
 "To import from a draft doc, download a copy as a .xlsx, and make sure the sheet with the necessary pok\u00e9mon on is called \"Board\". Once your selection has been made, if you wish to share, you can export your list to a .pkmnlist file in settings, which can be shared to other players in the draft league etc.\n"
 "\n"
-"When importing from a draft board, pok\u00e9mon under the column header \"Banned\" will be ignored.", None))
+"When importing from a draft board, pok\u00e9mon under the column header \"Banned\" will be ignored.\n"
+"\n"
+"The Current Draft page shows your drafted team alongside a live team analysis. The type weakness, resistance, and immunity panels update automatically as you add pok\u00e9mon. Set your total budget and number of picks in the settings bar to enable recommendations \u2014 the tool will suggest the best available pok\u00e9mon based on missing team roles (such as Stealth Rock, Bulky Water, or Grounded Poison) and type coverage. Recommendations are hidden when you have no points remaining.", None))
     # retranslateUi
 

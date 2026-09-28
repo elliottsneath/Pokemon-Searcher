@@ -35,6 +35,8 @@ class DraftAnalysis:
         "Speed Control":    lambda p: p.stats[DraftAnalysis.SPE] >= 110 or any(m in p.moves for m in ("tailwind", "trickroom", "stickywebs", "thunderwave")),
         "Contact Punish":   lambda p: any(a in DraftAnalysis.all_abilities(p) for a in ("Rough Skin", "Iron Barbs", "Static", "Flame Body")) and p.stats[DraftAnalysis.DEF] >= 80,
         "Spinblocker":      lambda p: "Ghost" in p.types,
+        "Fast Mon":         lambda p: p.stats[DraftAnalysis.SPE] >= 115,
+        "Sleeper":          lambda p: any(m in p.moves for m in ("spore")),
     }
 
     def __init__(self, weaknesses_layout: QLayout, resistances_layout: QLayout, immunities_layout: QLayout):
@@ -137,7 +139,7 @@ class DraftAnalysis:
             )
             return candidates_with_roles[:3]
 
-        pool.sort(key=lambda p: self.weakness_improvement(p, self.type_scores, self.all_types), reverse=True)
+        pool.sort(key=lambda p: (p.cost or 0, self.weakness_improvement(p, self.type_scores, self.all_types)), reverse=True)
         return [(p, []) for p in pool[:3]]
 
     @staticmethod
