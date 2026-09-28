@@ -4,3 +4,5 @@ venv/
 output/
 *.xlsx
 *.xlsm
+error_log.txt
+.vscode/settings.json

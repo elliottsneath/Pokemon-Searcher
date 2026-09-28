@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>731</width>
+    <width>756</width>
     <height>552</height>
    </rect>
   </property>
@@ -525,6 +525,7 @@
    <addaction name="actionSettings"/>
    <addaction name="actionHelp"/>
   </widget>
+  <widget class="QStatusBar" name="versionStatusBar"/>
   <action name="actionVersion">
    <property name="enabled">
     <bool>false</bool>

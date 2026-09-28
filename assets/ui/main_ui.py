@@ -19,7 +19,7 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QHBoxLayout,
     QLabel, QLineEdit, QListWidget, QListWidgetItem,
     QMainWindow, QSizePolicy, QSpacerItem, QStackedWidget,
-    QToolBar, QVBoxLayout, QWidget)
+    QStatusBar, QToolBar, QVBoxLayout, QWidget)
 
 from assets.ui.animated_button import AnimatedHoverButton
 from assets.ui.clickable_label import ClickableLabel
@@ -28,7 +28,7 @@ class Ui_PokemonSearcher(object):
     def setupUi(self, PokemonSearcher):
         if not PokemonSearcher.objectName():
             PokemonSearcher.setObjectName(u"PokemonSearcher")
-        PokemonSearcher.resize(731, 552)
+        PokemonSearcher.resize(756, 552)
         self.actionVersion = QAction(PokemonSearcher)
         self.actionVersion.setObjectName(u"actionVersion")
         self.actionVersion.setEnabled(False)
@@ -327,6 +327,9 @@ class Ui_PokemonSearcher(object):
         self.toolBar.setObjectName(u"toolBar")
         self.toolBar.setMovable(False)
         PokemonSearcher.addToolBar(Qt.ToolBarArea.TopToolBarArea, self.toolBar)
+        self.versionStatusBar = QStatusBar(PokemonSearcher)
+        self.versionStatusBar.setObjectName(u"versionStatusBar")
+        PokemonSearcher.setStatusBar(self.versionStatusBar)
 
         self.toolBar.addSeparator()
         self.toolBar.addAction(self.actionVersion)
