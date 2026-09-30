@@ -43,6 +43,7 @@ class DraftHandler:
         self.wg.number_of_pokemon_line_edit.textChanged.connect(self.analyse_team_matchups)
         self.wg.number_of_pokemon_line_edit.textChanged.connect(self.update_picks_label)
         self.wg.number_of_pokemon_line_edit.textChanged.connect(self._save_draft_state)
+        self.wg.clear_draft_button.clicked.connect(self.clear_draft)
         for i, slot in enumerate(self.wg.rec_slots):
             slot.add_button.clicked.connect(self._make_rec_add_handler(i))
         self._load_draft_state()
@@ -69,6 +70,15 @@ class DraftHandler:
             return
         self.drafted_pokemon[idx] = None
         self._clear_slot(self.wg.picks[idx], idx)
+        self.update_budget()
+        self.update_picks_label()
+        self.analyse_team_matchups()
+
+    def clear_draft(self) -> None:
+        for i in range(len(self.drafted_pokemon)):
+            if self.drafted_pokemon[i] is not None:
+                self.drafted_pokemon[i] = None
+                self._clear_slot(self.wg.picks[i], i)
         self.update_budget()
         self.update_picks_label()
         self.analyse_team_matchups()

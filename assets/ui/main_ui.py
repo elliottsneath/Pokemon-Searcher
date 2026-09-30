@@ -18,9 +18,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
     QGridLayout, QHBoxLayout, QLabel, QLineEdit,
-    QListWidget, QListWidgetItem, QMainWindow, QSizePolicy,
-    QSpacerItem, QStackedWidget, QStatusBar, QToolBar,
-    QToolButton, QVBoxLayout, QWidget)
+    QListWidget, QListWidgetItem, QMainWindow, QPushButton,
+    QSizePolicy, QSpacerItem, QStackedWidget, QStatusBar,
+    QToolBar, QToolButton, QVBoxLayout, QWidget)
 
 from assets.ui.animated_button import AnimatedHoverButton
 from assets.ui.clickable_label import ClickableLabel
@@ -400,6 +400,18 @@ class Ui_PokemonSearcher(object):
 
         self.horizontalLayout_4.addWidget(self.ptsLabel)
 
+        self.line_3 = QFrame(self.dataFrame)
+        self.line_3.setObjectName(u"line_3")
+        self.line_3.setFrameShape(QFrame.Shape.VLine)
+        self.line_3.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.horizontalLayout_4.addWidget(self.line_3)
+
+        self.clearDraftButton = QPushButton(self.dataFrame)
+        self.clearDraftButton.setObjectName(u"clearDraftButton")
+
+        self.horizontalLayout_4.addWidget(self.clearDraftButton)
+
         self.horizontalSpacer_3 = QSpacerItem(351, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_4.addItem(self.horizontalSpacer_3)
@@ -624,6 +636,10 @@ class Ui_PokemonSearcher(object):
 
 
         self.verticalLayout_5.addWidget(self.widget_3)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout_5.addItem(self.verticalSpacer_2)
 
 
         self.gridLayout.addWidget(self.recommendationsFrame, 2, 1, 1, 1)
@@ -1072,6 +1088,7 @@ class Ui_PokemonSearcher(object):
         self.label.setText(QCoreApplication.translate("PokemonSearcher", u"Current Draft", None))
         self.picksLabel.setText(QCoreApplication.translate("PokemonSearcher", u"x/12 Picks", None))
         self.ptsLabel.setText(QCoreApplication.translate("PokemonSearcher", u"x Pts Remaining", None))
+        self.clearDraftButton.setText(QCoreApplication.translate("PokemonSearcher", u"Clear", None))
         self.importLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Import Refreshed x ago", None))
         self.label_6.setText(QCoreApplication.translate("PokemonSearcher", u"Type Matchups", None))
         self.label_8.setText(QCoreApplication.translate("PokemonSearcher", u"Main Weaknesses", None))

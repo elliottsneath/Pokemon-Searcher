@@ -70,6 +70,7 @@ class DraftHandlerWidgets:
             for i in range(1, 13)
         ]
 
+        self.clear_draft_button = w.clearDraftButton
         self.weaknesses_layout = w.weaknessesLayout
         self.resistances_layout = w.resistancesLayout
         self.immunities_layout = w.immunitiesLayout
