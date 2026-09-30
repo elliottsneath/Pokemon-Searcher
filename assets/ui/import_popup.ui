@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>533</width>
-    <height>323</height>
+    <height>66</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,14 +22,14 @@
     </widget>
    </item>
    <item>
-    <widget class="QTextEdit" name="textEdit">
-     <property name="placeholderText">
-      <string>Type Pokémon List here...</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="fromGoogleSheetButton">
+       <property name="text">
+        <string>Sync to Draft Doc</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="AnimatedHoverButton" name="fromFileButton">
        <property name="text">
@@ -38,16 +38,9 @@
       </widget>
      </item>
      <item>
-      <widget class="AnimatedHoverButton" name="fromGoogleSheetButton">
+      <widget class="AnimatedHoverButton" name="fromExcelButton">
        <property name="text">
-        <string>Import from Draft doc</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="AnimatedHoverButton" name="fromPlainTextButton">
-       <property name="text">
-        <string>Import from plain text</string>
+        <string>Import from Draft Excel</string>
        </property>
       </widget>
      </item>

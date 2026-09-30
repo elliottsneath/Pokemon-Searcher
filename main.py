@@ -38,7 +38,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
             (self.actionSettings, 1),
             (self.actionCurrentDraft, 2),
         ]:
-            action.triggered.connect(lambda checked=False, i=page: self.toggle_settings(i))
+            action.triggered.connect(lambda checked=False, i=page: self.change_page(i))
         self.actionHelp.triggered.connect(self.show_help)
 
         self.pokemon_list_handler.update()
@@ -59,12 +59,13 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.draft_pools = 0
         self.pool = None
         self.hide_drafted = False
+        self.sheet_url = ""
         self.selected_pokemon = []
         self.pokedex = []
         self.highest_stats = [-float('inf')] * 6
         self.lowest_stats = [float('inf')] * 6
 
-    def toggle_settings(self, i: int) -> None:
+    def change_page(self, i: int) -> None:
         self.stackedWidget.setCurrentIndex(i)
 
     def show_help(self) -> None:

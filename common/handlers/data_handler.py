@@ -50,6 +50,7 @@ class DataHandler:
             if init:
                 self.w.pool = favourites.get("pool")
                 self.w.hide_drafted = favourites.get("hide_drafted", False)
+                self.w.sheet_url = favourites.get("sheet_url", "")
 
             self.w.highest_stats = [-float('inf')] * 6
             self.w.lowest_stats = [float('inf')] * 6
@@ -251,6 +252,7 @@ class DataHandler:
                 "favourites": favourite_names,
                 "pool": self.w.pool,
                 "hide_drafted": self.w.hide_drafted,
+                "sheet_url": self.w.sheet_url,
             }, f, indent=4)
 
     # ── refresh ────────────────────────────────────────────────────────────

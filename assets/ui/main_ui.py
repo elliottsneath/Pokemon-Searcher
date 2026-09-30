@@ -63,6 +63,14 @@ class Ui_PokemonSearcher(object):
 
         self.horizontalLayout_5.addWidget(self.searchBar)
 
+        self.refreshButton = QToolButton(self.main)
+        self.refreshButton.setObjectName(u"refreshButton")
+        icon = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.ViewRefresh))
+        self.refreshButton.setIcon(icon)
+        self.refreshButton.setAutoRaise(True)
+
+        self.horizontalLayout_5.addWidget(self.refreshButton)
+
         self.clearFiltersButton = AnimatedHoverButton(self.main)
         self.clearFiltersButton.setObjectName(u"clearFiltersButton")
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
@@ -74,7 +82,7 @@ class Ui_PokemonSearcher(object):
         self.horizontalLayout_5.addWidget(self.clearFiltersButton)
 
         self.horizontalLayout_5.setStretch(0, 2)
-        self.horizontalLayout_5.setStretch(1, 1)
+        self.horizontalLayout_5.setStretch(2, 1)
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_5)
 
@@ -548,8 +556,8 @@ class Ui_PokemonSearcher(object):
 
         self.recAdd_1 = QToolButton(self.widget)
         self.recAdd_1.setObjectName(u"recAdd_1")
-        icon = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.ListAdd))
-        self.recAdd_1.setIcon(icon)
+        icon1 = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.ListAdd))
+        self.recAdd_1.setIcon(icon1)
         self.recAdd_1.setAutoRaise(True)
 
         self.gridLayout_4.addWidget(self.recAdd_1, 0, 3, 3, 1)
@@ -589,7 +597,7 @@ class Ui_PokemonSearcher(object):
 
         self.recAdd_2 = QToolButton(self.widget_2)
         self.recAdd_2.setObjectName(u"recAdd_2")
-        self.recAdd_2.setIcon(icon)
+        self.recAdd_2.setIcon(icon1)
         self.recAdd_2.setAutoRaise(True)
 
         self.gridLayout_5.addWidget(self.recAdd_2, 0, 3, 3, 1)
@@ -629,7 +637,7 @@ class Ui_PokemonSearcher(object):
 
         self.recAdd_3 = QToolButton(self.widget_3)
         self.recAdd_3.setObjectName(u"recAdd_3")
-        self.recAdd_3.setIcon(icon)
+        self.recAdd_3.setIcon(icon1)
         self.recAdd_3.setAutoRaise(True)
 
         self.gridLayout_6.addWidget(self.recAdd_3, 0, 3, 3, 1)
@@ -1058,6 +1066,7 @@ class Ui_PokemonSearcher(object):
         self.actionCurrentDraft.setText(QCoreApplication.translate("PokemonSearcher", u"Current Draft", None))
         self.actionHome.setText(QCoreApplication.translate("PokemonSearcher", u"Home", None))
         self.searchBar.setPlaceholderText(QCoreApplication.translate("PokemonSearcher", u"Search Pokemon, Move, Type, Ability, etc...", None))
+        self.refreshButton.setText(QCoreApplication.translate("PokemonSearcher", u"...", None))
         self.clearFiltersButton.setText(QCoreApplication.translate("PokemonSearcher", u"Clear Filters", None))
         self.label_5.setText(QCoreApplication.translate("PokemonSearcher", u"Leave all blank to search for all:", None))
         self.pokemonCheckbox.setText(QCoreApplication.translate("PokemonSearcher", u"Pokemon", None))

@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 import json
+import os
+import re
+import tempfile
+import urllib.request
 from typing import TYPE_CHECKING
 
 import pandas as pd
@@ -32,6 +36,8 @@ class SettingsHandler:
         self.wg.reset_button.clicked.connect(self.reset_pokemon_list)
         self.populate_pool_combobox()
         self.wg.pool_combo.currentIndexChanged.connect(self.change_pool)
+        if self.w.sheet_url:
+            self.sync_from_sheet(silent=True)
 
     # ── pool ───────────────────────────────────────────────────────────────
 
@@ -118,6 +124,18 @@ class SettingsHandler:
         ui = Ui_Form()
         ui.setupUi(dialog)
 
+        def connect_to_sheet():
+            url, ok = QInputDialog.getText(
+                self.w, "Connect to Google Sheet", "Paste the Google Sheets URL:",
+                text=self.w.sheet_url,
+            )
+            if not ok or not url.strip():
+                return
+            self.w.sheet_url = url.strip()
+            self.w.data_handler.save_config()
+            dialog.accept()
+            self.sync_from_sheet()
+
         def import_from_file():
             file_path, _ = QFileDialog.getOpenFileName(
                 self.w, "Import Pokémon List", "",
@@ -136,18 +154,6 @@ class SettingsHandler:
                     self.w.draft_pools = data.get("draft_pools", 0)
                     self.populate_pool_combobox()
                 self._apply_imported_list(selected, dialog)
-                QMessageBox.information(self.w, "Import Successful", "Pokémon list imported successfully.")
-            except Exception as e:
-                QMessageBox.critical(self.w, "Import Error", f"Failed to import Pokémon list:\n{e}")
-
-        def import_from_text():
-            try:
-                text = ui.textEdit.toPlainText()
-                names = [name.strip() for name in text.split(",") if name.strip()]
-                if not names:
-                    QMessageBox.warning(self.w, "Input Error", "Please enter at least one Pokémon name.")
-                    return
-                self._apply_imported_list(names, dialog)
                 QMessageBox.information(self.w, "Import Successful", "Pokémon list imported successfully.")
             except Exception as e:
                 QMessageBox.critical(self.w, "Import Error", f"Failed to import Pokémon list:\n{e}")
@@ -212,12 +218,12 @@ class SettingsHandler:
                     f"Failed to import Pokémon list from Excel:\n{e}"
                 )
 
+        ui.fromGoogleSheetButton.clicked.connect(connect_to_sheet)
         ui.fromFileButton.clicked.connect(import_from_file)
-        ui.fromGoogleSheetButton.clicked.connect(import_from_doc)
-        ui.fromPlainTextButton.clicked.connect(import_from_text)
+        ui.fromExcelButton.clicked.connect(import_from_doc)
         dialog.exec()
 
-    def _apply_imported_list(self, selected: list[str], dialog: QDialog) -> None:
+    def _apply_imported_list(self, selected: list[str], dialog: QDialog | None = None) -> None:
         self.w.selected_pokemon = selected
         for widget in self.wg.pokemon_list_widget.findChildren(SettingsPokemonListItem):
             widget.checkbox.setChecked(widget.name_label.text() in selected)
@@ -225,7 +231,86 @@ class SettingsHandler:
         self.w.pokemon_list_handler.reset_state()
         self.w.data_handler.load_pokemon_data(init=False)
         self.w.pokemon_list_handler.update()
-        dialog.accept()
+        if dialog is not None:
+            dialog.accept()
+
+    # ── sheet sync ─────────────────────────────────────────────────────────
+
+    def sync_from_sheet(self, silent: bool = False) -> None:
+        if not self.w.sheet_url:
+            return
+        match = re.search(r'/spreadsheets/d/([^/]+)', self.w.sheet_url)
+        if not match:
+            if not silent:
+                QMessageBox.critical(self.w, "Sync Error", "Could not parse a Google Sheets ID from the URL.")
+            return
+        sheet_id = match.group(1)
+        export_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=xlsx"
+        tmp_path = None
+        try:
+            with tempfile.NamedTemporaryFile(suffix=".xlsx", delete=False) as tmp:
+                tmp_path = tmp.name
+            urllib.request.urlretrieve(export_url, tmp_path)
+
+            xls = pd.ExcelFile(tmp_path, engine='openpyxl')
+            target_sheet = "Draft Board" if "Draft Board" in xls.sheet_names else "Board"
+
+            df = pd.read_excel(xls, sheet_name=target_sheet, engine='openpyxl')
+            raw_list = df.astype(str).values.flatten().tolist()
+
+            if any(isinstance(v, str) and v.strip().lower() == "banned" for v in df.iloc[:, 1]):
+                banned_set = {
+                    v for v in df.iloc[:, 2]
+                    if isinstance(v, str) and v.strip() and v.strip().lower() != "banned"
+                }
+                raw_list = [v for v in raw_list if v not in banned_set]
+
+            imported_list, excluded_list, seen = [], [], set()
+            for raw in raw_list:
+                normalised = normalise_pokemon(raw)
+                if (normalised and normalised not in UNWANTED_STRINGS
+                        and normalised in self.w.pokedex and normalised not in seen):
+                    imported_list.append(normalised)
+                elif normalised and normalised not in UNWANTED_STRINGS and normalised not in seen:
+                    excluded_list.append(raw)
+                seen.add(normalised)
+
+            if excluded_list and not silent:
+                QMessageBox.warning(
+                    self.w, "Excluded Pokémon",
+                    f"The following Pokémon failed to be normalised and imported:\n"
+                    f"{', '.join(excluded_list)}"
+                )
+
+            draft_board, draft_pools = parse_draft_board(xls, target_sheet, self.w.pokedex)
+            self.w.draft_board = draft_board
+            self.w.draft_pools = draft_pools
+
+            if not silent and draft_pools and not (self.w.pool and self.w.pool <= draft_pools):
+                pool_names = [f"P{p}" for p in range(1, draft_pools + 1)]
+                choice, ok = QInputDialog.getItem(
+                    self.w, "Draft Pool", "Which pool are you in?", pool_names, 0, False
+                )
+                self.w.pool = pool_names.index(choice) + 1 if ok else None
+
+            self.w.data_handler.save_config()
+            self.populate_pool_combobox()
+            self._apply_imported_list(imported_list)
+            self.w.draft_handler.record_import()
+
+            if not silent:
+                QMessageBox.information(self.w, "Sync Successful", "Pokémon list synced from Google Sheets.")
+        except Exception as e:
+            if not silent:
+                QMessageBox.critical(self.w, "Sync Error", f"Failed to sync from Google Sheets:\n{e}")
+            else:
+                print(f"Sheet sync failed: {e}")
+        finally:
+            if tmp_path:
+                try:
+                    os.remove(tmp_path)
+                except Exception:
+                    pass
 
     # ── reset ──────────────────────────────────────────────────────────────
 
