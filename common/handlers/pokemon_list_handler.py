@@ -30,6 +30,7 @@ class PokemonListHandler:
         self.applied_filters: list[tuple[str, str]] = []
         self.selected_trait: str | None = None
         self.trait_reverse: bool = True
+        self._cost_range: tuple[int, int] | None = None
 
         self._build_index = 0
         self._build_batch_size = 10
@@ -49,6 +50,7 @@ class PokemonListHandler:
         self.wg.hide_drafted_checkbox.stateChanged.connect(self._toggle_hide_drafted)
         for trait, label in self.wg.sort_labels.items():
             label.clicked.connect(lambda t=trait: self.sort_by_trait(t))
+        self.wg.cost_slider.range_committed.connect(self.update)
 
     # ── hide drafted ───────────────────────────────────────────────────────
 
@@ -68,9 +70,12 @@ class PokemonListHandler:
     # ── filtering / sorting ────────────────────────────────────────────────
 
     def update(self) -> None:
+        self._sync_cost_slider_range()
+        slider = self.wg.cost_slider
+        cost_active = slider.isEnabled() and (slider.low > slider._min or slider.high < slider._max)
         self.filtered_sorted_list = []
         for pokemon in self.w.master_list:
-            if not self.applied_filters:
+            if not self.applied_filters and not cost_active:
                 self.filtered_sorted_list = list(self.w.master_list)
                 break
             if self._matches(pokemon):
@@ -96,7 +101,24 @@ class PokemonListHandler:
                 return False
             if category == "move" and keyword not in [m.lower() for m in pokemon.moves]:
                 return False
+        slider = self.wg.cost_slider
+        if slider.isEnabled() and pokemon.cost is not None:
+            if not (slider.low <= pokemon.cost <= slider.high):
+                return False
         return True
+
+    def _sync_cost_slider_range(self) -> None:
+        costs = [p.cost for p in self.w.master_list if p.cost is not None]
+        if not costs:
+            self.wg.cost_slider.setEnabled(False)
+            return
+        lo, hi = min(costs), max(costs)
+        if (lo, hi) == self._cost_range:
+            return
+        self._cost_range = (lo, hi)
+        self.wg.cost_slider.setEnabled(True)
+        self.wg.cost_slider.set_range(lo, hi)
+        self.wg.cost_slider.set_value(lo, hi)
 
     def _sort_key(self):
         t = self.selected_trait
@@ -182,6 +204,7 @@ class PokemonListHandler:
 
     def clear_filters(self) -> None:
         self.applied_filters = []
+        self.wg.cost_slider.reset()
         self.update()
 
     # ── completer ──────────────────────────────────────────────────────────

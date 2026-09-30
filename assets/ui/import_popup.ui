@@ -24,7 +24,7 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="fromGoogleSheetButton">
+      <widget class="AnimatedHoverButton" name="fromGoogleSheetButton">
        <property name="text">
         <string>Sync to Draft Doc</string>
        </property>

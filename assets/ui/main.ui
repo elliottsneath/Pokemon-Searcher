@@ -171,6 +171,24 @@
             </property>
            </spacer>
           </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_19">
+          <item>
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>Price Range: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="RangeSlider" name="horizontalSlider">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QCheckBox" name="hideDraftedCheckbox">
             <property name="sizePolicy">
@@ -611,7 +629,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="clearDraftButton">
+            <widget class="AnimatedHoverButton" name="clearDraftButton">
              <property name="text">
               <string>Clear</string>
              </property>
@@ -1661,6 +1679,11 @@
    <class>ClickableLabel</class>
    <extends>QLabel</extends>
    <header>assets.ui.clickable_label</header>
+  </customwidget>
+  <customwidget>
+   <class>RangeSlider</class>
+   <extends>QSlider</extends>
+   <header>common.custom_widgets</header>
   </customwidget>
  </customwidgets>
  <resources/>

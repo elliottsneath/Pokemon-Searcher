@@ -2,8 +2,10 @@ import sys
 import ctypes
 
 from PySide6.QtWidgets import QMainWindow, QApplication, QDialog, QSplashScreen
-from PySide6.QtGui import Qt, QPixmap, QIcon
+from PySide6.QtGui import Qt, QPixmap, QIcon, QShortcut, QKeySequence
 from PySide6.QtCore import Signal
+
+from common.debug_panel import DebugPanel
 
 from assets.ui.main_ui import Ui_PokemonSearcher
 from assets.ui.help_popup_ui import Ui_helpDialog
@@ -18,6 +20,11 @@ from common.helpers import install_exception_hook, suppress_qt_warnings
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(APP_NAME)
 install_exception_hook()
 suppress_qt_warnings()
+
+"""
+TODO:
+ - Add format moveset settings
+"""
 
 class MainWindow(QMainWindow, Ui_PokemonSearcher):
     loaded = Signal()
@@ -43,6 +50,13 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         self.pokemon_list_handler.update()
         self.version_control = VersionControl(self.actionVersion, self.versionStatusBar)
+
+        self.debug_panel = DebugPanel(self)
+        self.addDockWidget(Qt.BottomDockWidgetArea, self.debug_panel)
+        QShortcut(QKeySequence("F12"), self).activated.connect(
+            lambda: self.debug_panel.show() if self.debug_panel.isHidden() else self.debug_panel.hide()
+        )
+
         self.loaded.emit()
 
     def _init_vars(self) -> None:

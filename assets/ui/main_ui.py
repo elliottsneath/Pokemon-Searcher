@@ -18,12 +18,13 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
     QGridLayout, QHBoxLayout, QLabel, QLineEdit,
-    QListWidget, QListWidgetItem, QMainWindow, QPushButton,
-    QSizePolicy, QSpacerItem, QStackedWidget, QStatusBar,
-    QToolBar, QToolButton, QVBoxLayout, QWidget)
+    QListWidget, QListWidgetItem, QMainWindow, QSizePolicy,
+    QSpacerItem, QStackedWidget, QStatusBar, QToolBar,
+    QToolButton, QVBoxLayout, QWidget)
 
 from assets.ui.animated_button import AnimatedHoverButton
 from assets.ui.clickable_label import ClickableLabel
+from common.custom_widgets import RangeSlider
 
 class Ui_PokemonSearcher(object):
     def setupUi(self, PokemonSearcher):
@@ -143,15 +144,31 @@ class Ui_PokemonSearcher(object):
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer)
 
+
+        self.verticalLayout_2.addLayout(self.horizontalLayout_3)
+
+        self.horizontalLayout_19 = QHBoxLayout()
+        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
+        self.label_11 = QLabel(self.main)
+        self.label_11.setObjectName(u"label_11")
+
+        self.horizontalLayout_19.addWidget(self.label_11)
+
+        self.horizontalSlider = RangeSlider(self.main)
+        self.horizontalSlider.setObjectName(u"horizontalSlider")
+        self.horizontalSlider.setOrientation(Qt.Orientation.Horizontal)
+
+        self.horizontalLayout_19.addWidget(self.horizontalSlider)
+
         self.hideDraftedCheckbox = QCheckBox(self.main)
         self.hideDraftedCheckbox.setObjectName(u"hideDraftedCheckbox")
         sizePolicy2.setHeightForWidth(self.hideDraftedCheckbox.sizePolicy().hasHeightForWidth())
         self.hideDraftedCheckbox.setSizePolicy(sizePolicy2)
 
-        self.horizontalLayout_3.addWidget(self.hideDraftedCheckbox)
+        self.horizontalLayout_19.addWidget(self.hideDraftedCheckbox)
 
 
-        self.verticalLayout_2.addLayout(self.horizontalLayout_3)
+        self.verticalLayout_2.addLayout(self.horizontalLayout_19)
 
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -415,7 +432,7 @@ class Ui_PokemonSearcher(object):
 
         self.horizontalLayout_4.addWidget(self.line_3)
 
-        self.clearDraftButton = QPushButton(self.dataFrame)
+        self.clearDraftButton = AnimatedHoverButton(self.dataFrame)
         self.clearDraftButton.setObjectName(u"clearDraftButton")
 
         self.horizontalLayout_4.addWidget(self.clearDraftButton)
@@ -1073,6 +1090,7 @@ class Ui_PokemonSearcher(object):
         self.typesCheckbox.setText(QCoreApplication.translate("PokemonSearcher", u"Types", None))
         self.abilitiesCheckbox.setText(QCoreApplication.translate("PokemonSearcher", u"Abilities", None))
         self.movesCheckbox.setText(QCoreApplication.translate("PokemonSearcher", u"Moves", None))
+        self.label_11.setText(QCoreApplication.translate("PokemonSearcher", u"Price Range: ", None))
         self.hideDraftedCheckbox.setText(QCoreApplication.translate("PokemonSearcher", u"Hide drafted", None))
         self.nameLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Name", None))
         self.costLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Pts", None))

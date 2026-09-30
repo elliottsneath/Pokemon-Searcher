@@ -20,6 +20,7 @@ class MainWidgets:
         self.move_checkbox = w.movesCheckbox
         self.hide_drafted_checkbox = w.hideDraftedCheckbox
         self.pokemon_list_widget = w.pokemonListWidget
+        self.cost_slider = w.horizontalSlider
         self.sort_labels = {
             "name": w.nameLabel,
             "hp":   w.hpLabel,
@@ -99,6 +100,7 @@ class SettingsWidgets:
         self.import_button = w.importPokemonButton
         self.search_bar = w.settingsSearchBar
         self.reset_button = w.resetPokemonButton
+        self.refresh_button = w.refreshButton
         self.pokemon_list_widget = w.settingsPokemonListWidget
 
         self.budget_line_edit.setValidator(QIntValidator(0, 999))

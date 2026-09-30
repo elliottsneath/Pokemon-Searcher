@@ -142,7 +142,8 @@ class DataHandler:
                 p.favourite = p.name in favourites.get("favourites", [])
                 draft_info = self.w.draft_board.get(p.species_id, {})
                 p.cost = draft_info.get("cost")
-                p.drafted = self.w.pool in draft_info.get("drafted_in", [])
+                drafted_in = draft_info.get("drafted_in", [])
+                p.drafted = bool(drafted_in) if self.w.draft_pools == 0 else self.w.pool in drafted_in
             return True
         except Exception:
             return False
@@ -261,4 +262,5 @@ class DataHandler:
         for pokemon in self.w.master_list:
             draft_info = self.w.draft_board.get(pokemon.species_id, {})
             pokemon.cost = draft_info.get("cost")
-            pokemon.drafted = self.w.pool in draft_info.get("drafted_in", [])
+            drafted_in = draft_info.get("drafted_in", [])
+            pokemon.drafted = bool(drafted_in) if self.w.draft_pools == 0 else self.w.pool in drafted_in

@@ -10,8 +10,9 @@ from typing import TYPE_CHECKING
 
 import pandas as pd
 from PySide6.QtWidgets import (
-    QDialog, QFileDialog, QInputDialog, QMessageBox,
+    QApplication, QDialog, QFileDialog, QInputDialog, QMessageBox,
 )
+from PySide6.QtCore import Qt
 
 from assets.ui.import_popup_ui import Ui_Form
 from assets.ui.pokemon_list_item import SettingsPokemonListItem
@@ -34,10 +35,10 @@ class SettingsHandler:
         self.wg.export_button.clicked.connect(self.export_pokemon_list)
         self.wg.import_button.clicked.connect(self.import_pokemon_list)
         self.wg.reset_button.clicked.connect(self.reset_pokemon_list)
+        self.wg.refresh_button.clicked.connect(self.sync_from_sheet)
+        self.wg.refresh_button.setEnabled(bool(self.w.sheet_url))
         self.populate_pool_combobox()
         self.wg.pool_combo.currentIndexChanged.connect(self.change_pool)
-        if self.w.sheet_url:
-            self.sync_from_sheet(silent=True)
 
     # ── pool ───────────────────────────────────────────────────────────────
 
@@ -129,12 +130,14 @@ class SettingsHandler:
                 self.w, "Connect to Google Sheet", "Paste the Google Sheets URL:",
                 text=self.w.sheet_url,
             )
-            if not ok or not url.strip():
+            if not ok:
                 return
             self.w.sheet_url = url.strip()
             self.w.data_handler.save_config()
+            self.wg.refresh_button.setEnabled(bool(self.w.sheet_url))
             dialog.accept()
-            self.sync_from_sheet()
+            if self.w.sheet_url:
+                self.sync_from_sheet()
 
         def import_from_file():
             file_path, _ = QFileDialog.getOpenFileName(
@@ -167,7 +170,9 @@ class SettingsHandler:
                 return
             try:
                 xls = pd.ExcelFile(file_path, engine='openpyxl')
-                target_sheet = "Draft Board" if "Draft Board" in xls.sheet_names else "Board"
+                target_sheet = self._pick_sheet(xls)
+                if target_sheet is None:
+                    return
 
                 df = pd.read_excel(xls, sheet_name=target_sheet, engine='openpyxl')
                 raw_list = df.astype(str).values.flatten().tolist()
@@ -236,6 +241,19 @@ class SettingsHandler:
 
     # ── sheet sync ─────────────────────────────────────────────────────────
 
+    def _pick_sheet(self, xls: "pd.ExcelFile", silent: bool = False) -> "str | None":
+        for name in ("Draft Board", "Board"):
+            if name in xls.sheet_names:
+                return name
+        if silent:
+            return None
+        choice, ok = QInputDialog.getItem(
+            self.w, "Select Sheet",
+            "No 'Draft Board' sheet found. Which sheet is the draft board?",
+            xls.sheet_names, 0, False,
+        )
+        return choice if ok else None
+
     def sync_from_sheet(self, silent: bool = False) -> None:
         if not self.w.sheet_url:
             return
@@ -247,13 +265,18 @@ class SettingsHandler:
         sheet_id = match.group(1)
         export_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=xlsx"
         tmp_path = None
+        self.w.setEnabled(False)
+        QApplication.setOverrideCursor(Qt.WaitCursor)
+        QApplication.processEvents()
         try:
             with tempfile.NamedTemporaryFile(suffix=".xlsx", delete=False) as tmp:
                 tmp_path = tmp.name
             urllib.request.urlretrieve(export_url, tmp_path)
 
             xls = pd.ExcelFile(tmp_path, engine='openpyxl')
-            target_sheet = "Draft Board" if "Draft Board" in xls.sheet_names else "Board"
+            target_sheet = self._pick_sheet(xls, silent=silent)
+            if target_sheet is None:
+                return
 
             df = pd.read_excel(xls, sheet_name=target_sheet, engine='openpyxl')
             raw_list = df.astype(str).values.flatten().tolist()
@@ -282,6 +305,8 @@ class SettingsHandler:
                     f"{', '.join(excluded_list)}"
                 )
 
+            print(excluded_list)
+
             draft_board, draft_pools = parse_draft_board(xls, target_sheet, self.w.pokedex)
             self.w.draft_board = draft_board
             self.w.draft_pools = draft_pools
@@ -306,6 +331,8 @@ class SettingsHandler:
             else:
                 print(f"Sheet sync failed: {e}")
         finally:
+            QApplication.restoreOverrideCursor()
+            self.w.setEnabled(True)
             if tmp_path:
                 try:
                     os.remove(tmp_path)
