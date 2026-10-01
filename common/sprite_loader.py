@@ -1,11 +1,17 @@
 import json
 import os
 import re
+import sys
 import urllib.request
 
 from PySide6.QtGui import QPixmap
 
-_SPRITE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "sprites")
+if getattr(sys, "frozen", False):
+    _BASE = os.path.dirname(sys.executable)
+else:
+    _BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+_SPRITE_DIR = os.path.join(_BASE, "assets", "sprites")
 _POKEAPI_URL = "https://pokeapi.co/api/v2/pokemon/{}"
 
 

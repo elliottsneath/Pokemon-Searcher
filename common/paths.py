@@ -1,6 +1,10 @@
 import os
+import sys
 
-_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if getattr(sys, "frozen", False):
+    _ROOT = os.path.dirname(sys.executable)
+else:
+    _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 POKEDEX_PATH = os.path.join(_ROOT, "data", "pokedex.json")
 LEARNSET_PATH = os.path.join(_ROOT, "data", "learnsets.json")

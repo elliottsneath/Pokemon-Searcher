@@ -1,5 +1,9 @@
 import sys
+import os
 import ctypes
+
+if getattr(sys, "frozen", False):
+    os.chdir(os.path.dirname(sys.executable))
 
 from PySide6.QtWidgets import QMainWindow, QApplication, QDialog, QSplashScreen
 from PySide6.QtGui import Qt, QPixmap, QIcon, QShortcut, QKeySequence

@@ -2,6 +2,7 @@ __pycache__/
 tempCodeRunnerFile.py
 venv/
 output/
+default_data/
 *.xlsx
 *.xlsm
 error_log.txt
