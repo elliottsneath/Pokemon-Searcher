@@ -34,6 +34,7 @@ class DataHandler:
     # ── load ───────────────────────────────────────────────────────────────
 
     def load_pokemon_data(self, init: bool = True) -> None:
+        print(f"[DataHandler] load_pokemon_data init={init}")
         self.w.master_list = []
         self.w.all_names = []
         self.w.all_abilities = set()
@@ -47,6 +48,7 @@ class DataHandler:
                     self.w.draft_board = spdata.get("draft_board", {})
                     self.w.draft_pools = spdata.get("draft_pools", 0)
                 self.w.pokedex = []
+                print(f"[DataHandler] selected_pokemon={len(self.w.selected_pokemon)}, draft_pools={self.w.draft_pools}")
 
             with open(CONFIG_FILE_PATH, 'r') as f:
                 favourites = json.load(f)
@@ -58,17 +60,20 @@ class DataHandler:
                     self.w.draft_format = DraftFormat(favourites.get("draft_format", DraftFormat.CHAMPIONS_NATDEX.value))
                 except ValueError:
                     self.w.draft_format = DraftFormat.CHAMPIONS_NATDEX
+                print(f"[DataHandler] pool={self.w.pool}, format={self.w.draft_format.value}, hide_drafted={self.w.hide_drafted}")
 
             self.w.highest_stats = [-float('inf')] * 6
             self.w.lowest_stats = [float('inf')] * 6
 
             if self._try_load_cache(favourites, init):
                 self.w.all_moves = {m for p in self.w.master_list for m in p.moves_for(self.w.draft_format)}
+                print(f"[DataHandler] cache hit — {len(self.w.master_list)} pokemon, {len(self.w.all_moves)} moves")
                 if init:
                     self._populate_settings_list()
                 return
 
             # ── full rebuild ───────────────────────────────────────────────
+            print("[DataHandler] cache miss — full rebuild")
             with open(POKEDEX_PATH, 'r') as f:
                 pokedex = json.load(f)
             with open(LEARNSET_PATH, 'r') as f:
@@ -78,6 +83,9 @@ class DataHandler:
             if os.path.exists(LEARNSETS_SV_PATH):
                 with open(LEARNSETS_SV_PATH, 'r') as f:
                     sv_learnset_data = json.load(f)
+                print(f"[DataHandler] sv learnsets loaded ({len(sv_learnset_data)} entries)")
+            else:
+                print("[DataHandler] learnsets_sv.json not found — sv_moves will be empty (run update_champions_data.py)")
 
             merged = self._ensure_merged_learnsets(pokedex, learnset_data)
             sv_merged = self._ensure_sv_merged_learnsets(pokedex, sv_learnset_data) if sv_learnset_data else {}
@@ -117,16 +125,18 @@ class DataHandler:
                 self.w.all_names.append(name)
 
             self.w.all_moves = {m for p in self.w.master_list for m in p.moves_for(self.w.draft_format)}
+            print(f"[DataHandler] rebuilt {len(self.w.master_list)} pokemon, {len(self.w.all_moves)} moves ({self.w.draft_format.value})")
 
             self._save_cache()
+            print("[DataHandler] cache saved")
 
             if init:
                 self._populate_settings_list()
 
         except FileNotFoundError as e:
-            print(f"Error: {e}")
+            print(f"[DataHandler] Error: {e}")
         except json.JSONDecodeError as e:
-            print(f"Error parsing JSON: {e}")
+            print(f"[DataHandler] Error parsing JSON: {e}")
 
     # ── pickle cache ───────────────────────────────────────────────────────
 
@@ -282,6 +292,7 @@ class DataHandler:
             [name for name in saved_favourites if name not in loaded_names] +
             [p.name for p in self.w.master_list if p.favourite]
         )
+        print(f"[DataHandler] save_config pool={self.w.pool}, format={self.w.draft_format.value}, favourites={len(favourite_names)}")
         with open(CONFIG_FILE_PATH, 'w') as f:
             json.dump({
                 "favourites": favourite_names,

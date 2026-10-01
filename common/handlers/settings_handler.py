@@ -63,6 +63,7 @@ class SettingsHandler:
 
     def change_pool(self, index: int) -> None:
         self.w.pool = index if index > 0 else None
+        print(f"[Settings] pool changed → {self.w.pool}")
         self.w.data_handler.save_config()
         self.w.data_handler.refresh_draft_status()
         self.w.pokemon_list_handler.update()
@@ -80,12 +81,15 @@ class SettingsHandler:
         self.wg.format_combo.currentIndexChanged.connect(self.change_format)
 
     def change_format(self, index: int) -> None:
+        prev = self.w.draft_format
         try:
             self.w.draft_format = self._FORMAT_ORDER[index]
         except IndexError:
             self.w.draft_format = DraftFormat.CHAMPIONS_NATDEX
+        print(f"[Settings] format changed {prev.value} → {self.w.draft_format.value}")
         self.w.data_handler.save_config()
         self.w.all_moves = {m for p in self.w.master_list for m in p.moves_for(self.w.draft_format)}
+        print(f"[Settings] all_moves rebuilt: {len(self.w.all_moves)} moves")
         self.w.pokemon_list_handler.filter_completer()
         self.w.pokemon_list_handler.update()
         self.w.draft_handler.analyse_team_matchups()
@@ -114,10 +118,11 @@ class SettingsHandler:
             if widget.checkbox.isChecked():
                 self.w.selected_pokemon.append(widget.name_label.text())
 
+        print(f"[Settings] apply — {len(self.w.selected_pokemon)} pokemon selected")
         try:
             self.w.data_handler.save_selected_pokemon()
         except Exception as e:
-            print(f"Error saving selected Pokémon: {e}")
+            print(f"[Settings] Error saving selected Pokémon: {e}")
 
         self.w.pokemon_list_handler.reset_state()
         self.w.data_handler.load_pokemon_data(init=False)
@@ -189,8 +194,10 @@ class SettingsHandler:
                     self.w.draft_pools = data.get("draft_pools", 0)
                     self.populate_pool_combobox()
                 self._apply_imported_list(selected, dialog)
+                print(f"[Settings] imported from file — {len(selected)} pokemon")
                 QMessageBox.information(self.w, "Import Successful", "Pokémon list imported successfully.")
             except Exception as e:
+                print(f"[Settings] import from file failed: {e}")
                 QMessageBox.critical(self.w, "Import Error", f"Failed to import Pokémon list:\n{e}")
 
         def import_from_doc():
@@ -248,8 +255,10 @@ class SettingsHandler:
                 self.populate_pool_combobox()
                 self._apply_imported_list(imported_list, dialog)
                 self.w.draft_handler.record_import()
+                print(f"[Settings] imported from Excel — {len(imported_list)} pokemon, {draft_pools} pools, {len(excluded_list)} excluded")
                 QMessageBox.information(self.w, "Import Successful", "Pokémon list imported successfully.")
             except Exception as e:
+                print(f"[Settings] import from Excel failed: {e}")
                 QMessageBox.critical(
                     self.w, "Import Error",
                     f"Failed to import Pokémon list from Excel:\n{e}"
@@ -355,13 +364,13 @@ class SettingsHandler:
             self._apply_imported_list(imported_list)
             self.w.draft_handler.record_import()
 
+            print(f"[Settings] sheet sync complete — {len(imported_list)} pokemon, {draft_pools} pools, {len(excluded_list)} excluded")
             if not silent:
                 QMessageBox.information(self.w, "Sync Successful", "Pokémon list synced from Google Sheets.")
         except Exception as e:
+            print(f"[Settings] sheet sync failed: {e}")
             if not silent:
                 QMessageBox.critical(self.w, "Sync Error", f"Failed to sync from Google Sheets:\n{e}")
-            else:
-                print(f"Sheet sync failed: {e}")
         finally:
             QApplication.restoreOverrideCursor()
             self.w.setEnabled(True)

@@ -84,6 +84,7 @@ class PokemonListHandler:
         if self.w.hide_drafted:
             self.filtered_sorted_list = [p for p in self.filtered_sorted_list if not p.drafted]
 
+        print(f"[PokemonList] update — filters={self.applied_filters}, format={self.w.draft_format.value}, results={len(self.filtered_sorted_list)}")
         self.filtered_sorted_list.sort(key=self._sort_key(), reverse=self._sort_reverse())
         self.filtered_sorted_list = (
             [p for p in self.filtered_sorted_list if p.favourite] +

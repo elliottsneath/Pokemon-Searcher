@@ -58,6 +58,7 @@ class DraftHandler:
         if idx is None:
             return
         self.drafted_pokemon[idx] = pokemon
+        print(f"[Draft] added {pokemon.name} (slot {idx + 1})")
         self._populate_slot(self.wg.picks[idx], pokemon)
         self.update_budget()
         self.update_picks_label()
@@ -69,6 +70,7 @@ class DraftHandler:
         except ValueError:
             return
         self.drafted_pokemon[idx] = None
+        print(f"[Draft] removed {pokemon.name} (slot {idx + 1})")
         self._clear_slot(self.wg.picks[idx], idx)
         self.update_budget()
         self.update_picks_label()
@@ -114,6 +116,9 @@ class DraftHandler:
             self.w.master_list,
             per_pick_budget,
         )
+        drafted_names = [p.name for p in self.drafted_pokemon if p is not None]
+        missing = self._analysis.missing_roles
+        print(f"[Draft] analysis — team={drafted_names}, missing_roles={sorted(missing)}")
         self._populate_rec_slots(results)
 
     def record_import(self) -> None:
@@ -171,8 +176,10 @@ class DraftHandler:
             self._update_import_label()
             self.update_picks_label()
             self.analyse_team_matchups()
+            loaded = [p.name for p in self.drafted_pokemon if p is not None]
+            print(f"[Draft] state loaded — {len(loaded)} pokemon: {loaded}")
         except Exception as e:
-            print(f"Draft state load failed: {e}")
+            print(f"[Draft] state load failed: {e}")
 
     def update_picks_label(self) -> None:
         count = sum(1 for p in self.drafted_pokemon if p is not None)
