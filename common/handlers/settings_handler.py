@@ -10,7 +10,7 @@ from typing import TYPE_CHECKING
 
 import pandas as pd
 from PySide6.QtWidgets import (
-    QApplication, QDialog, QFileDialog, QInputDialog, QMessageBox,
+    QApplication, QDialog, QFileDialog, QInputDialog, QMessageBox, QProgressDialog,
 )
 from PySide6.QtCore import Qt
 
@@ -306,18 +306,37 @@ class SettingsHandler:
         sheet_id = match.group(1)
         export_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=xlsx"
         tmp_path = None
+
+        progress = QProgressDialog("Connecting...", None, 0, 100, self.w)
+        progress.setWindowTitle("Syncing")
+        progress.setWindowModality(Qt.WindowModal)
+        progress.setMinimumDuration(0)
+        progress.setValue(0)
+        QApplication.processEvents()
+
         self.w.setEnabled(False)
         QApplication.setOverrideCursor(Qt.WaitCursor)
         QApplication.processEvents()
         try:
+            progress.setLabelText("Downloading sheet...")
+            progress.setValue(5)
+            QApplication.processEvents()
+
             with tempfile.NamedTemporaryFile(suffix=".xlsx", delete=False) as tmp:
                 tmp_path = tmp.name
             urllib.request.urlretrieve(export_url, tmp_path)
+
+            progress.setLabelText("Reading spreadsheet...")
+            progress.setValue(45)
+            QApplication.processEvents()
 
             xls = pd.ExcelFile(tmp_path, engine='openpyxl')
             target_sheet = self._pick_sheet(xls, silent=silent)
             if target_sheet is None:
                 return
+
+            progress.setValue(55)
+            QApplication.processEvents()
 
             df = pd.read_excel(xls, sheet_name=target_sheet, engine='openpyxl')
             raw_list = df.astype(str).values.flatten().tolist()
@@ -328,6 +347,10 @@ class SettingsHandler:
                     if isinstance(v, str) and v.strip() and v.strip().lower() != "banned"
                 }
                 raw_list = [v for v in raw_list if v not in banned_set]
+
+            progress.setLabelText("Normalising Pokémon...")
+            progress.setValue(65)
+            QApplication.processEvents()
 
             imported_list, excluded_list, seen = [], [], set()
             for raw in raw_list:
@@ -346,7 +369,9 @@ class SettingsHandler:
                     f"{', '.join(excluded_list)}"
                 )
 
-            print(excluded_list)
+            progress.setLabelText("Parsing draft board...")
+            progress.setValue(78)
+            QApplication.processEvents()
 
             draft_board, draft_pools = parse_draft_board(xls, target_sheet, self.w.pokedex)
             self.w.draft_board = draft_board
@@ -359,10 +384,17 @@ class SettingsHandler:
                 )
                 self.w.pool = pool_names.index(choice) + 1 if ok else None
 
+            progress.setLabelText("Applying...")
+            progress.setValue(88)
+            QApplication.processEvents()
+
             self.w.data_handler.save_config()
             self.populate_pool_combobox()
             self._apply_imported_list(imported_list)
             self.w.draft_handler.record_import()
+
+            progress.setValue(100)
+            QApplication.processEvents()
 
             print(f"[Settings] sheet sync complete — {len(imported_list)} pokemon, {draft_pools} pools, {len(excluded_list)} excluded")
             if not silent:
@@ -372,6 +404,7 @@ class SettingsHandler:
             if not silent:
                 QMessageBox.critical(self.w, "Sync Error", f"Failed to sync from Google Sheets:\n{e}")
         finally:
+            progress.close()
             QApplication.restoreOverrideCursor()
             self.w.setEnabled(True)
             if tmp_path:
