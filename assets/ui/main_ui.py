@@ -291,11 +291,6 @@ class Ui_PokemonSearcher(object):
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.gridLayout_3 = QGridLayout()
         self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.label_3 = QLabel(self.settings)
-        self.label_3.setObjectName(u"label_3")
-
-        self.gridLayout_3.addWidget(self.label_3, 0, 2, 1, 1)
-
         self.budgetLineEdit = QLineEdit(self.settings)
         self.budgetLineEdit.setObjectName(u"budgetLineEdit")
         sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
@@ -306,20 +301,25 @@ class Ui_PokemonSearcher(object):
 
         self.gridLayout_3.addWidget(self.budgetLineEdit, 0, 3, 1, 1)
 
-        self.label_4 = QLabel(self.settings)
-        self.label_4.setObjectName(u"label_4")
+        self.label_12 = QLabel(self.settings)
+        self.label_12.setObjectName(u"label_12")
 
-        self.gridLayout_3.addWidget(self.label_4, 0, 4, 1, 1)
+        self.gridLayout_3.addWidget(self.label_12, 0, 6, 1, 1)
+
+        self.poolLabel = QLabel(self.settings)
+        self.poolLabel.setObjectName(u"poolLabel")
+
+        self.gridLayout_3.addWidget(self.poolLabel, 0, 0, 1, 1)
 
         self.poolComboBox = QComboBox(self.settings)
         self.poolComboBox.setObjectName(u"poolComboBox")
 
         self.gridLayout_3.addWidget(self.poolComboBox, 0, 1, 1, 1)
 
-        self.poolLabel = QLabel(self.settings)
-        self.poolLabel.setObjectName(u"poolLabel")
+        self.label_4 = QLabel(self.settings)
+        self.label_4.setObjectName(u"label_4")
 
-        self.gridLayout_3.addWidget(self.poolLabel, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.label_4, 0, 4, 1, 1)
 
         self.noOfPokemonLineEdit = QLineEdit(self.settings)
         self.noOfPokemonLineEdit.setObjectName(u"noOfPokemonLineEdit")
@@ -327,6 +327,20 @@ class Ui_PokemonSearcher(object):
         self.noOfPokemonLineEdit.setSizePolicy(sizePolicy4)
 
         self.gridLayout_3.addWidget(self.noOfPokemonLineEdit, 0, 5, 1, 1)
+
+        self.label_3 = QLabel(self.settings)
+        self.label_3.setObjectName(u"label_3")
+
+        self.gridLayout_3.addWidget(self.label_3, 0, 2, 1, 1)
+
+        self.formatCombo = QComboBox(self.settings)
+        self.formatCombo.addItem("")
+        self.formatCombo.addItem("")
+        self.formatCombo.addItem("")
+        self.formatCombo.addItem("")
+        self.formatCombo.setObjectName(u"formatCombo")
+
+        self.gridLayout_3.addWidget(self.formatCombo, 0, 7, 1, 1)
 
 
         self.verticalLayout_3.addLayout(self.gridLayout_3)
@@ -1103,9 +1117,15 @@ class Ui_PokemonSearcher(object):
         self.spdLabel.setText(QCoreApplication.translate("PokemonSearcher", u"SpD", None))
         self.speLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Spe", None))
         self.bstLabel.setText(QCoreApplication.translate("PokemonSearcher", u"BST", None))
-        self.label_3.setText(QCoreApplication.translate("PokemonSearcher", u"Budget:", None))
-        self.label_4.setText(QCoreApplication.translate("PokemonSearcher", u"No. of Pokemon", None))
+        self.label_12.setText(QCoreApplication.translate("PokemonSearcher", u"Format: ", None))
         self.poolLabel.setText(QCoreApplication.translate("PokemonSearcher", u"Draft pool:", None))
+        self.label_4.setText(QCoreApplication.translate("PokemonSearcher", u"No. of Pokemon", None))
+        self.label_3.setText(QCoreApplication.translate("PokemonSearcher", u"Budget:", None))
+        self.formatCombo.setItemText(0, QCoreApplication.translate("PokemonSearcher", u"SV", None))
+        self.formatCombo.setItemText(1, QCoreApplication.translate("PokemonSearcher", u"NatDex", None))
+        self.formatCombo.setItemText(2, QCoreApplication.translate("PokemonSearcher", u"Champions", None))
+        self.formatCombo.setItemText(3, QCoreApplication.translate("PokemonSearcher", u"Champions NatDex", None))
+
         self.applyButton.setText(QCoreApplication.translate("PokemonSearcher", u"Apply", None))
         self.exportPokemonButton.setText(QCoreApplication.translate("PokemonSearcher", u"Export Pokemon List", None))
         self.importPokemonButton.setText(QCoreApplication.translate("PokemonSearcher", u"Import Pokemon List", None))

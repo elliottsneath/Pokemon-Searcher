@@ -15,16 +15,12 @@ from common.handlers.data_handler import DataHandler
 from common.handlers.draft_handler import DraftHandler
 from common.handlers.pokemon_list_handler import PokemonListHandler
 from common.handlers.settings_handler import SettingsHandler
+from common.draft_format import DraftFormat
 from common.helpers import install_exception_hook, suppress_qt_warnings
 
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(APP_NAME)
 install_exception_hook()
 suppress_qt_warnings()
-
-"""
-TODO:
- - Add format moveset settings
-"""
 
 class MainWindow(QMainWindow, Ui_PokemonSearcher):
     loaded = Signal()
@@ -73,6 +69,7 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.draft_pools = 0
         self.pool = None
         self.hide_drafted = False
+        self.draft_format = DraftFormat.CHAMPIONS_NATDEX
         self.sheet_url = ""
         self.selected_pokemon = []
         self.pokedex = []

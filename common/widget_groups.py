@@ -102,6 +102,7 @@ class SettingsWidgets:
         self.reset_button = w.resetPokemonButton
         self.refresh_button = w.refreshButton
         self.pokemon_list_widget = w.settingsPokemonListWidget
+        self.format_combo = w.formatCombo
 
         self.budget_line_edit.setValidator(QIntValidator(0, 999))
         self.number_of_pokemon_line_edit.setValidator(QIntValidator(0, 50))

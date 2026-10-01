@@ -16,6 +16,7 @@ from PySide6.QtCore import Qt
 
 from assets.ui.import_popup_ui import Ui_Form
 from assets.ui.pokemon_list_item import SettingsPokemonListItem
+from common.draft_format import DraftFormat
 from common.handlers.draft_parser import normalise_pokemon, parse_draft_board, UNWANTED_STRINGS
 from common.widget_groups import SettingsWidgets
 
@@ -29,6 +30,13 @@ class SettingsHandler:
         self.wg = widgets
         self._connect_signals()
 
+    _FORMAT_ORDER = [
+        DraftFormat.SV,
+        DraftFormat.NATDEX,
+        DraftFormat.CHAMPIONS,
+        DraftFormat.CHAMPIONS_NATDEX,
+    ]
+
     def _connect_signals(self) -> None:
         self.wg.apply_button.clicked.connect(self.apply_pokemon_list)
         self.wg.search_bar.textChanged.connect(self.search_settings)
@@ -38,6 +46,7 @@ class SettingsHandler:
         self.wg.refresh_button.clicked.connect(self.sync_from_sheet)
         self.wg.refresh_button.setEnabled(bool(self.w.sheet_url))
         self.populate_pool_combobox()
+        self._init_format_combo()
         self.wg.pool_combo.currentIndexChanged.connect(self.change_pool)
 
     # ── pool ───────────────────────────────────────────────────────────────
@@ -57,6 +66,29 @@ class SettingsHandler:
         self.w.data_handler.save_config()
         self.w.data_handler.refresh_draft_status()
         self.w.pokemon_list_handler.update()
+
+    # ── format ─────────────────────────────────────────────────────────────
+
+    def _init_format_combo(self) -> None:
+        try:
+            idx = self._FORMAT_ORDER.index(self.w.draft_format)
+        except ValueError:
+            idx = len(self._FORMAT_ORDER) - 1
+        self.wg.format_combo.blockSignals(True)
+        self.wg.format_combo.setCurrentIndex(idx)
+        self.wg.format_combo.blockSignals(False)
+        self.wg.format_combo.currentIndexChanged.connect(self.change_format)
+
+    def change_format(self, index: int) -> None:
+        try:
+            self.w.draft_format = self._FORMAT_ORDER[index]
+        except IndexError:
+            self.w.draft_format = DraftFormat.CHAMPIONS_NATDEX
+        self.w.data_handler.save_config()
+        self.w.all_moves = {m for p in self.w.master_list for m in p.moves_for(self.w.draft_format)}
+        self.w.pokemon_list_handler.filter_completer()
+        self.w.pokemon_list_handler.update()
+        self.w.draft_handler.analyse_team_matchups()
 
     # ── apply ──────────────────────────────────────────────────────────────
 

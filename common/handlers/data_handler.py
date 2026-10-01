@@ -11,8 +11,10 @@ from PySide6.QtWidgets import QListWidgetItem
 from PySide6.QtCore import QTimer
 
 from assets.ui.pokemon_list_item import SettingsPokemonListItem
+from common.draft_format import DraftFormat
 from common.paths import (
-    POKEDEX_PATH, LEARNSET_PATH, LEARNSETS_MERGED_PATH,
+    POKEDEX_PATH, LEARNSET_PATH, LEARNSETS_SV_PATH,
+    LEARNSETS_MERGED_PATH, LEARNSETS_SV_MERGED_PATH,
     POKEMON_CACHE_PATH, SELECTED_POKEMON_PATH, CONFIG_FILE_PATH,
 )
 from data.pokemon_obj import PokemonData
@@ -25,6 +27,7 @@ class DataHandler:
     def __init__(self, window: MainWindow):
         self.w = window
         self._merged_learnsets: dict | None = None
+        self._sv_merged_learnsets: dict | None = None
         self._settings_build_index = 0
         self.load_pokemon_data(init=True)
 
@@ -51,11 +54,16 @@ class DataHandler:
                 self.w.pool = favourites.get("pool")
                 self.w.hide_drafted = favourites.get("hide_drafted", False)
                 self.w.sheet_url = favourites.get("sheet_url", "")
+                try:
+                    self.w.draft_format = DraftFormat(favourites.get("draft_format", DraftFormat.CHAMPIONS_NATDEX.value))
+                except ValueError:
+                    self.w.draft_format = DraftFormat.CHAMPIONS_NATDEX
 
             self.w.highest_stats = [-float('inf')] * 6
             self.w.lowest_stats = [float('inf')] * 6
 
             if self._try_load_cache(favourites, init):
+                self.w.all_moves = {m for p in self.w.master_list for m in p.moves_for(self.w.draft_format)}
                 if init:
                     self._populate_settings_list()
                 return
@@ -66,7 +74,13 @@ class DataHandler:
             with open(LEARNSET_PATH, 'r') as f:
                 learnset_data = json.load(f)
 
+            sv_learnset_data = {}
+            if os.path.exists(LEARNSETS_SV_PATH):
+                with open(LEARNSETS_SV_PATH, 'r') as f:
+                    sv_learnset_data = json.load(f)
+
             merged = self._ensure_merged_learnsets(pokedex, learnset_data)
+            sv_merged = self._ensure_sv_merged_learnsets(pokedex, sv_learnset_data) if sv_learnset_data else {}
 
             for pokemon, pdata in pokedex.items():
                 if init:
@@ -79,6 +93,7 @@ class DataHandler:
                 types = pdata.get("types", [])
                 stats = list(pdata.get("baseStats", {}).values())
                 moves = merged.get(pokemon, [])
+                sv_moves = sv_merged.get(pokemon, [])
 
                 base_abilities, hidden_abilities = [], []
                 for key, value in pdata.get("abilities", {}).items():
@@ -93,7 +108,7 @@ class DataHandler:
                 self.w.master_list.append(PokemonData(
                     num=num, name=name, types=types,
                     base_abilities=base_abilities, hidden_abilities=hidden_abilities,
-                    stats=stats, moves=moves,
+                    stats=stats, moves=moves, sv_moves=sv_moves,
                     favourite=name in favourites.get("favourites", []),
                     species_id=pokemon,
                     cost=draft_info.get("cost"),
@@ -101,8 +116,7 @@ class DataHandler:
                 ))
                 self.w.all_names.append(name)
 
-            for moves_list in learnset_data.values():
-                self.w.all_moves.update(moves_list)
+            self.w.all_moves = {m for p in self.w.master_list for m in p.moves_for(self.w.draft_format)}
 
             self._save_cache()
 
@@ -123,14 +137,20 @@ class DataHandler:
         if not os.path.exists(POKEMON_CACHE_PATH):
             return False
         try:
-            source_mtime = max(os.path.getmtime(POKEDEX_PATH), os.path.getmtime(LEARNSET_PATH))
+            source_paths = [POKEDEX_PATH, LEARNSET_PATH]
+            if os.path.exists(LEARNSETS_SV_PATH):
+                source_paths.append(LEARNSETS_SV_PATH)
+            source_mtime = max(os.path.getmtime(p) for p in source_paths)
             if os.path.getmtime(POKEMON_CACHE_PATH) <= source_mtime:
                 return False
             with open(POKEMON_CACHE_PATH, 'rb') as f:
                 cache = pickle.load(f)
             if cache.get("fingerprint") != self._selection_fingerprint():
                 return False
-            self.w.master_list = cache["master_list"]
+            master_list = cache["master_list"]
+            if master_list and not hasattr(master_list[0], "sv_moves"):
+                return False
+            self.w.master_list = master_list
             self.w.all_names = cache["all_names"]
             self.w.all_abilities = cache["all_abilities"]
             self.w.all_moves = cache["all_moves"]
@@ -179,6 +199,20 @@ class DataHandler:
         with open(LEARNSETS_MERGED_PATH, 'w') as f:
             json.dump(self._merged_learnsets, f)
         return self._merged_learnsets
+
+    def _ensure_sv_merged_learnsets(self, pokedex: dict, learnset_data: dict) -> dict:
+        if self._sv_merged_learnsets is not None:
+            return self._sv_merged_learnsets
+        if os.path.exists(LEARNSETS_SV_MERGED_PATH) and os.path.exists(LEARNSETS_SV_PATH):
+            source_mtime = max(os.path.getmtime(POKEDEX_PATH), os.path.getmtime(LEARNSETS_SV_PATH))
+            if os.path.getmtime(LEARNSETS_SV_MERGED_PATH) > source_mtime:
+                with open(LEARNSETS_SV_MERGED_PATH, 'r') as f:
+                    self._sv_merged_learnsets = json.load(f)
+                return self._sv_merged_learnsets
+        self._sv_merged_learnsets = self._build_merged_learnsets(pokedex, learnset_data)
+        with open(LEARNSETS_SV_MERGED_PATH, 'w') as f:
+            json.dump(self._sv_merged_learnsets, f)
+        return self._sv_merged_learnsets
 
     def _build_merged_learnsets(self, pokedex: dict, learnset_data: dict) -> dict:
         memo: dict[str, set] = {}
@@ -254,6 +288,7 @@ class DataHandler:
                 "pool": self.w.pool,
                 "hide_drafted": self.w.hide_drafted,
                 "sheet_url": self.w.sheet_url,
+                "draft_format": self.w.draft_format.value,
             }, f, indent=4)
 
     # ── refresh ────────────────────────────────────────────────────────────

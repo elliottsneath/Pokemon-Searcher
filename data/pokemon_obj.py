@@ -1,5 +1,10 @@
-from dataclasses import dataclass
-from typing import List, Optional
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import TYPE_CHECKING, List, Optional
+
+if TYPE_CHECKING:
+    from common.draft_format import DraftFormat
+
 
 @dataclass
 class PokemonData:
@@ -14,3 +19,10 @@ class PokemonData:
     species_id: str = ""
     cost: Optional[int] = None
     drafted: bool = False
+    sv_moves: List[str] = field(default_factory=list)
+
+    def moves_for(self, fmt: DraftFormat) -> List[str]:
+        from common.draft_format import DraftFormat as DF
+        if fmt in (DF.SV, DF.CHAMPIONS):
+            return getattr(self, "sv_moves", None) or self.moves
+        return self.moves

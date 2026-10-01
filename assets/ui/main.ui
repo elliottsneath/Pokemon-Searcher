@@ -471,13 +471,6 @@
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
          <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="2">
-           <widget class="QLabel" name="label_3">
-            <property name="text">
-             <string>Budget:</string>
-            </property>
-           </widget>
-          </item>
           <item row="0" column="3">
            <widget class="QLineEdit" name="budgetLineEdit">
             <property name="sizePolicy">
@@ -488,20 +481,27 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="4">
-           <widget class="QLabel" name="label_4">
+          <item row="0" column="6">
+           <widget class="QLabel" name="label_12">
             <property name="text">
-             <string>No. of Pokemon</string>
+             <string>Format: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="poolLabel">
+            <property name="text">
+             <string>Draft pool:</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
            <widget class="QComboBox" name="poolComboBox"/>
           </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="poolLabel">
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_4">
             <property name="text">
-             <string>Draft pool:</string>
+             <string>No. of Pokemon</string>
             </property>
            </widget>
           </item>
@@ -513,6 +513,37 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Budget:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="7">
+           <widget class="QComboBox" name="formatCombo">
+            <item>
+             <property name="text">
+              <string>SV</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>NatDex</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Champions</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Champions NatDex</string>
+             </property>
+            </item>
            </widget>
           </item>
          </layout>

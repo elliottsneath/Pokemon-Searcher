@@ -93,7 +93,7 @@ class DraftHandler:
     # ── team matchup analysis ─────────────────────────────────────────────────
 
     def analyse_team_matchups(self) -> None:
-        self._analysis.update(self.drafted_pokemon, self.w.all_types)
+        self._analysis.update(self.drafted_pokemon, self.w.all_types, self.w.draft_format)
         budget_text = self.wg.budget_line_edit.text()
         budget = int(budget_text) if budget_text else 0
         spent = sum(p.cost for p in self.drafted_pokemon if p is not None and p.cost is not None)

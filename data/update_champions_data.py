@@ -101,31 +101,44 @@ def main():
         moves |= champions_learnsets.get(species_id, set())
         return moves
 
-    learnsets = {}
-    for species_id in pokedex:
-        moves = moves_for(species_id)
-        current = species_id
-        # megas and other battle forms share the learnset of the form they change from,
-        # which may itself need to fall back to its base species (e.g. Tatsugiri-Droopy-Mega)
-        while not moves and current in full_pokedex:
-            data = full_pokedex[current]
-            parent = data.get("changesFrom") or data.get("battleOnly") or data.get("baseSpecies")
-            if isinstance(parent, list):
-                parent = parent[0]
-            if not parent or to_id(parent) == current:
-                break
-            current = to_id(parent)
-            moves = moves_for(current)
-        if moves:
-            learnsets[species_id] = sorted(moves)
+    def sv_moves_for(species_id):
+        learnset = full_learnsets.get(species_id, {}).get("learnset", {})
+        moves = {m for m, codes in learnset.items() if any(c[0] == "9" for c in codes)}
+        moves |= champions_learnsets.get(species_id, set())
+        return moves
+
+    def build_learnsets(moves_fn):
+        result = {}
+        for species_id in pokedex:
+            moves = moves_fn(species_id)
+            current = species_id
+            # megas and other battle forms share the learnset of the form they change from,
+            # which may itself need to fall back to its base species (e.g. Tatsugiri-Droopy-Mega)
+            while not moves and current in full_pokedex:
+                data = full_pokedex[current]
+                parent = data.get("changesFrom") or data.get("battleOnly") or data.get("baseSpecies")
+                if isinstance(parent, list):
+                    parent = parent[0]
+                if not parent or to_id(parent) == current:
+                    break
+                current = to_id(parent)
+                moves = moves_fn(current)
+            if moves:
+                result[species_id] = sorted(moves)
+        return result
+
+    learnsets = build_learnsets(moves_for)
+    sv_learnsets = build_learnsets(sv_moves_for)
 
     with open(os.path.join(DATA_DIR, "pokedex.json"), "w", encoding="utf-8") as f:
         json.dump(pokedex, f, indent=2)
     with open(os.path.join(DATA_DIR, "learnsets.json"), "w", encoding="utf-8") as f:
         json.dump(learnsets, f, indent=2)
+    with open(os.path.join(DATA_DIR, "learnsets_sv.json"), "w", encoding="utf-8") as f:
+        json.dump(sv_learnsets, f, indent=2)
 
     print(f"Saved {len(pokedex)} Pokemon ({len(champions_species & pokedex.keys())} Champions-legal) "
-          f"and {len(learnsets)} learnsets.")
+          f"and {len(learnsets)} learnsets ({len(sv_learnsets)} with SV movepools).")
 
 
 if __name__ == "__main__":

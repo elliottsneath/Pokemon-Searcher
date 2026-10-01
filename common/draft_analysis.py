@@ -5,6 +5,7 @@ from typing import Callable
 from PySide6.QtWidgets import QLayout
 
 from common.custom_widgets import type_count_widget
+from common.draft_format import DraftFormat
 from common.helpers import clear_layout
 from common.type_chart import effectiveness
 from data.pokemon_obj import PokemonData
@@ -18,25 +19,25 @@ class DraftAnalysis:
     SPD = 4
     SPE = 5
 
-    ARCHETYPES: dict[str, Callable[[PokemonData], bool]] = {
-        "Bulky Water":      lambda p: "Water" in p.types and p.stats[DraftAnalysis.DEF] + p.stats[DraftAnalysis.SPD] >= 170,
-        "Grounded Poison":  lambda p: "Poison" in p.types and "Flying" not in p.types and "Levitate" not in DraftAnalysis.all_abilities(p),
-        "Physical Breaker": lambda p: p.stats[DraftAnalysis.ATK] >= 125,
-        "Special Breaker":  lambda p: p.stats[DraftAnalysis.SPA] >= 125,
-        "Pivot":            lambda p: any(m in p.moves for m in ("uturn", "voltswitch", "flipturn", "partingshot", "teleport")),
-        "Stealth Rock":     lambda p: "stealthrock" in p.moves,
-        "Spikes":           lambda p: "spikes" in p.moves,
-        "Hazard Removal":   lambda p: any(m in p.moves for m in ("rapidspin", "defog", "mortalspin", "tidyup", "courtchange")),
-        "Knock Off":        lambda p: "knockoff" in p.moves,
-        "Trick Room":       lambda p: "trickroom" in p.moves,
-        "Cleric":           lambda p: any(m in p.moves for m in ("healbell", "aromatherapy", "lunardance")),
-        "Physical Wall":    lambda p: p.stats[DraftAnalysis.DEF] >= 100 and p.stats[DraftAnalysis.HP] >= 80,
-        "Special Wall":     lambda p: p.stats[DraftAnalysis.SPD] >= 100 and p.stats[DraftAnalysis.HP] >= 80,
-        "Speed Control":    lambda p: p.stats[DraftAnalysis.SPE] >= 110 or any(m in p.moves for m in ("tailwind", "trickroom", "stickywebs", "thunderwave")),
-        "Contact Punish":   lambda p: any(a in DraftAnalysis.all_abilities(p) for a in ("Rough Skin", "Iron Barbs", "Static", "Flame Body")) and p.stats[DraftAnalysis.DEF] >= 80,
-        "Spinblocker":      lambda p: "Ghost" in p.types,
-        "Fast Mon":         lambda p: p.stats[DraftAnalysis.SPE] >= 115,
-        "Sleeper":          lambda p: any(m in p.moves for m in ("spore")),
+    ARCHETYPES: dict[str, Callable[[PokemonData, DraftFormat], bool]] = {
+        "Bulky Water":      lambda p, _: "Water" in p.types and p.stats[DraftAnalysis.DEF] + p.stats[DraftAnalysis.SPD] >= 170,
+        "Grounded Poison":  lambda p, _: "Poison" in p.types and "Flying" not in p.types and "Levitate" not in DraftAnalysis.all_abilities(p),
+        "Physical Breaker": lambda p, _: p.stats[DraftAnalysis.ATK] >= 125,
+        "Special Breaker":  lambda p, _: p.stats[DraftAnalysis.SPA] >= 125,
+        "Pivot":            lambda p, f: any(m in p.moves_for(f) for m in ("uturn", "voltswitch", "flipturn", "partingshot", "teleport")),
+        "Stealth Rock":     lambda p, f: "stealthrock" in p.moves_for(f),
+        "Spikes":           lambda p, f: "spikes" in p.moves_for(f),
+        "Hazard Removal":   lambda p, f: any(m in p.moves_for(f) for m in ("rapidspin", "defog", "mortalspin", "tidyup", "courtchange")),
+        "Knock Off":        lambda p, f: "knockoff" in p.moves_for(f),
+        "Trick Room":       lambda p, f: "trickroom" in p.moves_for(f),
+        "Cleric":           lambda p, f: any(m in p.moves_for(f) for m in ("healbell", "aromatherapy", "lunardance")),
+        "Physical Wall":    lambda p, _: p.stats[DraftAnalysis.DEF] >= 100 and p.stats[DraftAnalysis.HP] >= 80,
+        "Special Wall":     lambda p, _: p.stats[DraftAnalysis.SPD] >= 100 and p.stats[DraftAnalysis.HP] >= 80,
+        "Speed Control":    lambda p, f: p.stats[DraftAnalysis.SPE] >= 110 or any(m in p.moves_for(f) for m in ("tailwind", "trickroom", "stickywebs", "thunderwave")),
+        "Contact Punish":   lambda p, _: any(a in DraftAnalysis.all_abilities(p) for a in ("Rough Skin", "Iron Barbs", "Static", "Flame Body")) and p.stats[DraftAnalysis.DEF] >= 80,
+        "Spinblocker":      lambda p, _: "Ghost" in p.types,
+        "Fast Mon":         lambda p, _: p.stats[DraftAnalysis.SPE] >= 115,
+        "Sleeper":          lambda p, f: any(m in p.moves_for(f) for m in ("spore",)),
     }
 
     def __init__(self, weaknesses_layout: QLayout, resistances_layout: QLayout, immunities_layout: QLayout):
@@ -46,6 +47,7 @@ class DraftAnalysis:
         self.type_scores: dict[str, int] = {}
         self.all_types: list[str] = []
         self.missing_roles: set[str] = set(self.ARCHETYPES.keys())
+        self.fmt: DraftFormat = DraftFormat.CHAMPIONS_NATDEX
 
     @staticmethod
     def all_abilities(p: PokemonData) -> list[str]:
@@ -61,20 +63,20 @@ class DraftAnalysis:
         return 0
 
     @staticmethod
-    def safe_check(check: Callable[[PokemonData], bool], p: PokemonData) -> bool:
+    def safe_check(check: Callable[[PokemonData, DraftFormat], bool], p: PokemonData, fmt: DraftFormat) -> bool:
         try:
-            return check(p)
+            return check(p, fmt)
         except Exception:
             return False
 
     @staticmethod
-    def find_missing_roles(drafted_pokemon: list[PokemonData | None]) -> set[str]:
+    def find_missing_roles(drafted_pokemon: list[PokemonData | None], fmt: DraftFormat) -> set[str]:
         covered: set[str] = set()
         for p in drafted_pokemon:
             if p is None:
                 continue
             for role, check in DraftAnalysis.ARCHETYPES.items():
-                if DraftAnalysis.safe_check(check, p):
+                if DraftAnalysis.safe_check(check, p, fmt):
                     covered.add(role)
         return set(DraftAnalysis.ARCHETYPES.keys()) - covered
 
@@ -87,7 +89,7 @@ class DraftAnalysis:
             delta += max(0, old) - max(0, new)
         return delta
 
-    def update(self, drafted_pokemon: list[PokemonData | None], all_types: list[str]) -> None:
+    def update(self, drafted_pokemon: list[PokemonData | None], all_types: list[str], fmt: DraftFormat = DraftFormat.CHAMPIONS_NATDEX) -> None:
         active = [p for p in drafted_pokemon if p is not None]
 
         type_scores: dict[str, int] = {}
@@ -104,7 +106,8 @@ class DraftAnalysis:
 
         self.type_scores = type_scores
         self.all_types = all_types
-        self.missing_roles = self.find_missing_roles(drafted_pokemon)
+        self.fmt = fmt
+        self.missing_roles = self.find_missing_roles(drafted_pokemon, fmt)
 
         top_weak   = sorted(((t, s) for t, s in type_scores.items() if s > 0), key=lambda x: -x[1])[:3]
         top_resist = sorted(((t, s) for t, s in type_scores.items() if s < 0), key=lambda x:  x[1])[:3]
@@ -121,7 +124,7 @@ class DraftAnalysis:
         per_pick_budget: float,
     ) -> list[tuple[PokemonData, list[str]]]:
         def matched_roles(p: PokemonData) -> list[str]:
-            return [r for r, check in self.ARCHETYPES.items() if r in self.missing_roles and self.safe_check(check, p)]
+            return [r for r, check in self.ARCHETYPES.items() if r in self.missing_roles and self.safe_check(check, p, self.fmt)]
 
         pool = [
             p for p in available_pokemon

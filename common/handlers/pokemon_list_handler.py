@@ -99,7 +99,7 @@ class PokemonListHandler:
                 return False
             if category == "ability" and keyword not in [a.lower() for a in pokemon.base_abilities + pokemon.hidden_abilities]:
                 return False
-            if category == "move" and keyword not in [m.lower() for m in pokemon.moves]:
+            if category == "move" and keyword not in [m.lower() for m in pokemon.moves_for(self.w.draft_format)]:
                 return False
         slider = self.wg.cost_slider
         if slider.isEnabled() and pokemon.cost is not None:
@@ -311,7 +311,7 @@ class PokemonListHandler:
             ui.sprite_label.clear()
 
         ui.moveListWidget.clear()
-        for move in pokemon.moves:
+        for move in pokemon.moves_for(self.w.draft_format):
             ui.moveListWidget.addItem(move)
 
         self._popup_dialog.exec()
@@ -323,7 +323,7 @@ class PokemonListHandler:
 
     def _filter_moves(self, text: str, pokemon: PokemonData) -> None:
         self._popup_ui.moveListWidget.clear()
-        for move in pokemon.moves:
+        for move in pokemon.moves_for(self.w.draft_format):
             if text in move:
                 self._popup_ui.moveListWidget.addItem(move)
 

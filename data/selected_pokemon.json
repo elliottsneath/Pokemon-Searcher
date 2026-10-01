@@ -96,6 +96,7 @@
         "arbok",
         "applin",
         "meowscarada",
+        "landorustherian",
         "ironbundle",
         "latios",
         "dragalgemega",
@@ -187,6 +188,7 @@
         "clawitzer",
         "basculin",
         "axew",
+        "tornadustherian",
         "mew",
         "tapulele",
         "ironmoth",
@@ -211,6 +213,7 @@
         "kommoo",
         "mienshao",
         "gyaradosmega",
+        "enamorustherian",
         "floetteeternal",
         "haxorus",
         "eelektrossmega",
@@ -332,6 +335,7 @@
         "victini",
         "ironhands",
         "swampertmega",
+        "thundurustherian",
         "ogerpon",
         "mukalola",
         "mesprit",
@@ -1264,6 +1268,15 @@
                 5
             ]
         },
+        "landorustherian": {
+            "cost": 18,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                5
+            ]
+        },
         "latiosmega": {
             "cost": 18,
             "drafted_in": [
@@ -1289,6 +1302,16 @@
             ]
         },
         "scizormega": {
+            "cost": 18,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "tornadustherian": {
             "cost": 18,
             "drafted_in": [
                 1,
@@ -2110,6 +2133,16 @@
             "cost": 12,
             "drafted_in": []
         },
+        "thundurustherian": {
+            "cost": 12,
+            "drafted_in": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
         "togekiss": {
             "cost": 12,
             "drafted_in": []
@@ -2350,6 +2383,12 @@
         "dondozo": {
             "cost": 10,
             "drafted_in": []
+        },
+        "enamorustherian": {
+            "cost": 10,
+            "drafted_in": [
+                1
+            ]
         },
         "fezandipiti": {
             "cost": 10,
@@ -5016,9 +5055,7 @@
         },
         "dewpider": {
             "cost": 1,
-            "drafted_in": [
-                3
-            ]
+            "drafted_in": []
         },
         "diglett": {
             "cost": 1,
@@ -6518,7 +6555,9 @@
         },
         "whirlipede": {
             "cost": 1,
-            "drafted_in": []
+            "drafted_in": [
+                3
+            ]
         },
         "whismur": {
             "cost": 1,
