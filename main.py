@@ -31,6 +31,12 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
         self.setWindowTitle("Pokemon Draft Searcher")
 
         self._init_vars()
+        self.debug_panel = DebugPanel(self)
+        self.addDockWidget(Qt.BottomDockWidgetArea, self.debug_panel)
+        QShortcut(QKeySequence("F12"), self).activated.connect(
+            lambda: self.debug_panel.show() if self.debug_panel.isHidden() else self.debug_panel.hide()
+        )
+
         self.data_handler = DataHandler(self)
         self.draft_handler = DraftHandler(self, DraftHandlerWidgets(self))
         self.pokemon_list_handler = PokemonListHandler(self, MainWidgets(self))
@@ -46,12 +52,6 @@ class MainWindow(QMainWindow, Ui_PokemonSearcher):
 
         self.pokemon_list_handler.update()
         self.version_control = VersionControl(self.actionVersion, self.versionStatusBar)
-
-        self.debug_panel = DebugPanel(self)
-        self.addDockWidget(Qt.BottomDockWidgetArea, self.debug_panel)
-        QShortcut(QKeySequence("F12"), self).activated.connect(
-            lambda: self.debug_panel.show() if self.debug_panel.isHidden() else self.debug_panel.hide()
-        )
 
         self.loaded.emit()
 

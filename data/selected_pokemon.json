@@ -1,839 +1,828 @@
 {
     "selected_pokemon": [
-        "absolmegaz",
-        "darkrai",
-        "chiyu",
-        "baxcaliburmega",
-        "aegislash",
-        "aerodactylmega",
-        "altariamega",
-        "blastoisemega",
-        "aggronmega",
-        "amoonguss",
-        "aerodactyl",
-        "araquanid",
-        "arctozolt",
-        "abomasnow",
-        "arboliva",
-        "accelgor",
-        "abomasnowmega",
-        "absol",
-        "abra",
-        "delphoxmega",
-        "dianciemega",
-        "deoxysspeed",
-        "celesteela",
-        "alomomola",
-        "annihilape",
-        "archaludon",
-        "dracozolt",
-        "alakazam",
-        "arcanine",
-        "breloom",
-        "armarouge",
-        "aromatisse",
-        "absolmega",
-        "articunogalar",
-        "alcremie",
-        "ambipom",
-        "aggron",
-        "aipom",
-        "gallademega",
-        "garchomp",
-        "gholdengo",
-        "cinderace",
-        "baxcalibur",
-        "barbaraclemega",
-        "azumarill",
-        "empoleon",
-        "arcaninehisui",
-        "barraskewda",
-        "bronzong",
-        "chandeluremega",
-        "bisharp",
-        "bellibolt",
-        "bombirdier",
-        "ampharosmega",
-        "appletun",
-        "altaria",
-        "amaura",
-        "greattusk",
-        "garchompmegaz",
-        "gougingfire",
-        "froslassmega",
-        "charizardmegax",
-        "blaziken",
-        "blacephalon",
-        "goodrahisui",
-        "azelf",
-        "blastoise",
-        "celebi",
-        "cloyster",
-        "blissey",
-        "bewear",
-        "brambleghast",
-        "audino",
-        "archeops",
-        "ampharos",
-        "anorith",
-        "ironvaliant",
-        "greninjamega",
-        "greninja",
-        "irontreads",
-        "corviknight",
-        "charizardmegay",
-        "dracovish",
-        "hawlucha",
-        "basculegion",
-        "chesnaughtmega",
-        "chandelure",
-        "conkeldurr",
-        "braviaryhisui",
-        "braviary",
-        "cetitan",
-        "audinomega",
-        "arctovish",
-        "arbok",
-        "applin",
-        "meowscarada",
-        "landorustherian",
-        "ironbundle",
-        "latios",
-        "dragalgemega",
-        "clefable",
-        "dragonitemega",
-        "hawluchamega",
-        "beedrillmega",
-        "chimechomega",
-        "cyclizar",
-        "diancie",
-        "cofagrigus",
-        "brutebonnet",
-        "cinccino",
-        "banettemega",
-        "articuno",
-        "ariados",
         "archen",
+        "kyuremblack",
+        "baxcalibur",
+        "dianciemega",
+        "aegislash",
+        "cinderace",
+        "samurotthisui",
+        "annihilape",
+        "slowbromega",
+        "alakazam",
+        "arctozolt",
+        "mukalola",
+        "pinsirmega",
+        "slowbrogalar",
+        "aromatisse",
+        "sneaselhisui",
+        "alcremie",
+        "golemalola",
+        "rapidashgalar",
+        "ponytagalar",
+        "burmy",
+        "chienpao",
+        "gallademega",
+        "darkrai",
+        "celesteela",
+        "enamorus",
+        "excadrill",
+        "blaziken",
+        "archaludon",
+        "venusaurmega",
+        "alomomola",
+        "armarouge",
+        "ninetalesalola",
+        "aerodactyl",
+        "breloom",
+        "braviary",
+        "accelgor",
+        "raichualola",
+        "abomasnow",
+        "dugtrioalola",
+        "slowpokegalar",
+        "cosmoem",
+        "genesect",
+        "dragapult",
+        "garchomp",
+        "chiyu",
+        "excadrillmega",
+        "gliscor",
+        "ceruledge",
+        "basculegion",
+        "blacephalon",
+        "azumarill",
+        "azelf",
+        "arcanine",
+        "amoonguss",
+        "chesnaught",
+        "bronzong",
+        "marowakalola",
+        "appletun",
+        "aggron",
+        "altaria",
+        "abra",
+        "cosmog",
+        "magearna",
+        "ironvaliant",
+        "greattusk",
+        "deoxysspeed",
+        "slowkinggalar",
+        "kingambit",
+        "cyclizar",
+        "clefable",
+        "buzzwole",
+        "enamorustherian",
+        "clodsire",
+        "barraskewda",
+        "araquanid",
+        "diggersby",
+        "chansey",
+        "persianalola",
+        "archeops",
+        "exeggutoralola",
+        "armaldo",
+        "absol",
+        "groudonprimal",
+        "delphoxmega",
+        "lopunnymega",
+        "kyurem",
+        "gougingfire",
+        "gholdengo",
+        "barbaraclemega",
+        "zapdosgalar",
+        "corviknight",
+        "deoxysdefense",
+        "ferrothorn",
+        "cresselia",
+        "blastoise",
+        "bisharp",
+        "espeon",
+        "cinccino",
+        "ambipom",
+        "articuno",
+        "sandslashalola",
+        "beartic",
+        "aipom",
+        "tynamo",
+        "starmiemega",
+        "floetteeternal",
+        "alakazammega",
+        "greninja",
+        "ironmoth",
+        "ironboulder",
+        "darmanitangalar",
+        "empoleon",
+        "gengar",
+        "dracozolt",
+        "celebi",
+        "blissey",
+        "feraligatr",
+        "cofagrigus",
+        "arboliva",
+        "aurorus",
+        "audino",
+        "camerupt",
+        "diglettalola",
+        "zamazenta",
+        "zeraoramega",
+        "froslassmega",
+        "ironbundle",
+        "irontreads",
+        "garchompmega",
+        "kartana",
+        "dracovish",
+        "goodrahisui",
+        "hawlucha",
+        "moltresgalar",
+        "chandelure",
+        "comfey",
+        "crawdaunt",
+        "arctovish",
+        "bewear",
+        "avalugg",
+        "clefairy",
+        "geodudealola",
+        "naganadel",
+        "golisopodmega",
+        "landorus",
+        "latios",
+        "glimmoramega",
+        "keldeo",
+        "dragonite",
+        "hoopaunbound",
+        "mandibuzz",
+        "grimmsnarl",
+        "cloyster",
+        "conkeldurr",
+        "florges",
+        "delphox",
+        "barbaracle",
+        "boltund",
+        "basculin",
+        "combusken",
+        "graveleralola",
         "tapukoko",
         "latiosmega",
-        "kyurem",
-        "melmetal",
-        "enamorus",
-        "clefablemega",
+        "landorustherian",
+        "chesnaughtmega",
+        "meganiummega",
+        "aerodactylmega",
+        "glimmora",
         "infernape",
-        "hoopaunbound",
-        "buzzwole",
-        "clodsire",
-        "darmanitan",
-        "drapion",
-        "comfey",
-        "chansey",
-        "decidueye",
-        "barbaracle",
-        "aurorus",
-        "armaldo",
-        "arctibax",
-        "terapagos",
-        "lopunnymega",
-        "landorus",
-        "roaringmoon",
-        "feraligatrmega",
-        "darmanitangalar",
-        "ironboulder",
-        "ironcrown",
-        "ceruledge",
+        "heracrossmega",
+        "arcaninehisui",
         "cobalion",
-        "diggersby",
-        "gallade",
-        "crawdaunt",
-        "chesnaught",
+        "crobat",
+        "flygon",
         "dhelmise",
-        "cameruptmega",
-        "bouffalant",
-        "avalugg",
-        "aron",
-        "palafin",
-        "mawilemega",
-        "slowkinggalar",
-        "gliscor",
-        "dragonite",
-        "jirachi",
-        "krookodile",
-        "deoxysdefense",
-        "cresselia",
+        "bellibolt",
+        "brambleghast",
+        "bombirdier",
+        "cramorant",
+        "grimeralola",
+        "tornadustherian",
+        "scizormega",
+        "darkraimega",
+        "golurkmega",
+        "ragingbolt",
+        "charizardmegax",
+        "gothitelle",
+        "ironhands",
+        "tatsugiricurlymega",
+        "ironjugulis",
+        "darmanitan",
+        "decidueye",
+        "braviaryhisui",
+        "diancie",
+        "brutebonnet",
+        "bruxish",
+        "carracosta",
+        "crocalor",
+        "meowthalola",
+        "meowscarada",
+        "greninjamega",
+        "heatranmega",
+        "tapufini",
+        "feraligatrmega",
+        "haxorus",
+        "kommoo",
+        "mesprit",
+        "ironleaves",
+        "dondozo",
         "donphan",
-        "garganacl",
-        "dragalge",
-        "crabominablemega",
+        "electrodehisui",
         "ditto",
         "centiskorch",
-        "charizard",
-        "avalugghisui",
-        "arrokuda",
-        "scizormega",
-        "medichammega",
-        "staraptormega",
-        "golisopodmega",
-        "excadrill",
-        "keldeo",
-        "mandibuzz",
-        "gengar",
-        "crobat",
-        "dugtrio",
-        "gastrodon",
-        "drampamega",
-        "delphox",
-        "drampa",
-        "decidueyehisui",
+        "cetitan",
         "clawitzer",
-        "basculin",
-        "axew",
-        "tornadustherian",
-        "mew",
-        "tapulele",
-        "ironmoth",
-        "excadrillmega",
-        "kingambit",
-        "metagross",
-        "gothitelle",
-        "dondozo",
-        "entei",
-        "gyarados",
-        "dudunsparce",
-        "espeon",
-        "eelektross",
-        "drednaw",
-        "claydol",
-        "beartic",
-        "azurill",
-        "sneasler",
-        "tinglu",
-        "kartana",
-        "ferrothorn",
-        "kommoo",
-        "mienshao",
-        "gyaradosmega",
-        "enamorustherian",
-        "floetteeternal",
-        "haxorus",
-        "eelektrossmega",
-        "flygon",
-        "electrodehisui",
-        "drifblim",
-        "copperajah",
-        "beheeyem",
-        "bagon",
-        "urshifu",
-        "necrozma",
-        "floettemega",
-        "meganiummega",
-        "nidoking",
-        "hatterene",
-        "fezandipiti",
-        "florges",
-        "heracross",
-        "emboarmega",
-        "forretress",
-        "emboar",
-        "druddigon",
-        "cradily",
-        "bellossom",
-        "baltoy",
-        "urshifurapidstrike",
-        "ogerponwellspring",
-        "garchompmega",
-        "pecharunt",
-        "nidoqueen",
-        "heracrossmega",
-        "grimmsnarl",
-        "gardevoir",
-        "jellicent",
-        "escavalier",
-        "froslass",
-        "farigiraf",
-        "duraludon",
         "crustle",
-        "bibarel",
-        "banette",
-        "zapdos",
-        "quaquaval",
-        "gardevoirmega",
-        "primarina",
-        "nihilego",
-        "klefki",
-        "hippowdon",
-        "hydrapple",
-        "meloetta",
-        "espathra",
-        "galvantula",
-        "flamigo",
-        "electivire",
-        "cryogonal",
-        "boltund",
-        "barboach",
-        "zeraora",
-        "rillaboom",
-        "glimmora",
-        "raichumegax",
-        "raikou",
-        "lilliganthisui",
-        "kangaskhanmega",
-        "incineroar",
-        "mudsdale",
-        "falinksmega",
-        "gligar",
-        "hariyama",
-        "exploud",
-        "doublade",
-        "bruxish",
-        "bastiodon",
-        "slowbro",
-        "glimmoramega",
-        "salamence",
-        "rotomheat",
-        "lycanrocdusk",
-        "kleavor",
-        "ironjugulis",
-        "ninetales",
-        "feraligatr",
-        "golurkmega",
-        "hitmonlee",
-        "floatzel",
-        "durant",
-        "calyrex",
-        "bayleef",
-        "tapufini",
+        "raticatealola",
+        "terapagos",
+        "medichammega",
+        "mawilemega",
+        "tapulele",
+        "skarmorymega",
         "heatran",
-        "skarmory",
-        "sylveon",
+        "lycanrocdusk",
+        "metagross",
+        "klefki",
+        "dugtrio",
+        "espathra",
+        "typhlosionhisui",
+        "doublade",
+        "claydol",
+        "charizard",
+        "coalossal",
+        "dipplin",
+        "rattataalola",
+        "urshifu",
+        "palafin",
+        "raichumegax",
+        "ursaluna",
+        "necrozma",
+        "lilliganthisui",
         "mamoswine",
-        "milotic",
-        "lokix",
-        "noivern",
-        "gigalith",
-        "houndoommega",
-        "inteleon",
-        "garbodor",
-        "dusknoir",
-        "camerupt",
-        "beautifly",
+        "mienshao",
+        "krookodile",
+        "entei",
+        "articunogalar",
+        "hoopa",
+        "dragalge",
+        "copperajah",
+        "cradily",
+        "cursola",
+        "dodrio",
+        "sandshrewalola",
+        "zapdos",
+        "sneasler",
+        "raichumegay",
         "ursalunabloodmoon",
-        "hydreigon",
-        "slowking",
-        "terrakion",
+        "quaquaval",
+        "hydrapple",
+        "blastoisemega",
         "moltres",
-        "moltresgalar",
-        "magnezone",
-        "okidogi",
-        "goodra",
-        "ironthorns",
-        "lanturn",
-        "glaliemega",
-        "eldegoss",
-        "carbink",
-        "beedrill",
-        "victini",
-        "ironhands",
-        "swampertmega",
-        "thundurustherian",
-        "ogerpon",
-        "mukalola",
-        "mesprit",
-        "pawmot",
-        "heliolisk",
-        "manectricmega",
-        "lickilicky",
-        "glastrier",
-        "golemalola",
-        "carracosta",
-        "beldum",
-        "weavile",
-        "latias",
-        "thundurus",
-        "togekiss",
-        "pidgeotmega",
-        "ninetalesalola",
-        "munkidori",
-        "pinsirmega",
-        "hitmontop",
-        "mismagius",
-        "machamp",
-        "golurk",
-        "golisopod",
-        "charjabug",
-        "bellsprout",
+        "aggronmega",
+        "fezandipiti",
+        "gallade",
+        "inteleon",
+        "drapion",
+        "cryogonal",
+        "dachsbun",
+        "drifblim",
+        "dubwool",
+        "vulpixalola",
         "zygarde",
+        "spectrier",
+        "staraptormega",
+        "victini",
+        "thundurustherian",
+        "hydreigon",
+        "clefablemega",
+        "nidoking",
+        "altariamega",
+        "weezinggalar",
+        "gardevoir",
+        "ironthorns",
+        "dudunsparce",
+        "drampa",
+        "drednaw",
+        "dunsparce",
+        "dusknoir",
+        "amaura",
+        "urshifurapidstrike",
+        "melmetal",
+        "weavile",
+        "walkingwake",
+        "ironcrown",
+        "eelektrossmega",
+        "nidoqueen",
+        "beedrillmega",
+        "garganacl",
+        "heracross",
+        "jellicent",
+        "eelektross",
+        "druddigon",
+        "duraludon",
+        "eiscue",
+        "eldegoss",
+        "ampharos",
+        "roaringmoon",
+        "jirachi",
+        "gyaradosmega",
+        "raikou",
+        "falinksmega",
+        "glastrier",
+        "hippowdon",
+        "emboarmega",
+        "flamigo",
+        "durant",
+        "dusclops",
+        "electabuzz",
+        "electrode",
+        "anorith",
+        "shayminsky",
+        "latias",
+        "kangaskhanmega",
+        "sandyshocks",
+        "hawluchamega",
+        "goodra",
+        "incineroar",
+        "sharpedomega",
+        "froslass",
+        "emboar",
+        "electivire",
+        "falinks",
+        "exeggutor",
+        "applin",
+        "tinglu",
         "manaphy",
-        "tyranitar",
-        "torkoal",
-        "pyroarmega",
-        "sableyemega",
-        "overqwil",
-        "porygonz",
+        "scraftymega",
+        "screamtail",
+        "pidgeotmega",
+        "gyarados",
         "indeedee",
-        "orthworm",
-        "medicham",
-        "gothorita",
-        "guzzlord",
-        "chimecho",
-        "bergmite",
+        "victreebelmega",
+        "galvantula",
+        "escavalier",
+        "exploud",
+        "flareon",
+        "ferroseed",
+        "arbok",
+        "zeraora",
+        "charizardmegay",
+        "swampertmega",
+        "silvally",
+        "sableyemega",
+        "hatterene",
+        "kilowattrel",
+        "mimikyu",
+        "gastrodon",
+        "rotomfan",
+        "farigiraf",
+        "floatzel",
+        "flapple",
+        "arctibax",
+        "chimechomega",
+        "nihilego",
+        "slitherwing",
+        "scolipedemega",
+        "rotomheat",
+        "kleavor",
+        "mudsdale",
+        "gigalith",
+        "rotomfrost",
+        "forretress",
+        "corsolagalar",
+        "mrmimegalar",
+        "ariados",
+        "dragalgemega",
         "ogerponcornerstone",
-        "volcarona",
-        "toxapex",
+        "suicune",
+        "tyranitarmega",
+        "zoroarkhisui",
+        "drampamega",
+        "obstagoon",
+        "gligar",
+        "golisopod",
+        "frosmoth",
+        "garbodor",
+        "stunfiskgalar",
+        "aron",
+        "gardevoirmega",
+        "ogerponhearthflame",
+        "swampert",
+        "milotic",
+        "kingdra",
+        "meloetta",
+        "registeel",
+        "hitmonlee",
+        "gourgeist",
+        "golurk",
+        "granbull",
+        "gloom",
+        "arrokuda",
+        "meowsticmmega",
+        "ogerponwellspring",
+        "terrakion",
+        "okidogi",
+        "lokix",
+        "rotommow",
+        "sandaconda",
+        "hitmontop",
+        "grafaiai",
+        "guzzlord",
+        "gurdurr",
+        "golbat",
+        "axew",
+        "mew",
+        "pelipper",
+        "tyranitar",
+        "porygonz",
+        "lucario",
+        "munkidori",
+        "seismitoad",
+        "jolteon",
+        "heliolisk",
+        "hariyama",
+        "avalugghisui",
+        "golem",
+        "azurill",
+        "ogerpon",
+        "salamence",
+        "uxie",
+        "regidrago",
+        "magnezone",
+        "overqwil",
+        "shaymin",
+        "lycanroc",
+        "qwilfishhisui",
+        "decidueyehisui",
+        "honchkrow",
+        "gorebyss",
+        "bagon",
+        "pecharunt",
+        "scizor",
+        "rotomwash",
         "reuniclus",
+        "pyroarmega",
+        "polteageist",
+        "sinistcha",
+        "malamar",
+        "hitmonchan",
+        "kabutops",
+        "houndstone",
+        "grotle",
+        "baltoy",
+        "primarina",
+        "skeledirge",
         "scolipede",
         "porygon2",
-        "revavroom",
-        "ironleaves",
-        "palossand",
-        "muk",
-        "gourgeist",
-        "honchkrow",
-        "coalossal",
-        "bidoof",
-        "ogerponhearthflame",
-        "zapdosgalar",
-        "tyranitarmega",
-        "sandyshocks",
-        "serperior",
-        "registeel",
-        "ribombee",
-        "kilowattrel",
-        "pangoro",
-        "passimian",
-        "grafaiai",
-        "houndstone",
-        "corsolagalar",
-        "binacle",
-        "pelipper",
-        "zoroarkhisui",
-        "screamtail",
-        "sharpedomega",
-        "roserade",
-        "salazzle",
-        "kingdra",
-        "persianalola",
-        "piloswine",
-        "granbull",
-        "kangaskhan",
-        "crabominable",
-        "blipbug",
-        "ragingbolt",
-        "skeledirge",
-        "silvally",
-        "rotommow",
-        "seismitoad",
-        "lucario",
-        "polteageist",
-        "quagsire",
-        "hitmonchan",
-        "komala",
-        "cramorant",
-        "blitzle",
-        "rotomwash",
-        "swampert",
-        "slowbromega",
-        "scolipedemega",
-        "shaymin",
-        "maushold",
-        "qwilfish",
-        "rotom",
-        "hoopa",
-        "liepard",
-        "crocalor",
-        "boldore",
-        "samurotthisui",
-        "tangrowth",
-        "snorlax",
-        "scraftymega",
-        "staraptor",
-        "meowsticmmega",
-        "qwilfishhisui",
-        "rotomfan",
-        "jolteon",
-        "linoone",
-        "cursola",
-        "bonsly",
-        "scizor",
-        "tinkaton",
-        "tapubulu",
-        "sinistcha",
-        "swellow",
-        "miltank",
-        "regidrago",
-        "sableye",
-        "lilligant",
-        "ludicolo",
-        "dachsbun",
-        "bounsweet",
-        "skarmorymega",
-        "volcanion",
-        "uxie",
-        "slitherwing",
         "taurospaldeaaqua",
-        "mimikyu",
-        "rotomfrost",
-        "sharpedo",
-        "mabosstiff",
-        "lycanroc",
-        "dipplin",
-        "braixen",
-        "ursaluna",
-        "weezinggalar",
-        "starmie",
-        "tornadus",
-        "obstagoon",
-        "sceptilemega",
-        "sigilyph",
-        "magmortar",
-        "malamar",
-        "dodrio",
-        "bramblin",
-        "venusaurmega",
-        "zarude",
-        "suicune",
-        "toxtricity",
-        "politoed",
-        "scrafty",
-        "sirfetchd",
-        "magneton",
-        "malamarmega",
-        "dolliv",
-        "brionne",
-        "walkingwake",
-        "talonflame",
-        "tsareena",
-        "regieleki",
-        "slowbrogalar",
-        "skuntank",
-        "marowakalola",
-        "minior",
-        "dottler",
-        "bronzor",
-        "tentacruel",
-        "vikavolt",
-        "rhyperior",
-        "slurpuff",
-        "tyrantrum",
-        "musharna",
-        "orbeetle",
-        "dubwool",
-        "budew",
-        "umbreon",
-        "scovillainmega",
-        "stakataka",
-        "ursaring",
-        "omastar",
-        "perrserker",
-        "dugtrioalola",
-        "buizel",
-        "vaporeon",
-        "steelix",
-        "victreebelmega",
-        "venomoth",
-        "oricorio",
-        "pincurchin",
-        "dunsparce",
-        "bulbasaur",
-        "xurkitree",
-        "steelixmega",
-        "weezing",
-        "vileplume",
-        "primeape",
-        "raichu",
-        "duosion",
-        "buneary",
-        "taurospaldeablaze",
-        "wochien",
-        "virizion",
-        "pyroar",
-        "rapidash",
-        "dusclops",
-        "bunnelby",
-        "torterra",
-        "yanmega",
-        "xatu",
-        "raichualola",
-        "rapidashgalar",
-        "eiscue",
-        "burmy",
-        "vanilluxe",
-        "zygarde10",
-        "sandaconda",
-        "regigigas",
-        "electabuzz",
-        "butterfree",
-        "venusaur",
-        "sawk",
-        "roselia",
-        "electrode",
-        "cacnea",
-        "whimsicott",
-        "stunfisk",
-        "runerigus",
-        "emolga",
-        "cacturne",
-        "zoroark",
-        "tangela",
-        "sceptile",
-        "exeggutor",
-        "capsakid",
-        "toedscruel",
-        "scyther",
-        "exeggutoralola",
-        "carkol",
-        "toxicroak",
-        "smeargle",
-        "falinks",
-        "carnivine",
-        "typhlosionhisui",
-        "sneasel",
-        "flapple",
-        "carvanha",
-        "sneaselhisui",
-        "flareon",
-        "cascoon",
-        "spiritomb",
-        "fraxure",
-        "castform",
-        "stoutland",
-        "frogadier",
-        "caterpie",
-        "stunfiskgalar",
-        "frosmoth",
-        "cetoddle",
-        "tatsugiri",
-        "girafarig",
-        "charcadet",
-        "tauros",
-        "glaceon",
-        "charmander",
-        "taurospaldeacombat",
-        "gogoat",
-        "charmeleon",
-        "turtonator",
-        "golbat",
-        "chatot",
-        "typenull",
-        "golduck",
-        "cherrim",
-        "typhlosion",
-        "golem",
-        "cherubi",
-        "victreebel",
-        "gorebyss",
-        "chespin",
-        "vivillon",
-        "grotle",
-        "chewtle",
-        "zangoose",
-        "gurdurr",
-        "chikorita",
+        "medicham",
+        "linoone",
+        "lanturn",
+        "kangaskhan",
         "haunter",
-        "chimchar",
-        "houndoom",
-        "chinchou",
-        "huntail",
-        "chingling",
-        "illumise",
-        "clamperl",
-        "jynx",
-        "clauncher",
-        "kabutops",
-        "clefairy",
-        "kadabra",
-        "cleffa",
-        "kecleon",
-        "clobbopus",
-        "kingler",
-        "combee",
+        "banette",
+        "rillaboom",
+        "slowking",
+        "skarmory",
+        "noivern",
+        "ribombee",
+        "taurospaldeablaze",
+        "chandeluremega",
+        "machamp",
+        "lickilicky",
         "klawf",
-        "combusken",
+        "houndoom",
+        "barboach",
+        "slowbro",
+        "volcarona",
+        "sylveon",
+        "orthworm",
+        "starmie",
+        "tsareena",
+        "miltank",
+        "magneton",
+        "ampharosmega",
         "klinklang",
-        "corphish",
-        "lapras",
-        "corsola",
-        "leafeon",
-        "corvisquire",
-        "leavanny",
-        "cosmoem",
-        "lickitung",
-        "cosmog",
-        "lurantis",
-        "cottonee",
-        "luxray",
-        "crabrawler",
-        "lycanrocmidnight",
-        "cranidos",
-        "machoke",
-        "croagunk",
-        "magmar",
-        "croconaw",
-        "manectric",
-        "cubchoo",
-        "mantine",
-        "cubone",
-        "marowak",
-        "cufant",
-        "masquerain",
-        "cutiefly",
-        "mawile",
-        "cyndaquil",
-        "meganium",
-        "dartrix",
-        "meowstic",
-        "darumaka",
-        "misdreavus",
-        "darumakagalar",
-        "monferno",
-        "dedenne",
+        "huntail",
+        "bastiodon",
+        "thundurus",
+        "tinkaton",
+        "salazzle",
+        "swellow",
+        "venusaur",
         "morpeko",
-        "deerling",
-        "mrmime",
-        "deino",
-        "mrmimegalar",
-        "delcatty",
-        "mrrime",
-        "delibird",
-        "murkrow",
-        "dewgong",
-        "naclstack",
-        "dewott",
-        "oinkologne",
-        "dewpider",
-        "oranguru",
-        "diglett",
-        "persian",
-        "diglettalola",
-        "pikachu",
-        "doduo",
-        "pinsir",
-        "dragonair",
-        "poliwrath",
-        "drakloak",
-        "probopass",
-        "dratini",
-        "purugly",
-        "dreepy",
-        "pyukumuku",
-        "drifloon",
-        "quaxwell",
-        "drilbur",
-        "quilladin",
-        "drizzile",
+        "mantine",
+        "cameruptmega",
+        "komala",
+        "kadabra",
+        "bayleef",
+        "volcanion",
+        "torkoal",
+        "serperior",
+        "talonflame",
+        "virizion",
+        "passimian",
+        "maushold",
+        "ninetales",
+        "lapras",
+        "kecleon",
+        "beautifly",
+        "zarude",
+        "tornadus",
+        "snorlax",
+        "tentacruel",
+        "zoroark",
+        "pawmot",
+        "absolmega",
+        "pangoro",
+        "liepard",
+        "kingler",
+        "beedrill",
+        "toxapex",
+        "stakataka",
+        "tyrantrum",
+        "zygarde10",
+        "politoed",
+        "banettemega",
+        "perrserker",
+        "lilligant",
+        "klang",
+        "beheeyem",
+        "staraptor",
+        "primeape",
+        "houndoommega",
+        "piloswine",
+        "ludicolo",
+        "leavanny",
+        "beldum",
+        "tangrowth",
+        "quagsire",
+        "malamarmega",
+        "qwilfish",
+        "lurantis",
+        "lickitung",
+        "bellossom",
+        "tapubulu",
+        "regieleki",
+        "manectricmega",
         "rabsca",
-        "drowzee",
-        "rampardos",
-        "ducklett",
-        "raticate",
-        "duskull",
-        "raticatealola",
-        "dustox",
-        "regice",
-        "dwebble",
+        "lycanrocmidnight",
+        "luxray",
+        "bellsprout",
+        "togekiss",
+        "revavroom",
+        "sceptilemega",
         "regirock",
-        "eelektrik",
-        "rhydon",
-        "eevee",
-        "samurott",
-        "ekans",
-        "sandslash",
-        "electrike",
-        "sandslashalola",
-        "elekid",
-        "sawsbuck",
-        "elgyem",
+        "magmortar",
+        "mabosstiff",
+        "bergmite",
+        "toxtricity",
+        "roserade",
+        "steelixmega",
+        "rhyperior",
+        "abomasnowmega",
+        "magcargo",
+        "bibarel",
+        "umbreon",
+        "runerigus",
+        "minior",
         "scovillain",
-        "espurr",
-        "shedinja",
-        "exeggcute",
-        "shelgon",
-        "farfetchd",
-        "shiftry",
-        "farfetchdgalar",
-        "shiinotic",
-        "fearow",
-        "shuckle",
-        "feebas",
-        "simipour",
-        "fennekin",
-        "simisage",
-        "ferroseed",
-        "simisear",
-        "fidough",
-        "slaking",
-        "finizen",
-        "sliggoohisui",
-        "finneon",
-        "spidops",
-        "flaaffy",
-        "squawkabilly",
-        "flabebe",
-        "stantler",
-        "fletchinder",
-        "stonjourner",
-        "fletchling",
-        "sudowoodo",
-        "flittle",
+        "audinomega",
+        "magmar",
+        "bidoof",
+        "vaporeon",
+        "sableye",
+        "mismagius",
+        "scrafty",
+        "glaliemega",
+        "manectric",
+        "binacle",
+        "xurkitree",
+        "sirfetchd",
+        "omastar",
+        "skuntank",
+        "meowstic",
+        "marowak",
+        "blipbug",
+        "slurpuff",
+        "oricorio",
+        "steelix",
+        "muk",
+        "masquerain",
+        "blitzle",
+        "tauros",
+        "palossand",
+        "stunfisk",
+        "musharna",
+        "mawile",
+        "boldore",
+        "torterra",
+        "pincurchin",
         "swoobat",
-        "floette",
-        "thievul",
-        "floragato",
-        "throh",
-        "fomantis",
-        "thwackey",
-        "foongus",
+        "naclstack",
+        "meganium",
+        "bonsly",
+        "typhlosion",
+        "rotom",
+        "tatsugiristretchy",
+        "orbeetle",
+        "mrmime",
+        "bouffalant",
+        "ursaring",
+        "sceptile",
+        "turtonator",
+        "poliwrath",
+        "mrrime",
+        "bounsweet",
+        "vanilluxe",
+        "scyther",
+        "quilladin",
+        "munchlax",
+        "braixen",
+        "venomoth",
+        "sharpedo",
+        "raichu",
+        "ninjask",
+        "bramblin",
+        "vikavolt",
+        "sigilyph",
+        "regice",
+        "pikachu",
+        "brionne",
+        "wochien",
+        "sneasel",
+        "samurott",
+        "purugly",
+        "bronzor",
+        "tangela",
+        "sawk",
+        "pyroar",
+        "budew",
+        "toedscruel",
+        "shuckle",
+        "raboot",
+        "buizel",
+        "toxicroak",
+        "stonjourner",
+        "rapidash",
+        "bulbasaur",
+        "vileplume",
+        "swalot",
+        "rhydon",
+        "buneary",
+        "weezing",
+        "taurospaldeacombat",
+        "roselia",
+        "bunnelby",
+        "whimsicott",
         "togedemaru",
-        "frigibax",
-        "toucannon",
-        "frillish",
-        "trapinch",
-        "froakie",
-        "trevenant",
-        "fuecoco",
+        "sandslash",
+        "butterfree",
+        "yanmega",
+        "typenull",
+        "seaking",
+        "cacnea",
+        "zangoose",
         "veluza",
-        "furfrou",
-        "vespiquen",
-        "furret",
-        "vigoroth",
-        "gabite",
-        "volbeat",
-        "gastly",
-        "vullaby",
-        "geodude",
-        "walrein",
-        "geodudealola",
-        "wartortle",
-        "gible",
-        "whiscash",
-        "gimmighoul",
-        "wigglytuff",
-        "glalie",
-        "wishiwashi",
-        "glameow",
+        "shiftry",
+        "cacturne",
+        "victreebel",
+        "shiinotic",
+        "calyrex",
         "wobbuffet",
-        "glimmet",
-        "wormadam",
-        "gloom",
-        "wugtrio",
-        "goldeen",
+        "capsakid",
         "wyrdeer",
-        "golett",
+        "slaking",
+        "carbink",
+        "xatu",
+        "spidops",
+        "carkol",
+        "spiritomb",
+        "carnivine",
+        "stoutland",
+        "carvanha",
+        "thwackey",
+        "cascoon",
+        "torracat",
+        "castform",
+        "trapinch",
+        "caterpie",
+        "trevenant",
+        "cetoddle",
+        "vivillon",
+        "charcadet",
+        "wailord",
+        "charjabug",
+        "walrein",
+        "charmander",
+        "wartortle",
+        "charmeleon",
+        "whirlipede",
+        "chatot",
+        "wigglytuff",
+        "cherrim",
         "zebstrika",
+        "cherubi",
+        "chespin",
+        "chewtle",
+        "chikorita",
+        "chimchar",
+        "chimecho",
+        "chinchou",
+        "chingling",
+        "clamperl",
+        "clauncher",
+        "cleffa",
+        "clobbopus",
+        "combee",
+        "corphish",
+        "corsola",
+        "corvisquire",
+        "cottonee",
+        "crabominable",
+        "crabrawler",
+        "cranidos",
+        "croagunk",
+        "croconaw",
+        "cubchoo",
+        "cubone",
+        "cufant",
+        "cutiefly",
+        "cyndaquil",
+        "dartrix",
+        "darumaka",
+        "dedenne",
+        "deerling",
+        "deino",
+        "delcatty",
+        "delibird",
+        "dewgong",
+        "dewott",
+        "dewpider",
+        "diglett",
+        "doduo",
+        "dolliv",
+        "dottler",
+        "dragonair",
+        "drakloak",
+        "dratini",
+        "dreepy",
+        "drifloon",
+        "drilbur",
+        "drizzile",
+        "drowzee",
+        "ducklett",
+        "duosion",
+        "duskull",
+        "dustox",
+        "dwebble",
+        "eelektrik",
+        "eevee",
+        "ekans",
+        "electrike",
+        "elekid",
+        "elgyem",
+        "emolga",
+        "espurr",
+        "exeggcute",
+        "farfetchd",
+        "fearow",
+        "feebas",
+        "fennekin",
+        "fidough",
+        "finizen",
+        "finneon",
+        "flaaffy",
+        "flabebe",
+        "fletchinder",
+        "fletchling",
+        "flittle",
+        "floette",
+        "floragato",
+        "fomantis",
+        "foongus",
+        "fraxure",
+        "frigibax",
+        "frillish",
+        "froakie",
+        "frogadier",
+        "fuecoco",
+        "furfrou",
+        "furret",
+        "gabite",
+        "darumakagalar",
+        "farfetchdgalar",
+        "linoonegalar",
+        "meowthgalar",
+        "yamaskgalar",
+        "zigzagoongalar",
+        "gastly",
+        "geodude",
+        "gible",
+        "gimmighoul",
+        "girafarig",
+        "glaceon",
+        "glalie",
+        "glameow",
+        "glimmet",
+        "gogoat",
+        "golett",
         "goomy",
         "gossifleur",
         "gothita",
+        "gothorita",
         "grapploct",
         "graveler",
-        "graveleralola",
         "greavard",
         "greedent",
         "grimer",
-        "grimeralola",
         "grookey",
         "grovyle",
         "growlithe",
-        "growlithehisui",
         "grubbin",
         "grumpig",
         "gulpin",
@@ -846,6 +835,10 @@
         "helioptile",
         "herdier",
         "hippopotas",
+        "growlithehisui",
+        "sliggoohisui",
+        "voltorbhisui",
+        "zoruahisui",
         "honedge",
         "hoothoot",
         "hoppip",
@@ -853,6 +846,7 @@
         "houndour",
         "hypno",
         "igglybuff",
+        "illumise",
         "impidimp",
         "inkay",
         "ivysaur",
@@ -860,11 +854,11 @@
         "jigglypuff",
         "joltik",
         "jumpluff",
+        "jynx",
         "kabuto",
         "kakuna",
         "karrablast",
         "kirlia",
-        "klang",
         "klink",
         "koffing",
         "krabby",
@@ -876,12 +870,12 @@
         "lampent",
         "larvesta",
         "larvitar",
+        "leafeon",
         "lechonk",
         "ledian",
         "ledyba",
         "lileep",
         "lillipup",
-        "linoonegalar",
         "litleo",
         "litten",
         "litwick",
@@ -893,9 +887,9 @@
         "lunatone",
         "luvdisc",
         "luxio",
+        "machoke",
         "machop",
         "magby",
-        "magcargo",
         "magikarp",
         "magnemite",
         "makuhita",
@@ -910,8 +904,6 @@
         "meditite",
         "meltan",
         "meowth",
-        "meowthalola",
-        "meowthgalar",
         "metang",
         "metapod",
         "mienfoo",
@@ -920,13 +912,15 @@
         "mimejr",
         "minccino",
         "minun",
+        "misdreavus",
+        "monferno",
         "morelull",
         "morgrem",
         "mothim",
         "mudbray",
         "mudkip",
-        "munchlax",
         "munna",
+        "murkrow",
         "nacli",
         "natu",
         "nickit",
@@ -935,7 +929,6 @@
         "nidorina",
         "nidorino",
         "nincada",
-        "ninjask",
         "noctowl",
         "noibat",
         "nosepass",
@@ -944,10 +937,14 @@
         "nymble",
         "octillery",
         "oddish",
+        "oinkolognef",
+        "oinkologne",
         "omanyte",
         "onix",
+        "oranguru",
         "oshawott",
         "pachirisu",
+        "wooperpaldea",
         "palpitoad",
         "pancham",
         "panpour",
@@ -959,6 +956,7 @@
         "pawmi",
         "pawmo",
         "pawniard",
+        "persian",
         "petilil",
         "phanpy",
         "phantump",
@@ -971,6 +969,7 @@
         "pignite",
         "pikipek",
         "pineco",
+        "pinsir",
         "piplup",
         "plusle",
         "poipole",
@@ -978,21 +977,24 @@
         "poliwhirl",
         "poltchageist",
         "ponyta",
-        "ponytagalar",
         "poochyena",
         "popplio",
         "porygon",
         "prinplup",
+        "probopass",
         "psyduck",
         "pumpkaboo",
         "pupitar",
         "purrloin",
+        "pyukumuku",
         "quaxly",
+        "quaxwell",
         "quilava",
-        "raboot",
         "ralts",
+        "rampardos",
+        "raticate",
         "rattata",
-        "rattataalola",
+        "regigigas",
         "relicanth",
         "rellor",
         "remoraid",
@@ -1007,13 +1009,12 @@
         "salandit",
         "sandile",
         "sandshrew",
-        "sandshrewalola",
         "sandygast",
+        "sawsbuck",
         "scatterbug",
         "scorbunny",
         "scraggy",
         "seadra",
-        "seaking",
         "sealeo",
         "seedot",
         "seel",
@@ -1021,6 +1022,8 @@
         "servine",
         "seviper",
         "sewaddle",
+        "shedinja",
+        "shelgon",
         "shellder",
         "shellos",
         "shelmet",
@@ -1031,6 +1034,9 @@
         "shuppet",
         "silcoon",
         "silicobra",
+        "simipour",
+        "simisage",
+        "simisear",
         "sinistea",
         "sizzlipede",
         "skiddo",
@@ -1042,8 +1048,8 @@
         "slakoth",
         "sliggoo",
         "slowpoke",
-        "slowpokegalar",
         "slugma",
+        "smeargle",
         "smoliv",
         "smoochum",
         "snivy",
@@ -1062,19 +1068,21 @@
         "spoink",
         "sprigatito",
         "spritzee",
+        "squawkabilly",
         "squirtle",
+        "stantler",
         "staravia",
         "starly",
         "staryu",
         "steenee",
         "stufful",
         "stunky",
+        "sudowoodo",
         "sunflora",
         "sunkern",
         "surskit",
         "swablu",
         "swadloon",
-        "swalot",
         "swanna",
         "swinub",
         "swirlix",
@@ -1085,6 +1093,8 @@
         "teddiursa",
         "tentacool",
         "tepig",
+        "thievul",
+        "throh",
         "timburr",
         "tinkatink",
         "tinkatuff",
@@ -1093,8 +1103,8 @@
         "togepi",
         "togetic",
         "torchic",
-        "torracat",
         "totodile",
+        "toucannon",
         "toxel",
         "tranquill",
         "treecko",
@@ -1103,333 +1113,334 @@
         "trumbeak",
         "turtwig",
         "tympole",
-        "tynamo",
         "tyrogue",
         "tyrunt",
         "unfezant",
+        "unown",
         "vanillish",
         "vanillite",
         "varoom",
         "venipede",
         "venonat",
+        "vespiquen",
         "vibrava",
+        "vigoroth",
+        "volbeat",
         "voltorb",
-        "voltorbhisui",
+        "vullaby",
         "vulpix",
-        "vulpixalola",
         "wailmer",
-        "wailord",
         "watchog",
         "wattrel",
         "weedle",
         "weepinbell",
-        "whirlipede",
+        "whiscash",
         "whismur",
         "wiglett",
         "wimpod",
         "wingull",
+        "wishiwashi",
         "woobat",
         "wooloo",
         "wooper",
-        "wooperpaldea",
+        "wormadam",
+        "wugtrio",
         "wurmple",
         "wynaut",
         "yamask",
-        "yamaskgalar",
         "yamper",
         "yanma",
         "yungoos",
         "zigzagoon",
-        "zigzagoongalar",
         "zorua",
-        "zoruahisui",
         "zubat",
         "zweilous"
     ],
-    "draft_pools": 5,
+    "draft_pools": 0,
     "draft_board": {
-        "absolmegaz": {
-            "cost": 19,
+        "archen": {
+            "cost": 20,
+            "drafted_in": []
+        },
+        "chienpao": {
+            "cost": 20,
             "drafted_in": [
-                1,
-                4,
-                5
+                1
+            ]
+        },
+        "genesect": {
+            "cost": 20,
+            "drafted_in": [
+                1
+            ]
+        },
+        "magearna": {
+            "cost": 20,
+            "drafted_in": [
+                1
             ]
         },
         "delphoxmega": {
+            "cost": 20,
+            "drafted_in": [
+                1
+            ]
+        },
+        "starmiemega": {
+            "cost": 20,
+            "drafted_in": [
+                1
+            ]
+        },
+        "zamazenta": {
+            "cost": 20,
+            "drafted_in": [
+                1
+            ]
+        },
+        "kyuremblack": {
             "cost": 19,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
         "gallademega": {
             "cost": 19,
-            "drafted_in": [
-                3,
-                5
-            ]
+            "drafted_in": []
         },
-        "greattusk": {
+        "dragapult": {
             "cost": 19,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
         "ironvaliant": {
             "cost": 19,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
-        "meowscarada": {
+        "lopunnymega": {
             "cost": 19,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
+            ]
+        },
+        "floetteeternal": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "zeraoramega": {
+            "cost": 19,
+            "drafted_in": [
+                1
+            ]
+        },
+        "naganadel": {
+            "cost": 19,
+            "drafted_in": [
+                1
             ]
         },
         "tapukoko": {
             "cost": 19,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
-        "terapagos": {
+        "tornadustherian": {
             "cost": 19,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
+            ]
+        },
+        "baxcalibur": {
+            "cost": 18,
+            "drafted_in": [
+                1
             ]
         },
         "darkrai": {
             "cost": 18,
             "drafted_in": [
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "dianciemega": {
-            "cost": 18,
-            "drafted_in": [
-                3,
-                4
+                1
             ]
         },
         "garchomp": {
             "cost": 18,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
-        "garchompmegaz": {
+        "greattusk": {
             "cost": 18,
             "drafted_in": [
-                1,
-                2,
-                4,
-                5
+                1
             ]
         },
-        "greninjamega": {
+        "kyurem": {
             "cost": 18,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
+            "drafted_in": []
         },
-        "landorustherian": {
+        "alakazammega": {
             "cost": 18,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                5
-            ]
+            "drafted_in": []
+        },
+        "froslassmega": {
+            "cost": 18,
+            "drafted_in": []
+        },
+        "golisopodmega": {
+            "cost": 18,
+            "drafted_in": []
         },
         "latiosmega": {
             "cost": 18,
-            "drafted_in": [
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "lopunnymega": {
-            "cost": 18,
-            "drafted_in": [
-                3,
-                4,
-                5
-            ]
-        },
-        "palafin": {
-            "cost": 18,
-            "drafted_in": [
-                1,
-                3
-            ]
+            "drafted_in": []
         },
         "scizormega": {
             "cost": 18,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
-        "tornadustherian": {
+        "meowscarada": {
             "cost": 18,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
+        },
+        "terapagos": {
+            "cost": 18,
+            "drafted_in": [
+                1
+            ]
+        },
+        "urshifu": {
+            "cost": 18,
+            "drafted_in": [
+                1
+            ]
+        },
+        "zapdos": {
+            "cost": 18,
+            "drafted_in": [
+                1
+            ]
+        },
+        "zygarde": {
+            "cost": 18,
+            "drafted_in": [
+                1
+            ]
+        },
+        "dianciemega": {
+            "cost": 17,
+            "drafted_in": []
+        },
+        "celesteela": {
+            "cost": 17,
+            "drafted_in": []
         },
         "chiyu": {
-            "cost": 17,
-            "drafted_in": [
-                1,
-                2,
-                3
-            ]
-        },
-        "deoxysspeed": {
-            "cost": 17,
-            "drafted_in": [
-                3
-            ]
-        },
-        "gholdengo": {
-            "cost": 17,
-            "drafted_in": [
-                1,
-                2,
-                3
-            ]
-        },
-        "gougingfire": {
-            "cost": 17,
-            "drafted_in": [
-                5
-            ]
-        },
-        "greninja": {
-            "cost": 17,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                5
-            ]
-        },
-        "ironbundle": {
-            "cost": 17,
-            "drafted_in": [
-                1,
-                2,
-                4,
-                5
-            ]
-        },
-        "kyurem": {
-            "cost": 17,
-            "drafted_in": []
-        },
-        "landorus": {
-            "cost": 17,
-            "drafted_in": [
-                1,
-                2,
-                4,
-                5
-            ]
-        },
-        "mawilemega": {
-            "cost": 17,
-            "drafted_in": []
-        },
-        "medichammega": {
             "cost": 17,
             "drafted_in": [
                 1
             ]
         },
-        "mew": {
+        "deoxysspeed": {
+            "cost": 17,
+            "drafted_in": []
+        },
+        "gougingfire": {
+            "cost": 17,
+            "drafted_in": []
+        },
+        "greninja": {
+            "cost": 17,
+            "drafted_in": []
+        },
+        "ironbundle": {
             "cost": 17,
             "drafted_in": [
-                3,
-                5
+                1
+            ]
+        },
+        "landorus": {
+            "cost": 17,
+            "drafted_in": [
+                1
+            ]
+        },
+        "landorustherian": {
+            "cost": 17,
+            "drafted_in": [
+                1
+            ]
+        },
+        "darkraimega": {
+            "cost": 17,
+            "drafted_in": []
+        },
+        "greninjamega": {
+            "cost": 17,
+            "drafted_in": [
+                1
+            ]
+        },
+        "medichammega": {
+            "cost": 17,
+            "drafted_in": []
+        },
+        "palafin": {
+            "cost": 17,
+            "drafted_in": [
+                1
             ]
         },
         "sneasler": {
             "cost": 17,
             "drafted_in": [
-                2,
-                3,
-                4
+                1
             ]
         },
-        "baxcaliburmega": {
+        "spectrier": {
+            "cost": 17,
+            "drafted_in": [
+                1
+            ]
+        },
+        "urshifurapidstrike": {
+            "cost": 17,
+            "drafted_in": []
+        },
+        "aegislash": {
+            "cost": 16,
+            "drafted_in": []
+        },
+        "enamorus": {
             "cost": 16,
             "drafted_in": [
-                1,
-                2,
-                4
+                1
             ]
         },
-        "celesteela": {
+        "excadrillmega": {
+            "cost": 16,
+            "drafted_in": []
+        },
+        "slowkinggalar": {
             "cost": 16,
             "drafted_in": [
-                1,
-                3,
-                5
+                1
             ]
         },
-        "cinderace": {
+        "gholdengo": {
             "cost": 16,
             "drafted_in": [
-                2,
-                4,
-                5
+                1
             ]
         },
-        "froslassmega": {
+        "ironmoth": {
             "cost": 16,
             "drafted_in": [
                 1
@@ -1438,848 +1449,600 @@
         "irontreads": {
             "cost": 16,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
         "latios": {
             "cost": 16,
             "drafted_in": [
-                1,
-                5
+                1
             ]
         },
-        "melmetal": {
+        "chesnaughtmega": {
+            "cost": 16,
+            "drafted_in": []
+        },
+        "golurkmega": {
+            "cost": 16,
+            "drafted_in": []
+        },
+        "heatranmega": {
             "cost": 16,
             "drafted_in": [
-                1,
-                4,
-                5
+                1
             ]
         },
-        "roaringmoon": {
+        "mawilemega": {
             "cost": 16,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4
+                1
             ]
         },
-        "slowkinggalar": {
+        "raichumegax": {
+            "cost": 16,
+            "drafted_in": []
+        },
+        "raichumegay": {
             "cost": 16,
             "drafted_in": [
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
         "staraptormega": {
             "cost": 16,
             "drafted_in": [
-                3
+                1
             ]
         },
-        "tapulele": {
+        "melmetal": {
             "cost": 16,
             "drafted_in": [
-                2
+                1
             ]
+        },
+        "roaringmoon": {
+            "cost": 16,
+            "drafted_in": [
+                1
+            ]
+        },
+        "shayminsky": {
+            "cost": 16,
+            "drafted_in": []
         },
         "tinglu": {
             "cost": 16,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4
-            ]
-        },
-        "urshifu": {
-            "cost": 16,
-            "drafted_in": [
-                3
-            ]
-        },
-        "urshifurapidstrike": {
-            "cost": 16,
-            "drafted_in": [
-                4
-            ]
-        },
-        "zapdos": {
-            "cost": 16,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
         "zeraora": {
             "cost": 16,
             "drafted_in": [
-                1,
-                2,
-                5
+                1
             ]
         },
-        "aegislash": {
+        "cinderace": {
             "cost": 15,
             "drafted_in": [
-                1,
-                5
+                1
             ]
         },
-        "alomomola": {
+        "excadrill": {
             "cost": 15,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "baxcalibur": {
-            "cost": 15,
-            "drafted_in": [
-                2
-            ]
-        },
-        "charizardmegax": {
-            "cost": 15,
-            "drafted_in": []
-        },
-        "corviknight": {
-            "cost": 15,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "dragalgemega": {
-            "cost": 15,
-            "drafted_in": [
-                1,
-                2
-            ]
-        },
-        "enamorus": {
-            "cost": 15,
-            "drafted_in": [
-                2,
-                4
-            ]
-        },
-        "feraligatrmega": {
-            "cost": 15,
-            "drafted_in": [
-                2,
-                5
+                1
             ]
         },
         "gliscor": {
             "cost": 15,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
-        "golisopodmega": {
+        "kingambit": {
             "cost": 15,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
-        "ironmoth": {
+        "barbaraclemega": {
             "cost": 15,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4
-            ]
+            "drafted_in": []
         },
-        "kartana": {
+        "garchompmega": {
             "cost": 15,
-            "drafted_in": [
-                4
-            ]
+            "drafted_in": []
         },
-        "necrozma": {
+        "glimmoramega": {
             "cost": 15,
-            "drafted_in": [
-                5
-            ]
+            "drafted_in": []
         },
-        "ogerponwellspring": {
+        "meganiummega": {
             "cost": 15,
-            "drafted_in": [
-                2,
-                4,
-                5
-            ]
+            "drafted_in": []
         },
-        "quaquaval": {
+        "ragingbolt": {
             "cost": 15,
             "drafted_in": [
-                3
-            ]
-        },
-        "rillaboom": {
-            "cost": 15,
-            "drafted_in": [
-                2,
-                3
-            ]
-        },
-        "slowbro": {
-            "cost": 15,
-            "drafted_in": [
-                4
+                1
             ]
         },
         "tapufini": {
             "cost": 15,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
+        },
+        "tapulele": {
+            "cost": 15,
+            "drafted_in": []
+        },
+        "ursaluna": {
+            "cost": 15,
+            "drafted_in": []
         },
         "ursalunabloodmoon": {
             "cost": 15,
             "drafted_in": [
-                4
+                1
             ]
         },
         "victini": {
             "cost": 15,
             "drafted_in": [
-                5
+                1
             ]
         },
         "weavile": {
             "cost": 15,
+            "drafted_in": []
+        },
+        "samurotthisui": {
+            "cost": 14,
             "drafted_in": [
-                2,
-                4
+                1
             ]
         },
-        "zygarde": {
-            "cost": 15,
+        "blaziken": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "ceruledge": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "cyclizar": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "zapdosgalar": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "ironboulder": {
+            "cost": 14,
+            "drafted_in": [
+                1
+            ]
+        },
+        "kartana": {
+            "cost": 14,
+            "drafted_in": [
+                1
+            ]
+        },
+        "keldeo": {
+            "cost": 14,
             "drafted_in": []
         },
         "aerodactylmega": {
             "cost": 14,
             "drafted_in": []
         },
-        "annihilape": {
-            "cost": 14,
-            "drafted_in": [
-                2,
-                5
-            ]
-        },
-        "barbaraclemega": {
-            "cost": 14,
-            "drafted_in": []
-        },
-        "blaziken": {
-            "cost": 14,
-            "drafted_in": []
-        },
-        "charizardmegay": {
-            "cost": 14,
-            "drafted_in": []
-        },
-        "clefable": {
-            "cost": 14,
-            "drafted_in": [
-                4,
-                5
-            ]
-        },
-        "clefablemega": {
-            "cost": 14,
-            "drafted_in": []
-        },
-        "darmanitangalar": {
-            "cost": 14,
-            "drafted_in": [
-                2
-            ]
-        },
-        "dragonite": {
-            "cost": 14,
-            "drafted_in": [
-                1,
-                4,
-                5
-            ]
-        },
-        "excadrill": {
-            "cost": 14,
-            "drafted_in": [
-                4
-            ]
-        },
-        "excadrillmega": {
-            "cost": 14,
-            "drafted_in": []
-        },
-        "ferrothorn": {
-            "cost": 14,
-            "drafted_in": [
-                2,
-                3,
-                5
-            ]
-        },
-        "floettemega": {
-            "cost": 14,
-            "drafted_in": []
-        },
-        "garchompmega": {
-            "cost": 14,
-            "drafted_in": []
-        },
-        "gardevoirmega": {
+        "charizardmegax": {
             "cost": 14,
             "drafted_in": [
                 1
             ]
         },
-        "glimmora": {
+        "feraligatrmega": {
             "cost": 14,
             "drafted_in": [
-                4
-            ]
-        },
-        "glimmoramega": {
-            "cost": 14,
-            "drafted_in": [
-                5
-            ]
-        },
-        "heatran": {
-            "cost": 14,
-            "drafted_in": [
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "hydreigon": {
-            "cost": 14,
-            "drafted_in": [
-                1,
-                5
-            ]
-        },
-        "ironhands": {
-            "cost": 14,
-            "drafted_in": [
-                2
-            ]
-        },
-        "latias": {
-            "cost": 14,
-            "drafted_in": [
-                2
-            ]
-        },
-        "manaphy": {
-            "cost": 14,
-            "drafted_in": []
-        },
-        "ogerponcornerstone": {
-            "cost": 14,
-            "drafted_in": []
-        },
-        "ogerponhearthflame": {
-            "cost": 14,
-            "drafted_in": [
-                2,
-                4,
-                5
-            ]
-        },
-        "pelipper": {
-            "cost": 14,
-            "drafted_in": [
-                4
-            ]
-        },
-        "ragingbolt": {
-            "cost": 14,
-            "drafted_in": [
-                1,
-                4
-            ]
-        },
-        "rotomwash": {
-            "cost": 14,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "samurotthisui": {
-            "cost": 14,
-            "drafted_in": [
-                1,
-                3,
-                4,
-                5
-            ]
-        },
-        "scizor": {
-            "cost": 14,
-            "drafted_in": [
-                2,
-                3,
-                5
+                1
             ]
         },
         "skarmorymega": {
             "cost": 14,
             "drafted_in": []
         },
-        "ursaluna": {
+        "necrozma": {
             "cost": 14,
             "drafted_in": []
         },
-        "venusaurmega": {
+        "quaquaval": {
+            "cost": 14,
+            "drafted_in": []
+        },
+        "thundurustherian": {
             "cost": 14,
             "drafted_in": [
-                3
+                1
             ]
         },
         "walkingwake": {
             "cost": 14,
             "drafted_in": []
         },
-        "altariamega": {
+        "annihilape": {
             "cost": 13,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "archaludon": {
             "cost": 13,
-            "drafted_in": [
-                3,
-                4
-            ]
+            "drafted_in": []
         },
-        "azumarill": {
+        "basculegion": {
             "cost": 13,
             "drafted_in": []
         },
-        "blacephalon": {
+        "clefable": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "corviknight": {
             "cost": 13,
             "drafted_in": [
-                1,
-                5
+                1
+            ]
+        },
+        "darmanitangalar": {
+            "cost": 13,
+            "drafted_in": [
+                1
             ]
         },
         "dracovish": {
             "cost": 13,
             "drafted_in": []
         },
-        "dragonitemega": {
+        "dragonite": {
             "cost": 13,
             "drafted_in": []
         },
-        "infernape": {
-            "cost": 13,
-            "drafted_in": [
-                3,
-                5
-            ]
-        },
-        "ironboulder": {
-            "cost": 13,
-            "drafted_in": []
-        },
-        "jirachi": {
-            "cost": 13,
-            "drafted_in": [
-                1,
-                2,
-                5
-            ]
-        },
-        "keldeo": {
-            "cost": 13,
-            "drafted_in": [
-                1,
-                2,
-                5
-            ]
-        },
-        "kingambit": {
+        "glimmora": {
             "cost": 13,
             "drafted_in": [
                 1
             ]
         },
-        "kommoo": {
+        "gothitelle": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "haxorus": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "heatran": {
             "cost": 13,
             "drafted_in": [
-                1,
-                4
+                1
             ]
         },
-        "meganiummega": {
+        "lilliganthisui": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "hydrapple": {
+            "cost": 13,
+            "drafted_in": [
+                1
+            ]
+        },
+        "hydreigon": {
+            "cost": 13,
+            "drafted_in": [
+                1
+            ]
+        },
+        "ironcrown": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "jirachi": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "latias": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "manaphy": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "charizardmegay": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "chimechomega": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "dragalgemega": {
+            "cost": 13,
+            "drafted_in": [
+                1
+            ]
+        },
+        "gardevoirmega": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "meowsticmmega": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "mew": {
+            "cost": 13,
+            "drafted_in": []
+        },
+        "ogerpon": {
             "cost": 13,
             "drafted_in": []
         },
         "pecharunt": {
             "cost": 13,
             "drafted_in": [
-                1,
-                2,
-                4,
-                5
+                1
             ]
         },
         "primarina": {
             "cost": 13,
             "drafted_in": [
-                1,
-                2,
-                4,
-                5
+                1
             ]
         },
-        "raichumegax": {
+        "rillaboom": {
             "cost": 13,
             "drafted_in": []
         },
-        "salamence": {
-            "cost": 13,
-            "drafted_in": [
-                3
-            ]
-        },
-        "skarmory": {
-            "cost": 13,
-            "drafted_in": []
-        },
-        "slowking": {
-            "cost": 13,
-            "drafted_in": [
-                2
-            ]
-        },
-        "swampertmega": {
+        "slowbro": {
             "cost": 13,
             "drafted_in": []
         },
         "thundurus": {
             "cost": 13,
             "drafted_in": [
-                2,
-                3
+                1
             ]
         },
-        "tyranitar": {
+        "volcanion": {
             "cost": 13,
             "drafted_in": []
         },
-        "volcarona": {
-            "cost": 13,
-            "drafted_in": [
-                3
-            ]
-        },
-        "zapdosgalar": {
+        "zarude": {
             "cost": 13,
             "drafted_in": []
         },
-        "blastoisemega": {
-            "cost": 12,
-            "drafted_in": [
-                2
-            ]
-        },
-        "dracozolt": {
+        "slowbromega": {
             "cost": 12,
             "drafted_in": []
+        },
+        "venusaurmega": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "blacephalon": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "buzzwole": {
+            "cost": 12,
+            "drafted_in": [
+                1
+            ]
+        },
+        "deoxysdefense": {
+            "cost": 12,
+            "drafted_in": [
+                1
+            ]
         },
         "empoleon": {
             "cost": 12,
-            "drafted_in": [
-                2,
-                4,
-                5
-            ]
+            "drafted_in": []
         },
         "goodrahisui": {
             "cost": 12,
             "drafted_in": []
         },
-        "hawlucha": {
-            "cost": 12,
-            "drafted_in": [
-                2,
-                5
-            ]
-        },
-        "hawluchamega": {
+        "hoopaunbound": {
             "cost": 12,
             "drafted_in": []
         },
-        "hoopaunbound": {
+        "infernape": {
             "cost": 12,
-            "drafted_in": [
-                5
-            ]
+            "drafted_in": []
         },
-        "ironcrown": {
+        "ironhands": {
             "cost": 12,
             "drafted_in": [
                 1
             ]
         },
-        "krookodile": {
-            "cost": 12,
-            "drafted_in": [
-                2,
-                4,
-                5
-            ]
-        },
-        "mandibuzz": {
-            "cost": 12,
-            "drafted_in": [
-                1,
-                3
-            ]
-        },
-        "metagross": {
-            "cost": 12,
-            "drafted_in": [
-                1,
-                3
-            ]
-        },
-        "mienshao": {
-            "cost": 12,
-            "drafted_in": [
-                4
-            ]
-        },
-        "nidoking": {
+        "kommoo": {
             "cost": 12,
             "drafted_in": []
         },
-        "nidoqueen": {
+        "lycanrocdusk": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "mamoswine": {
+            "cost": 12,
+            "drafted_in": [
+                1
+            ]
+        },
+        "blastoisemega": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "clefablemega": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "eelektrossmega": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "gyaradosmega": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "kangaskhanmega": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "scraftymega": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "swampertmega": {
             "cost": 12,
             "drafted_in": []
         },
         "nihilego": {
             "cost": 12,
-            "drafted_in": [
-                1,
-                3,
-                5
-            ]
-        },
-        "raikou": {
-            "cost": 12,
-            "drafted_in": [
-                3,
-                4
-            ]
-        },
-        "rotomheat": {
-            "cost": 12,
-            "drafted_in": [
-                1,
-                3,
-                5
-            ]
-        },
-        "sylveon": {
-            "cost": 12,
-            "drafted_in": [
-                4
-            ]
-        },
-        "terrakion": {
-            "cost": 12,
             "drafted_in": []
         },
-        "thundurustherian": {
-            "cost": 12,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "togekiss": {
-            "cost": 12,
-            "drafted_in": []
-        },
-        "torkoal": {
-            "cost": 12,
-            "drafted_in": []
-        },
-        "toxapex": {
-            "cost": 12,
-            "drafted_in": []
-        },
-        "tyranitarmega": {
-            "cost": 12,
-            "drafted_in": []
-        },
-        "zoroarkhisui": {
+        "ogerponcornerstone": {
             "cost": 12,
             "drafted_in": [
                 1
             ]
         },
-        "aggronmega": {
-            "cost": 11,
+        "ogerponhearthflame": {
+            "cost": 12,
             "drafted_in": [
-                2
+                1
             ]
+        },
+        "ogerponwellspring": {
+            "cost": 12,
+            "drafted_in": [
+                1
+            ]
+        },
+        "pelipper": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "salamence": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "scizor": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "skeledirge": {
+            "cost": 12,
+            "drafted_in": []
+        },
+        "slowking": {
+            "cost": 12,
+            "drafted_in": [
+                1
+            ]
+        },
+        "volcarona": {
+            "cost": 12,
+            "drafted_in": []
         },
         "alakazam": {
             "cost": 11,
             "drafted_in": []
         },
-        "arcaninehisui": {
+        "alomomola": {
             "cost": 11,
             "drafted_in": [
                 1
             ]
         },
-        "azelf": {
-            "cost": 11,
-            "drafted_in": [
-                3
-            ]
-        },
-        "basculegion": {
-            "cost": 11,
-            "drafted_in": []
-        },
-        "beedrillmega": {
-            "cost": 11,
-            "drafted_in": [
-                3
-            ]
-        },
-        "buzzwole": {
+        "azumarill": {
             "cost": 11,
             "drafted_in": [
                 1
             ]
         },
-        "ceruledge": {
-            "cost": 11,
-            "drafted_in": [
-                3
-            ]
-        },
-        "deoxysdefense": {
+        "enamorustherian": {
             "cost": 11,
             "drafted_in": []
+        },
+        "ferrothorn": {
+            "cost": 11,
+            "drafted_in": [
+                1
+            ]
         },
         "gengar": {
             "cost": 11,
             "drafted_in": []
         },
-        "gothitelle": {
+        "hawlucha": {
             "cost": 11,
             "drafted_in": []
         },
-        "gyaradosmega": {
+        "mandibuzz": {
             "cost": 11,
-            "drafted_in": []
-        },
-        "hatterene": {
-            "cost": 11,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "heracrossmega": {
             "cost": 11,
-            "drafted_in": [
-                5
-            ]
+            "drafted_in": []
         },
-        "klefki": {
-            "cost": 11,
-            "drafted_in": [
-                2
-            ]
-        },
-        "lilliganthisui": {
+        "tatsugiricurlymega": {
             "cost": 11,
             "drafted_in": []
         },
-        "lycanrocdusk": {
+        "mesprit": {
             "cost": 11,
             "drafted_in": []
         },
-        "mamoswine": {
+        "metagross": {
             "cost": 11,
-            "drafted_in": [
-                3
-            ]
+            "drafted_in": []
+        },
+        "mienshao": {
+            "cost": 11,
+            "drafted_in": []
         },
         "moltres": {
             "cost": 11,
             "drafted_in": [
-                3
+                1
             ]
         },
-        "ogerpon": {
+        "nidoking": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "nidoqueen": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "raikou": {
             "cost": 11,
             "drafted_in": [
-                1,
-                3,
-                5
+                1
             ]
-        },
-        "pidgeotmega": {
-            "cost": 11,
-            "drafted_in": []
-        },
-        "pyroarmega": {
-            "cost": 11,
-            "drafted_in": []
-        },
-        "reuniclus": {
-            "cost": 11,
-            "drafted_in": []
         },
         "sandyshocks": {
             "cost": 11,
@@ -2288,231 +2051,216 @@
         "screamtail": {
             "cost": 11,
             "drafted_in": [
-                1,
-                2,
-                3
-            ]
-        },
-        "skeledirge": {
-            "cost": 11,
-            "drafted_in": [
                 1
             ]
+        },
+        "silvally": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "slitherwing": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "suicune": {
+            "cost": 11,
+            "drafted_in": []
         },
         "swampert": {
             "cost": 11,
             "drafted_in": [
-                5
+                1
             ]
         },
-        "tangrowth": {
+        "terrakion": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "tyranitar": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "uxie": {
+            "cost": 11,
+            "drafted_in": []
+        },
+        "rotomwash": {
             "cost": 11,
             "drafted_in": [
-                5
+                1
             ]
         },
-        "tinkaton": {
-            "cost": 11,
-            "drafted_in": [
-                1,
-                3,
-                5
-            ]
-        },
-        "volcanion": {
-            "cost": 11,
-            "drafted_in": [
-                2,
-                4
-            ]
-        },
-        "amoonguss": {
-            "cost": 10,
-            "drafted_in": [
-                1,
-                5
-            ]
-        },
-        "arcanine": {
-            "cost": 10,
-            "drafted_in": []
-        },
-        "barraskewda": {
-            "cost": 10,
-            "drafted_in": []
-        },
-        "blastoise": {
-            "cost": 10,
-            "drafted_in": [
-                5
-            ]
-        },
-        "chesnaughtmega": {
-            "cost": 10,
-            "drafted_in": []
-        },
-        "chimechomega": {
-            "cost": 10,
-            "drafted_in": [
-                4
-            ]
-        },
-        "clodsire": {
-            "cost": 10,
-            "drafted_in": [
-                4
-            ]
-        },
-        "cobalion": {
-            "cost": 10,
-            "drafted_in": [
-                1,
-                3
-            ]
-        },
-        "cresselia": {
-            "cost": 10,
-            "drafted_in": [
-                5
-            ]
-        },
-        "crobat": {
-            "cost": 10,
-            "drafted_in": []
-        },
-        "dondozo": {
-            "cost": 10,
-            "drafted_in": []
-        },
-        "enamorustherian": {
+        "arctozolt": {
             "cost": 10,
             "drafted_in": [
                 1
             ]
         },
-        "fezandipiti": {
+        "armarouge": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "azelf": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "clodsire": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "cresselia": {
             "cost": 10,
             "drafted_in": [
-                1,
-                3,
-                4,
-                5
+                1
             ]
+        },
+        "dracozolt": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "moltresgalar": {
+            "cost": 10,
+            "drafted_in": []
         },
         "grimmsnarl": {
             "cost": 10,
             "drafted_in": []
         },
-        "hippowdon": {
+        "arcaninehisui": {
             "cost": 10,
             "drafted_in": []
         },
-        "kangaskhanmega": {
+        "ironjugulis": {
             "cost": 10,
             "drafted_in": []
         },
-        "kleavor": {
+        "ironleaves": {
             "cost": 10,
             "drafted_in": []
         },
-        "milotic": {
-            "cost": 10,
-            "drafted_in": [
-                2,
-                3,
-                5
-            ]
-        },
-        "moltresgalar": {
-            "cost": 10,
-            "drafted_in": [
-                4
-            ]
-        },
-        "mukalola": {
-            "cost": 10,
-            "drafted_in": [
-                4
-            ]
-        },
-        "ninetalesalola": {
+        "klefki": {
             "cost": 10,
             "drafted_in": [
                 1
             ]
+        },
+        "krookodile": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "aggronmega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "altariamega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "beedrillmega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "falinksmega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "hawluchamega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "pidgeotmega": {
+            "cost": 10,
+            "drafted_in": []
         },
         "sableyemega": {
             "cost": 10,
             "drafted_in": []
         },
+        "scolipedemega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "tyranitarmega": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "milotic": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "okidogi": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "porygonz": {
+            "cost": 10,
+            "drafted_in": [
+                1
+            ]
+        },
+        "regidrago": {
+            "cost": 10,
+            "drafted_in": []
+        },
+        "reuniclus": {
+            "cost": 10,
+            "drafted_in": []
+        },
         "scolipede": {
             "cost": 10,
-            "drafted_in": [
-                2
-            ]
+            "drafted_in": []
         },
-        "serperior": {
+        "skarmory": {
             "cost": 10,
             "drafted_in": [
-                1,
-                5
+                1
             ]
         },
-        "sharpedomega": {
+        "sylveon": {
+            "cost": 10,
+            "drafted_in": [
+                1
+            ]
+        },
+        "tinkaton": {
+            "cost": 10,
+            "drafted_in": [
+                1
+            ]
+        },
+        "torkoal": {
             "cost": 10,
             "drafted_in": []
         },
-        "silvally": {
+        "tornadus": {
             "cost": 10,
             "drafted_in": []
         },
-        "slowbromega": {
+        "toxapex": {
             "cost": 10,
+            "drafted_in": [
+                1
+            ]
+        },
+        "mukalola": {
+            "cost": 9,
             "drafted_in": []
         },
-        "snorlax": {
-            "cost": 10,
-            "drafted_in": [
-                4
-            ]
-        },
-        "tapubulu": {
-            "cost": 10,
-            "drafted_in": []
-        },
-        "uxie": {
-            "cost": 10,
-            "drafted_in": [
-                1,
-                3
-            ]
-        },
-        "weezinggalar": {
-            "cost": 10,
-            "drafted_in": [
-                2,
-                5
-            ]
-        },
-        "zarude": {
-            "cost": 10,
-            "drafted_in": [
-                1,
-                2,
-                4
-            ]
-        },
-        "aerodactyl": {
+        "ninetalesalola": {
             "cost": 9,
             "drafted_in": [
                 1
             ]
         },
-        "breloom": {
+        "arcanine": {
             "cost": 9,
             "drafted_in": []
         },
-        "bronzong": {
+        "barraskewda": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "blastoise": {
             "cost": 9,
             "drafted_in": []
         },
@@ -2524,32 +2272,21 @@
             "cost": 9,
             "drafted_in": []
         },
-        "cyclizar": {
-            "cost": 9,
-            "drafted_in": [
-                1,
-                3,
-                4
-            ]
-        },
-        "darmanitan": {
-            "cost": 9,
-            "drafted_in": [
-                2
-            ]
-        },
-        "diggersby": {
+        "cloyster": {
             "cost": 9,
             "drafted_in": []
         },
-        "donphan": {
+        "cobalion": {
             "cost": 9,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                5
-            ]
+            "drafted_in": []
+        },
+        "darmanitan": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "dondozo": {
+            "cost": 9,
+            "drafted_in": []
         },
         "dugtrio": {
             "cost": 9,
@@ -2557,42 +2294,57 @@
         },
         "entei": {
             "cost": 9,
-            "drafted_in": [
-                4
-            ]
+            "drafted_in": []
         },
-        "floetteeternal": {
+        "fezandipiti": {
             "cost": 9,
             "drafted_in": [
-                2,
-                4
+                1
             ]
         },
-        "florges": {
+        "weezinggalar": {
             "cost": 9,
             "drafted_in": [
-                1,
-                2,
-                3
+                1
             ]
         },
-        "gardevoir": {
+        "garganacl": {
+            "cost": 9,
+            "drafted_in": [
+                1
+            ]
+        },
+        "glastrier": {
             "cost": 9,
             "drafted_in": []
         },
-        "hydrapple": {
+        "goodra": {
             "cost": 9,
             "drafted_in": [
-                3
+                1
             ]
         },
-        "incineroar": {
+        "gyarados": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "hatterene": {
             "cost": 9,
             "drafted_in": [
-                4
+                1
             ]
         },
-        "ironjugulis": {
+        "rotomheat": {
+            "cost": 9,
+            "drafted_in": [
+                1
+            ]
+        },
+        "zoroarkhisui": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "kingdra": {
             "cost": 9,
             "drafted_in": []
         },
@@ -2600,149 +2352,143 @@
             "cost": 9,
             "drafted_in": []
         },
+        "lucario": {
+            "cost": 9,
+            "drafted_in": []
+        },
         "magnezone": {
             "cost": 9,
             "drafted_in": []
         },
-        "mesprit": {
+        "pyroarmega": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "noivern": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "orthworm": {
             "cost": 9,
             "drafted_in": [
                 1
             ]
         },
-        "munkidori": {
+        "salazzle": {
             "cost": 9,
             "drafted_in": [
-                1,
-                4
+                1
             ]
         },
-        "overqwil": {
-            "cost": 9,
-            "drafted_in": [
-                2,
-                3,
-                5
-            ]
-        },
-        "porygon2": {
-            "cost": 9,
-            "drafted_in": [
-                4
-            ]
-        },
-        "registeel": {
-            "cost": 9,
-            "drafted_in": [
-                4
-            ]
-        },
-        "roserade": {
-            "cost": 9,
-            "drafted_in": [
-                2,
-                3
-            ]
-        },
-        "rotommow": {
-            "cost": 9,
-            "drafted_in": [
-                1,
-                2
-            ]
-        },
-        "scolipedemega": {
+        "serperior": {
             "cost": 9,
             "drafted_in": []
         },
-        "scraftymega": {
+        "snorlax": {
             "cost": 9,
             "drafted_in": []
         },
-        "sinistcha": {
-            "cost": 9,
-            "drafted_in": []
-        },
-        "slitherwing": {
-            "cost": 9,
-            "drafted_in": []
-        },
-        "starmie": {
+        "stakataka": {
             "cost": 9,
             "drafted_in": [
-                1,
-                3
+                1
             ]
         },
-        "suicune": {
+        "staraptor": {
             "cost": 9,
             "drafted_in": []
         },
-        "talonflame": {
-            "cost": 9,
-            "drafted_in": []
-        },
-        "tentacruel": {
+        "tangrowth": {
             "cost": 9,
             "drafted_in": [
-                1,
-                3
+                1
             ]
+        },
+        "tapubulu": {
+            "cost": 9,
+            "drafted_in": []
+        },
+        "togekiss": {
+            "cost": 9,
+            "drafted_in": [
+                1
+            ]
+        },
+        "toxtricity": {
+            "cost": 9,
+            "drafted_in": []
         },
         "umbreon": {
             "cost": 9,
-            "drafted_in": [
-                4,
-                5
-            ]
+            "drafted_in": []
         },
         "vaporeon": {
             "cost": 9,
             "drafted_in": [
-                2,
-                3
+                1
             ]
         },
         "xurkitree": {
             "cost": 9,
             "drafted_in": []
         },
+        "pinsirmega": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "aerodactyl": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "amoonguss": {
+            "cost": 8,
+            "drafted_in": []
+        },
         "araquanid": {
             "cost": 8,
             "drafted_in": [
-                3,
-                4
+                1
             ]
         },
-        "armarouge": {
+        "bisharp": {
             "cost": 8,
             "drafted_in": []
         },
-        "chandeluremega": {
+        "blissey": {
             "cost": 8,
             "drafted_in": []
         },
-        "cloyster": {
+        "comfey": {
             "cost": 8,
-            "drafted_in": [
-                3
-            ]
+            "drafted_in": []
         },
         "conkeldurr": {
             "cost": 8,
-            "drafted_in": [
-                4
-            ]
+            "drafted_in": []
         },
-        "diancie": {
+        "crobat": {
             "cost": 8,
             "drafted_in": [
-                2,
-                4,
-                5
+                1
             ]
         },
-        "drapion": {
+        "decidueye": {
+            "cost": 8,
+            "drafted_in": [
+                1
+            ]
+        },
+        "donphan": {
+            "cost": 8,
+            "drafted_in": [
+                1
+            ]
+        },
+        "espathra": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "articunogalar": {
             "cost": 8,
             "drafted_in": []
         },
@@ -2750,103 +2496,77 @@
             "cost": 8,
             "drafted_in": []
         },
-        "garganacl": {
-            "cost": 8,
-            "drafted_in": [
-                3
-            ]
-        },
-        "gastrodon": {
-            "cost": 8,
-            "drafted_in": [
-                1,
-                4
-            ]
-        },
-        "gyarados": {
-            "cost": 8,
-            "drafted_in": []
-        },
-        "haxorus": {
+        "gardevoir": {
             "cost": 8,
             "drafted_in": []
         },
         "heracross": {
             "cost": 8,
-            "drafted_in": [
-                5
-            ]
+            "drafted_in": []
         },
-        "jellicent": {
-            "cost": 8,
-            "drafted_in": [
-                4
-            ]
-        },
-        "meloetta": {
-            "cost": 8,
-            "drafted_in": [
-                2
-            ]
-        },
-        "mudsdale": {
+        "hippowdon": {
             "cost": 8,
             "drafted_in": [
                 1
             ]
         },
-        "ninetales": {
-            "cost": 8,
-            "drafted_in": []
-        },
-        "noivern": {
+        "incineroar": {
             "cost": 8,
             "drafted_in": [
-                4
+                1
             ]
         },
-        "okidogi": {
+        "indeedee": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "kilowattrel": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "kleavor": {
             "cost": 8,
             "drafted_in": [
-                1,
-                2
+                1
             ]
         },
-        "pawmot": {
+        "drampamega": {
             "cost": 8,
             "drafted_in": []
         },
-        "pinsirmega": {
+        "meloetta": {
             "cost": 8,
             "drafted_in": []
         },
-        "porygonz": {
+        "rotommow": {
             "cost": 8,
             "drafted_in": []
         },
-        "revavroom": {
+        "munkidori": {
             "cost": 8,
             "drafted_in": []
+        },
+        "overqwil": {
+            "cost": 8,
+            "drafted_in": [
+                1
+            ]
+        },
+        "polteageist": {
+            "cost": 8,
+            "drafted_in": []
+        },
+        "porygon2": {
+            "cost": 8,
+            "drafted_in": [
+                1
+            ]
         },
         "ribombee": {
             "cost": 8,
             "drafted_in": []
         },
-        "salazzle": {
-            "cost": 8,
-            "drafted_in": []
-        },
-        "seismitoad": {
-            "cost": 8,
-            "drafted_in": []
-        },
-        "shaymin": {
-            "cost": 8,
-            "drafted_in": [
-                3
-            ]
-        },
-        "staraptor": {
+        "starmie": {
             "cost": 8,
             "drafted_in": []
         },
@@ -2854,105 +2574,39 @@
             "cost": 8,
             "drafted_in": []
         },
-        "taurospaldeaaqua": {
+        "talonflame": {
+            "cost": 8,
+            "drafted_in": [
+                1
+            ]
+        },
+        "tentacruel": {
+            "cost": 8,
+            "drafted_in": [
+                1
+            ]
+        },
+        "tyrantrum": {
             "cost": 8,
             "drafted_in": []
         },
-        "tornadus": {
-            "cost": 8,
-            "drafted_in": []
-        },
-        "toxtricity": {
-            "cost": 8,
-            "drafted_in": [
-                4
-            ]
-        },
-        "tsareena": {
-            "cost": 8,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4
-            ]
-        },
-        "vikavolt": {
-            "cost": 8,
-            "drafted_in": []
-        },
-        "arctozolt": {
+        "slowbrogalar": {
             "cost": 7,
             "drafted_in": []
         },
-        "aromatisse": {
-            "cost": 7,
-            "drafted_in": [
-                5
-            ]
-        },
-        "bisharp": {
+        "breloom": {
             "cost": 7,
             "drafted_in": []
         },
-        "blissey": {
+        "chesnaught": {
             "cost": 7,
             "drafted_in": []
         },
-        "braviaryhisui": {
+        "diggersby": {
             "cost": 7,
             "drafted_in": []
         },
-        "cofagrigus": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "comfey": {
-            "cost": 7,
-            "drafted_in": [
-                1,
-                3
-            ]
-        },
-        "crawdaunt": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "dragalge": {
-            "cost": 7,
-            "drafted_in": [
-                2,
-                5
-            ]
-        },
-        "drampamega": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "dudunsparce": {
-            "cost": 7,
-            "drafted_in": [
-                2,
-                3
-            ]
-        },
-        "eelektrossmega": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "emboarmega": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "escavalier": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "espathra": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "falinksmega": {
+        "espeon": {
             "cost": 7,
             "drafted_in": []
         },
@@ -2960,119 +2614,109 @@
             "cost": 7,
             "drafted_in": []
         },
-        "gigalith": {
+        "florges": {
             "cost": 7,
             "drafted_in": []
         },
-        "goodra": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "heliolisk": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "hitmontop": {
+        "flygon": {
             "cost": 7,
             "drafted_in": [
-                2
+                1
             ]
         },
-        "indeedee": {
-            "cost": 7,
-            "drafted_in": [
-                3
-            ]
-        },
-        "ironleaves": {
+        "braviaryhisui": {
             "cost": 7,
             "drafted_in": []
         },
-        "kilowattrel": {
+        "electrodehisui": {
             "cost": 7,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
-        "kingdra": {
+        "typhlosionhisui": {
             "cost": 7,
             "drafted_in": []
         },
-        "lucario": {
+        "hoopa": {
             "cost": 7,
             "drafted_in": []
         },
-        "maushold": {
+        "inteleon": {
             "cost": 7,
             "drafted_in": [
-                4
+                1
             ]
         },
-        "meowsticmmega": {
+        "ironthorns": {
             "cost": 7,
             "drafted_in": []
         },
-        "miltank": {
+        "jellicent": {
             "cost": 7,
             "drafted_in": [
-                5
+                1
             ]
+        },
+        "emboarmega": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "sharpedomega": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "victreebelmega": {
+            "cost": 7,
+            "drafted_in": []
         },
         "mimikyu": {
             "cost": 7,
+            "drafted_in": []
+        },
+        "mudsdale": {
+            "cost": 7,
             "drafted_in": [
-                4
+                1
             ]
         },
         "obstagoon": {
             "cost": 7,
+            "drafted_in": []
+        },
+        "registeel": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "sandaconda": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "seismitoad": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "shaymin": {
+            "cost": 7,
+            "drafted_in": []
+        },
+        "sinistcha": {
+            "cost": 7,
             "drafted_in": [
-                3
+                1
             ]
         },
-        "politoed": {
+        "taurospaldeaaqua": {
             "cost": 7,
-            "drafted_in": []
-        },
-        "regieleki": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "rhyperior": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "scovillainmega": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "steelix": {
-            "cost": 7,
-            "drafted_in": []
-        },
-        "steelixmega": {
-            "cost": 7,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "taurospaldeablaze": {
             "cost": 7,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "torterra": {
-            "cost": 7,
             "drafted_in": []
         },
-        "vanilluxe": {
+        "tsareena": {
             "cost": 7,
             "drafted_in": []
         },
@@ -3080,32 +2724,21 @@
             "cost": 7,
             "drafted_in": []
         },
-        "whimsicott": {
+        "virizion": {
             "cost": 7,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "zoroark": {
             "cost": 7,
-            "drafted_in": [
-                3
-            ]
-        },
-        "abomasnow": {
-            "cost": 6,
             "drafted_in": []
         },
-        "absolmega": {
-            "cost": 6,
+        "zygarde10": {
+            "cost": 7,
             "drafted_in": []
         },
-        "bellibolt": {
-            "cost": 6,
-            "drafted_in": [
-                1,
-                5
-            ]
-        },
-        "bewear": {
+        "aromatisse": {
             "cost": 6,
             "drafted_in": []
         },
@@ -3113,24 +2746,25 @@
             "cost": 6,
             "drafted_in": []
         },
-        "brutebonnet": {
+        "bronzong": {
             "cost": 6,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "chansey": {
             "cost": 6,
-            "drafted_in": [
-                3
-            ]
+            "drafted_in": []
         },
-        "chesnaught": {
+        "cinccino": {
             "cost": 6,
-            "drafted_in": [
-                3,
-                4
-            ]
+            "drafted_in": []
         },
-        "crabominablemega": {
+        "cofagrigus": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "crawdaunt": {
             "cost": 6,
             "drafted_in": []
         },
@@ -3138,26 +2772,45 @@
             "cost": 6,
             "drafted_in": []
         },
-        "espeon": {
+        "dhelmise": {
+            "cost": 6,
+            "drafted_in": [
+                1
+            ]
+        },
+        "diancie": {
             "cost": 6,
             "drafted_in": []
         },
-        "flygon": {
+        "ditto": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "doublade": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "dragalge": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "drapion": {
             "cost": 6,
             "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
+                1
             ]
         },
-        "forretress": {
+        "dudunsparce": {
             "cost": 6,
-            "drafted_in": [
-                1,
-                4
-            ]
+            "drafted_in": []
+        },
+        "eelektross": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "flamigo": {
+            "cost": 6,
+            "drafted_in": []
         },
         "froslass": {
             "cost": 6,
@@ -3165,313 +2818,349 @@
         },
         "galvantula": {
             "cost": 6,
-            "drafted_in": [
-                4
-            ]
+            "drafted_in": []
+        },
+        "gastrodon": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "gigalith": {
+            "cost": 6,
+            "drafted_in": []
         },
         "gligar": {
             "cost": 6,
             "drafted_in": [
-                1,
-                4
+                1
             ]
         },
-        "golurkmega": {
+        "hitmonlee": {
             "cost": 6,
             "drafted_in": []
         },
-        "houndoommega": {
-            "cost": 6,
-            "drafted_in": []
-        },
-        "ironthorns": {
+        "hitmontop": {
             "cost": 6,
             "drafted_in": [
                 1
             ]
         },
-        "manectricmega": {
-            "cost": 6,
-            "drafted_in": [
-                4
-            ]
-        },
-        "mismagius": {
+        "jolteon": {
             "cost": 6,
             "drafted_in": []
         },
-        "orthworm": {
+        "lycanroc": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "malamar": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "medicham": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "chandeluremega": {
             "cost": 6,
             "drafted_in": [
                 1
             ]
         },
-        "palossand": {
+        "miltank": {
             "cost": 6,
             "drafted_in": []
         },
-        "pangoro": {
+        "morpeko": {
             "cost": 6,
             "drafted_in": []
         },
-        "persianalola": {
+        "passimian": {
             "cost": 6,
             "drafted_in": []
         },
-        "polteageist": {
+        "pawmot": {
             "cost": 6,
             "drafted_in": [
-                2
+                1
             ]
         },
-        "qwilfish": {
-            "cost": 6,
-            "drafted_in": []
-        },
-        "qwilfishhisui": {
+        "politoed": {
             "cost": 6,
             "drafted_in": [
-                5
+                1
             ]
         },
-        "regidrago": {
+        "primeape": {
             "cost": 6,
             "drafted_in": []
         },
-        "rotomfrost": {
+        "quagsire": {
             "cost": 6,
             "drafted_in": [
-                2
+                1
             ]
         },
-        "sceptilemega": {
-            "cost": 6,
-            "drafted_in": []
-        },
-        "scrafty": {
-            "cost": 6,
-            "drafted_in": []
-        },
-        "slowbrogalar": {
+        "regieleki": {
             "cost": 6,
             "drafted_in": [
-                4
+                1
             ]
+        },
+        "revavroom": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "roserade": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "runerigus": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "sableye": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "sirfetchd": {
+            "cost": 6,
+            "drafted_in": []
         },
         "slurpuff": {
             "cost": 6,
             "drafted_in": []
         },
-        "stakataka": {
+        "tauros": {
             "cost": 6,
             "drafted_in": []
         },
-        "victreebelmega": {
+        "torterra": {
             "cost": 6,
             "drafted_in": []
         },
-        "weezing": {
+        "typhlosion": {
             "cost": 6,
             "drafted_in": []
+        },
+        "ursaring": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "vanilluxe": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "venomoth": {
+            "cost": 6,
+            "drafted_in": []
+        },
+        "vikavolt": {
+            "cost": 6,
+            "drafted_in": [
+                1
+            ]
         },
         "wochien": {
             "cost": 6,
-            "drafted_in": [
-                5
-            ]
+            "drafted_in": []
         },
-        "yanmega": {
-            "cost": 6,
-            "drafted_in": [
-                1
-            ]
+        "sneaselhisui": {
+            "cost": 5,
+            "drafted_in": []
         },
-        "zygarde10": {
-            "cost": 6,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
+        "accelgor": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "marowakalola": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "persianalola": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "ambipom": {
+            "cost": 5,
+            "drafted_in": []
         },
         "arboliva": {
             "cost": 5,
+            "drafted_in": []
+        },
+        "arctovish": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "barbaracle": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "bellibolt": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "brutebonnet": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "centiskorch": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "claydol": {
+            "cost": 5,
             "drafted_in": [
                 1
             ]
         },
-        "articunogalar": {
-            "cost": 5,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "bombirdier": {
+        "copperajah": {
             "cost": 5,
             "drafted_in": []
         },
-        "brambleghast": {
-            "cost": 5,
-            "drafted_in": [
-                2,
-                4
-            ]
-        },
-        "cetitan": {
+        "cryogonal": {
             "cost": 5,
             "drafted_in": []
-        },
-        "cinccino": {
-            "cost": 5,
-            "drafted_in": [
-                2
-            ]
-        },
-        "decidueye": {
-            "cost": 5,
-            "drafted_in": [
-                4
-            ]
-        },
-        "dhelmise": {
-            "cost": 5,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "ditto": {
-            "cost": 5,
-            "drafted_in": [
-                3
-            ]
         },
         "drampa": {
             "cost": 5,
             "drafted_in": []
         },
-        "eelektross": {
+        "druddigon": {
             "cost": 5,
-            "drafted_in": [
-                2,
-                5
-            ]
+            "drafted_in": []
         },
-        "electrodehisui": {
+        "durant": {
             "cost": 5,
-            "drafted_in": [
-                4
-            ]
+            "drafted_in": []
         },
         "emboar": {
             "cost": 5,
             "drafted_in": []
         },
-        "farigiraf": {
-            "cost": 5,
-            "drafted_in": [
-                2
-            ]
-        },
-        "flamigo": {
+        "escavalier": {
             "cost": 5,
             "drafted_in": []
         },
-        "hariyama": {
-            "cost": 5,
-            "drafted_in": [
-                4
-            ]
-        },
-        "hitmonlee": {
+        "rotomfan": {
             "cost": 5,
             "drafted_in": []
         },
-        "inteleon": {
+        "rotomfrost": {
             "cost": 5,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
+            "drafted_in": []
         },
-        "lanturn": {
+        "golisopod": {
             "cost": 5,
-            "drafted_in": [
-                5
-            ]
+            "drafted_in": []
         },
-        "lickilicky": {
+        "gourgeist": {
             "cost": 5,
-            "drafted_in": [
-                1
-            ]
+            "drafted_in": []
+        },
+        "grafaiai": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "heliolisk": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "qwilfishhisui": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "hitmonchan": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "linoone": {
+            "cost": 5,
+            "drafted_in": []
         },
         "machamp": {
             "cost": 5,
             "drafted_in": []
         },
-        "medicham": {
+        "magneton": {
             "cost": 5,
             "drafted_in": []
         },
-        "muk": {
-            "cost": 5,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4
-            ]
-        },
-        "passimian": {
-            "cost": 5,
-            "drafted_in": [
-                3
-            ]
-        },
-        "piloswine": {
+        "mantine": {
             "cost": 5,
             "drafted_in": []
         },
-        "quagsire": {
+        "maushold": {
             "cost": 5,
             "drafted_in": [
-                2
+                1
             ]
+        },
+        "absolmega": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "banettemega": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "houndoommega": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "malamarmega": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "manectricmega": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "sceptilemega": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "steelixmega": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "minior": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "mismagius": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "omastar": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "oricorio": {
+            "cost": 5,
+            "drafted_in": [
+                1
+            ]
+        },
+        "palossand": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "pincurchin": {
+            "cost": 5,
+            "drafted_in": []
         },
         "rotom": {
             "cost": 5,
-            "drafted_in": [
-                3
-            ]
+            "drafted_in": []
         },
-        "rotomfan": {
+        "sceptile": {
             "cost": 5,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
+            "drafted_in": []
         },
-        "sableye": {
+        "scyther": {
             "cost": 5,
-            "drafted_in": [
-                3
-            ]
+            "drafted_in": []
         },
         "sharpedo": {
             "cost": 5,
@@ -3481,28 +3170,19 @@
             "cost": 5,
             "drafted_in": []
         },
-        "sirfetchd": {
+        "sneasel": {
             "cost": 5,
             "drafted_in": []
         },
-        "skuntank": {
-            "cost": 5,
-            "drafted_in": [
-                1,
-                3
-            ]
-        },
-        "tyrantrum": {
+        "tangela": {
             "cost": 5,
             "drafted_in": []
         },
-        "ursaring": {
+        "toedscruel": {
             "cost": 5,
-            "drafted_in": [
-                1
-            ]
+            "drafted_in": []
         },
-        "venomoth": {
+        "toxicroak": {
             "cost": 5,
             "drafted_in": []
         },
@@ -3510,58 +3190,75 @@
             "cost": 5,
             "drafted_in": []
         },
-        "virizion": {
+        "weezing": {
             "cost": 5,
             "drafted_in": []
         },
-        "xatu": {
+        "whimsicott": {
             "cost": 5,
             "drafted_in": []
         },
-        "accelgor": {
-            "cost": 4,
-            "drafted_in": [
-                2,
-                5
-            ]
+        "yanmega": {
+            "cost": 5,
+            "drafted_in": []
+        },
+        "zangoose": {
+            "cost": 5,
+            "drafted_in": []
         },
         "alcremie": {
             "cost": 4,
             "drafted_in": []
         },
-        "ampharosmega": {
+        "raichualola": {
             "cost": 4,
             "drafted_in": []
         },
-        "audino": {
+        "appletun": {
             "cost": 4,
             "drafted_in": []
         },
-        "audinomega": {
-            "cost": 4,
-            "drafted_in": [
-                3
-            ]
-        },
-        "banettemega": {
-            "cost": 4,
-            "drafted_in": [
-                1
-            ]
-        },
-        "barbaracle": {
+        "archeops": {
             "cost": 4,
             "drafted_in": []
         },
-        "cameruptmega": {
+        "articuno": {
             "cost": 4,
             "drafted_in": []
         },
-        "centiskorch": {
+        "aurorus": {
             "cost": 4,
             "drafted_in": []
         },
-        "decidueyehisui": {
+        "bewear": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "boltund": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "brambleghast": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "bruxish": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "cetitan": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "charizard": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "cradily": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "dachsbun": {
             "cost": 4,
             "drafted_in": []
         },
@@ -3569,19 +3266,11 @@
             "cost": 4,
             "drafted_in": []
         },
-        "drifblim": {
-            "cost": 4,
-            "drafted_in": [
-                3
-            ]
-        },
-        "druddigon": {
-            "cost": 4,
-            "drafted_in": [
-                5
-            ]
-        },
         "duraludon": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "dusclops": {
             "cost": 4,
             "drafted_in": []
         },
@@ -3593,19 +3282,15 @@
             "cost": 4,
             "drafted_in": []
         },
-        "floatzel": {
+        "farigiraf": {
             "cost": 4,
             "drafted_in": []
         },
-        "garbodor": {
+        "forretress": {
             "cost": 4,
             "drafted_in": []
         },
-        "glaliemega": {
-            "cost": 4,
-            "drafted_in": []
-        },
-        "glastrier": {
+        "frosmoth": {
             "cost": 4,
             "drafted_in": []
         },
@@ -3613,99 +3298,85 @@
             "cost": 4,
             "drafted_in": []
         },
-        "gothorita": {
+        "guzzlord": {
             "cost": 4,
             "drafted_in": []
         },
-        "gourgeist": {
+        "hariyama": {
             "cost": 4,
             "drafted_in": []
         },
-        "grafaiai": {
+        "decidueyehisui": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "kabutops": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "lanturn": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "lickilicky": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "ampharosmega": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "cameruptmega": {
+            "cost": 4,
+            "drafted_in": []
+        },
+        "ninetales": {
             "cost": 4,
             "drafted_in": [
-                5
+                1
             ]
         },
-        "granbull": {
-            "cost": 4,
-            "drafted_in": [
-                3
-            ]
-        },
-        "hitmonchan": {
+        "pangoro": {
             "cost": 4,
             "drafted_in": []
         },
-        "hoopa": {
-            "cost": 4,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "jolteon": {
-            "cost": 4,
-            "drafted_in": [
-                2,
-                3,
-                4
-            ]
-        },
-        "lilligant": {
+        "perrserker": {
             "cost": 4,
             "drafted_in": []
         },
-        "mabosstiff": {
+        "piloswine": {
             "cost": 4,
             "drafted_in": []
         },
-        "magmortar": {
+        "qwilfish": {
             "cost": 4,
             "drafted_in": []
         },
-        "magneton": {
+        "rabsca": {
             "cost": 4,
             "drafted_in": []
         },
-        "marowakalola": {
+        "regirock": {
             "cost": 4,
             "drafted_in": []
         },
-        "musharna": {
+        "rhyperior": {
             "cost": 4,
             "drafted_in": []
         },
-        "omastar": {
+        "scovillain": {
             "cost": 4,
             "drafted_in": []
         },
-        "oricorio": {
+        "scrafty": {
             "cost": 4,
             "drafted_in": []
         },
-        "primeape": {
+        "skuntank": {
             "cost": 4,
             "drafted_in": []
         },
-        "pyroar": {
-            "cost": 4,
-            "drafted_in": []
-        },
-        "raichualola": {
-            "cost": 4,
-            "drafted_in": []
-        },
-        "sandaconda": {
-            "cost": 4,
-            "drafted_in": [
-                3
-            ]
-        },
-        "sawk": {
+        "steelix": {
             "cost": 4,
             "drafted_in": []
         },
@@ -3713,73 +3384,55 @@
             "cost": 4,
             "drafted_in": []
         },
-        "tangela": {
+        "swoobat": {
             "cost": 4,
             "drafted_in": []
         },
-        "toedscruel": {
-            "cost": 4,
-            "drafted_in": [
-                2
-            ]
-        },
-        "toxicroak": {
+        "tatsugiristretchy": {
             "cost": 4,
             "drafted_in": []
         },
-        "typhlosionhisui": {
+        "turtonator": {
             "cost": 4,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
+            "drafted_in": []
         },
-        "abomasnowmega": {
+        "golemalola": {
             "cost": 3,
             "drafted_in": []
         },
-        "ambipom": {
-            "cost": 3,
-            "drafted_in": [
-                5
-            ]
-        },
-        "appletun": {
+        "abomasnow": {
             "cost": 3,
             "drafted_in": []
         },
-        "archeops": {
+        "aggron": {
             "cost": 3,
             "drafted_in": []
         },
-        "arctovish": {
+        "exeggutoralola": {
             "cost": 3,
             "drafted_in": []
         },
-        "articuno": {
-            "cost": 3,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "aurorus": {
+        "sandslashalola": {
             "cost": 3,
             "drafted_in": []
         },
-        "bouffalant": {
+        "audino": {
             "cost": 3,
-            "drafted_in": [
-                1
-            ]
+            "drafted_in": []
         },
-        "charizard": {
+        "avalugg": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "basculin": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "bombirdier": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "carracosta": {
             "cost": 3,
             "drafted_in": []
         },
@@ -3787,55 +3440,61 @@
             "cost": 3,
             "drafted_in": []
         },
-        "claydol": {
+        "coalossal": {
             "cost": 3,
             "drafted_in": []
         },
-        "copperajah": {
+        "cursola": {
             "cost": 3,
             "drafted_in": []
         },
-        "cradily": {
+        "drifblim": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "dunsparce": {
             "cost": 3,
             "drafted_in": [
-                3
+                1
             ]
         },
-        "crustle": {
+        "eiscue": {
             "cost": 3,
             "drafted_in": []
         },
-        "cryogonal": {
-            "cost": 3,
-            "drafted_in": [
-                5
-            ]
-        },
-        "doublade": {
+        "electabuzz": {
             "cost": 3,
             "drafted_in": []
         },
-        "durant": {
+        "falinks": {
             "cost": 3,
             "drafted_in": []
         },
-        "dusknoir": {
+        "flareon": {
             "cost": 3,
             "drafted_in": []
         },
-        "eldegoss": {
+        "floatzel": {
             "cost": 3,
             "drafted_in": []
         },
-        "golemalola": {
+        "corsolagalar": {
             "cost": 3,
             "drafted_in": []
         },
-        "golisopod": {
+        "garbodor": {
             "cost": 3,
             "drafted_in": []
         },
-        "guzzlord": {
+        "granbull": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "gurdurr": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "avalugghisui": {
             "cost": 3,
             "drafted_in": []
         },
@@ -3849,43 +3508,77 @@
         },
         "kangaskhan": {
             "cost": 3,
-            "drafted_in": [
-                5
-            ]
+            "drafted_in": []
+        },
+        "klawf": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "klinklang": {
+            "cost": 3,
+            "drafted_in": []
         },
         "komala": {
             "cost": 3,
             "drafted_in": [
-                4
+                1
             ]
+        },
+        "lapras": {
+            "cost": 3,
+            "drafted_in": []
         },
         "liepard": {
             "cost": 3,
             "drafted_in": []
         },
-        "linoone": {
+        "lilligant": {
             "cost": 3,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "ludicolo": {
             "cost": 3,
-            "drafted_in": [
-                4
-            ]
+            "drafted_in": []
         },
-        "lycanroc": {
+        "lurantis": {
             "cost": 3,
             "drafted_in": []
         },
-        "malamar": {
+        "lycanrocmidnight": {
             "cost": 3,
             "drafted_in": []
         },
-        "malamarmega": {
+        "magmortar": {
             "cost": 3,
             "drafted_in": []
         },
-        "minior": {
+        "abomasnowmega": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "audinomega": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "glaliemega": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "meowstic": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "muk": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "musharna": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "naclstack": {
             "cost": 3,
             "drafted_in": []
         },
@@ -3893,88 +3586,39 @@
             "cost": 3,
             "drafted_in": []
         },
-        "perrserker": {
+        "poliwrath": {
             "cost": 3,
             "drafted_in": []
         },
-        "pincurchin": {
+        "quilladin": {
             "cost": 3,
-            "drafted_in": [
-                3,
-                4,
-                5
-            ]
+            "drafted_in": []
         },
         "raichu": {
             "cost": 3,
-            "drafted_in": [
-                1
-            ]
+            "drafted_in": []
         },
-        "rapidash": {
-            "cost": 3,
-            "drafted_in": [
-                2
-            ]
-        },
-        "rapidashgalar": {
+        "regice": {
             "cost": 3,
             "drafted_in": []
         },
-        "regigigas": {
+        "samurott": {
             "cost": 3,
             "drafted_in": []
         },
-        "roselia": {
+        "sawk": {
             "cost": 3,
             "drafted_in": []
         },
-        "runerigus": {
+        "shuckle": {
             "cost": 3,
             "drafted_in": []
         },
-        "sceptile": {
+        "stonjourner": {
             "cost": 3,
             "drafted_in": []
         },
-        "scyther": {
-            "cost": 3,
-            "drafted_in": []
-        },
-        "smeargle": {
-            "cost": 3,
-            "drafted_in": [
-                2,
-                3
-            ]
-        },
-        "sneasel": {
-            "cost": 3,
-            "drafted_in": []
-        },
-        "sneaselhisui": {
-            "cost": 3,
-            "drafted_in": []
-        },
-        "spiritomb": {
-            "cost": 3,
-            "drafted_in": []
-        },
-        "stoutland": {
-            "cost": 3,
-            "drafted_in": []
-        },
-        "stunfiskgalar": {
-            "cost": 3,
-            "drafted_in": [
-                3
-            ]
-        },
-        "tatsugiri": {
-            "cost": 3,
-            "drafted_in": []
-        },
-        "tauros": {
+        "swalot": {
             "cost": 3,
             "drafted_in": []
         },
@@ -3982,17 +3626,15 @@
             "cost": 3,
             "drafted_in": []
         },
-        "turtonator": {
+        "togedemaru": {
             "cost": 3,
             "drafted_in": []
         },
         "typenull": {
             "cost": 3,
-            "drafted_in": [
-                4
-            ]
+            "drafted_in": []
         },
-        "typhlosion": {
+        "veluza": {
             "cost": 3,
             "drafted_in": []
         },
@@ -4000,19 +3642,23 @@
             "cost": 3,
             "drafted_in": []
         },
-        "vivillon": {
+        "wobbuffet": {
             "cost": 3,
             "drafted_in": []
         },
-        "zangoose": {
+        "wyrdeer": {
             "cost": 3,
             "drafted_in": []
         },
-        "absol": {
+        "xatu": {
+            "cost": 3,
+            "drafted_in": []
+        },
+        "rapidashgalar": {
             "cost": 2,
             "drafted_in": []
         },
-        "aggron": {
+        "dugtrioalola": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4020,31 +3666,7 @@
             "cost": 2,
             "drafted_in": []
         },
-        "ampharos": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "arbok": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "ariados": {
-            "cost": 2,
-            "drafted_in": []
-        },
         "armaldo": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "avalugg": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "avalugghisui": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "basculin": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4052,69 +3674,15 @@
             "cost": 2,
             "drafted_in": []
         },
-        "beheeyem": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "bellossom": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "bibarel": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "boltund": {
-            "cost": 2,
-            "drafted_in": [
-                5
-            ]
-        },
-        "bruxish": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "calyrex": {
-            "cost": 2,
-            "drafted_in": []
-        },
         "camerupt": {
             "cost": 2,
             "drafted_in": []
         },
-        "carbink": {
+        "clefairy": {
             "cost": 2,
             "drafted_in": []
         },
-        "carracosta": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "charjabug": {
-            "cost": 2,
-            "drafted_in": [
-                1
-            ]
-        },
-        "chimecho": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "coalossal": {
-            "cost": 2,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        "corsolagalar": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "crabominable": {
+        "combusken": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4126,11 +3694,7 @@
             "cost": 2,
             "drafted_in": []
         },
-        "cursola": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "dachsbun": {
+        "crustle": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4142,41 +3706,17 @@
             "cost": 2,
             "drafted_in": []
         },
-        "dolliv": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "dottler": {
-            "cost": 2,
-            "drafted_in": []
-        },
         "dubwool": {
             "cost": 2,
             "drafted_in": []
         },
-        "dugtrioalola": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "dunsparce": {
+        "dusknoir": {
             "cost": 2,
             "drafted_in": [
-                2
+                1
             ]
         },
-        "duosion": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "dusclops": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "eiscue": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "electabuzz": {
+        "eldegoss": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4184,19 +3724,11 @@
             "cost": 2,
             "drafted_in": []
         },
-        "emolga": {
-            "cost": 2,
-            "drafted_in": []
-        },
         "exeggutor": {
             "cost": 2,
             "drafted_in": []
         },
-        "exeggutoralola": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "falinks": {
+        "ferroseed": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4204,39 +3736,19 @@
             "cost": 2,
             "drafted_in": []
         },
-        "flareon": {
+        "mrmimegalar": {
             "cost": 2,
             "drafted_in": []
         },
-        "fraxure": {
+        "stunfiskgalar": {
             "cost": 2,
             "drafted_in": []
         },
-        "frogadier": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "frosmoth": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "girafarig": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "glaceon": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "gogoat": {
+        "gloom": {
             "cost": 2,
             "drafted_in": []
         },
         "golbat": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "golduck": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4252,10 +3764,6 @@
             "cost": 2,
             "drafted_in": []
         },
-        "gurdurr": {
-            "cost": 2,
-            "drafted_in": []
-        },
         "haunter": {
             "cost": 2,
             "drafted_in": []
@@ -4268,20 +3776,6 @@
             "cost": 2,
             "drafted_in": []
         },
-        "illumise": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "jynx": {
-            "cost": 2,
-            "drafted_in": [
-                5
-            ]
-        },
-        "kabutops": {
-            "cost": 2,
-            "drafted_in": []
-        },
         "kadabra": {
             "cost": 2,
             "drafted_in": []
@@ -4289,45 +3783,24 @@
         "kecleon": {
             "cost": 2,
             "drafted_in": [
-                1,
-                2
+                1
             ]
         },
         "kingler": {
             "cost": 2,
             "drafted_in": []
         },
-        "klawf": {
+        "klang": {
             "cost": 2,
             "drafted_in": []
-        },
-        "klinklang": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "lapras": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "leafeon": {
-            "cost": 2,
-            "drafted_in": [
-                1,
-                5
-            ]
         },
         "leavanny": {
             "cost": 2,
             "drafted_in": [
-                1,
-                2
+                1
             ]
         },
         "lickitung": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "lurantis": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4335,23 +3808,23 @@
             "cost": 2,
             "drafted_in": []
         },
-        "lycanrocmidnight": {
+        "mabosstiff": {
             "cost": 2,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
-        "machoke": {
+        "magcargo": {
             "cost": 2,
             "drafted_in": []
         },
         "magmar": {
             "cost": 2,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "manectric": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "mantine": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4361,7 +3834,9 @@
         },
         "masquerain": {
             "cost": 2,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "mawile": {
             "cost": 2,
@@ -4371,53 +3846,21 @@
             "cost": 2,
             "drafted_in": []
         },
-        "meowstic": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "misdreavus": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "monferno": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "morpeko": {
-            "cost": 2,
-            "drafted_in": []
-        },
         "mrmime": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "mrmimegalar": {
             "cost": 2,
             "drafted_in": []
         },
         "mrrime": {
             "cost": 2,
-            "drafted_in": []
-        },
-        "murkrow": {
-            "cost": 2,
             "drafted_in": [
-                5
+                1
             ]
         },
-        "naclstack": {
+        "munchlax": {
             "cost": 2,
             "drafted_in": []
         },
-        "oinkologne": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "oranguru": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "persian": {
+        "ninjask": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4425,91 +3868,37 @@
             "cost": 2,
             "drafted_in": []
         },
-        "pinsir": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "poliwrath": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "probopass": {
-            "cost": 2,
-            "drafted_in": []
-        },
         "purugly": {
             "cost": 2,
             "drafted_in": []
         },
-        "pyukumuku": {
+        "pyroar": {
             "cost": 2,
             "drafted_in": []
         },
-        "quaxwell": {
+        "raboot": {
             "cost": 2,
             "drafted_in": []
         },
-        "quilladin": {
+        "rapidash": {
             "cost": 2,
             "drafted_in": []
-        },
-        "rabsca": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "rampardos": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "raticate": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "raticatealola": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "regice": {
-            "cost": 2,
-            "drafted_in": [
-                4
-            ]
-        },
-        "regirock": {
-            "cost": 2,
-            "drafted_in": [
-                2
-            ]
         },
         "rhydon": {
             "cost": 2,
             "drafted_in": []
         },
-        "samurott": {
+        "roselia": {
             "cost": 2,
             "drafted_in": []
         },
         "sandslash": {
             "cost": 2,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
-        "sandslashalola": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "sawsbuck": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "scovillain": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "shedinja": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "shelgon": {
+        "seaking": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4521,63 +3910,19 @@
             "cost": 2,
             "drafted_in": []
         },
-        "shuckle": {
-            "cost": 2,
-            "drafted_in": [
-                2
-            ]
-        },
-        "simipour": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "simisage": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "simisear": {
-            "cost": 2,
-            "drafted_in": []
-        },
         "slaking": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "sliggoohisui": {
             "cost": 2,
             "drafted_in": []
         },
         "spidops": {
             "cost": 2,
-            "drafted_in": [
-                2
-            ]
+            "drafted_in": []
         },
-        "squawkabilly": {
+        "spiritomb": {
             "cost": 2,
             "drafted_in": []
         },
-        "stantler": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "stonjourner": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "sudowoodo": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "swoobat": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "thievul": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "throh": {
+        "stoutland": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4585,15 +3930,9 @@
             "cost": 2,
             "drafted_in": []
         },
-        "togedemaru": {
+        "torracat": {
             "cost": 2,
             "drafted_in": []
-        },
-        "toucannon": {
-            "cost": 2,
-            "drafted_in": [
-                4
-            ]
         },
         "trapinch": {
             "cost": 2,
@@ -4603,23 +3942,11 @@
             "cost": 2,
             "drafted_in": []
         },
-        "veluza": {
+        "vivillon": {
             "cost": 2,
             "drafted_in": []
         },
-        "vespiquen": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "vigoroth": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "volbeat": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "vullaby": {
+        "wailord": {
             "cost": 2,
             "drafted_in": []
         },
@@ -4631,41 +3958,33 @@
             "cost": 2,
             "drafted_in": []
         },
-        "whiscash": {
+        "whirlipede": {
             "cost": 2,
             "drafted_in": []
         },
         "wigglytuff": {
             "cost": 2,
             "drafted_in": [
-                5
+                1
             ]
-        },
-        "wishiwashi": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "wobbuffet": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "wormadam": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "wugtrio": {
-            "cost": 2,
-            "drafted_in": []
-        },
-        "wyrdeer": {
-            "cost": 2,
-            "drafted_in": []
         },
         "zebstrika": {
             "cost": 2,
             "drafted_in": []
         },
+        "ponytagalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "slowpokegalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "abra": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "absol": {
             "cost": 1,
             "drafted_in": []
         },
@@ -4673,7 +3992,47 @@
             "cost": 1,
             "drafted_in": []
         },
+        "diglettalola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "geodudealola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "graveleralola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "grimeralola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "meowthalola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "raticatealola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "rattataalola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sandshrewalola": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "vulpixalola": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "amaura": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ampharos": {
             "cost": 1,
             "drafted_in": []
         },
@@ -4685,11 +4044,15 @@
             "cost": 1,
             "drafted_in": []
         },
-        "archen": {
+        "arbok": {
             "cost": 1,
             "drafted_in": []
         },
         "arctibax": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "ariados": {
             "cost": 1,
             "drafted_in": []
         },
@@ -4741,7 +4104,15 @@
             "cost": 1,
             "drafted_in": []
         },
+        "beheeyem": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "beldum": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bellossom": {
             "cost": 1,
             "drafted_in": []
         },
@@ -4750,6 +4121,10 @@
             "drafted_in": []
         },
         "bergmite": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "bibarel": {
             "cost": 1,
             "drafted_in": []
         },
@@ -4776,6 +4151,12 @@
         "bonsly": {
             "cost": 1,
             "drafted_in": []
+        },
+        "bouffalant": {
+            "cost": 1,
+            "drafted_in": [
+                1
+            ]
         },
         "bounsweet": {
             "cost": 1,
@@ -4817,10 +4198,6 @@
             "cost": 1,
             "drafted_in": []
         },
-        "burmy": {
-            "cost": 1,
-            "drafted_in": []
-        },
         "butterfree": {
             "cost": 1,
             "drafted_in": []
@@ -4833,7 +4210,15 @@
             "cost": 1,
             "drafted_in": []
         },
+        "calyrex": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "capsakid": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "carbink": {
             "cost": 1,
             "drafted_in": []
         },
@@ -4869,15 +4254,17 @@
             "cost": 1,
             "drafted_in": []
         },
+        "charjabug": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "charmander": {
             "cost": 1,
             "drafted_in": []
         },
         "charmeleon": {
             "cost": 1,
-            "drafted_in": [
-                1
-            ]
+            "drafted_in": []
         },
         "chatot": {
             "cost": 1,
@@ -4907,6 +4294,10 @@
             "cost": 1,
             "drafted_in": []
         },
+        "chimecho": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "chinchou": {
             "cost": 1,
             "drafted_in": []
@@ -4917,13 +4308,11 @@
         },
         "clamperl": {
             "cost": 1,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "clauncher": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "clefairy": {
             "cost": 1,
             "drafted_in": []
         },
@@ -4939,12 +4328,6 @@
             "cost": 1,
             "drafted_in": []
         },
-        "combusken": {
-            "cost": 1,
-            "drafted_in": [
-                5
-            ]
-        },
         "corphish": {
             "cost": 1,
             "drafted_in": []
@@ -4957,15 +4340,11 @@
             "cost": 1,
             "drafted_in": []
         },
-        "cosmoem": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "cosmog": {
-            "cost": 1,
-            "drafted_in": []
-        },
         "cottonee": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "crabominable": {
             "cost": 1,
             "drafted_in": []
         },
@@ -4999,13 +4378,7 @@
         },
         "cutiefly": {
             "cost": 1,
-            "drafted_in": [
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
+            "drafted_in": []
         },
         "cyndaquil": {
             "cost": 1,
@@ -5016,10 +4389,6 @@
             "drafted_in": []
         },
         "darumaka": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "darumakagalar": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5041,9 +4410,7 @@
         },
         "delibird": {
             "cost": 1,
-            "drafted_in": [
-                3
-            ]
+            "drafted_in": []
         },
         "dewgong": {
             "cost": 1,
@@ -5055,17 +4422,23 @@
         },
         "dewpider": {
             "cost": 1,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "diglett": {
             "cost": 1,
             "drafted_in": []
         },
-        "diglettalola": {
+        "doduo": {
             "cost": 1,
             "drafted_in": []
         },
-        "doduo": {
+        "dolliv": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "dottler": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5105,6 +4478,10 @@
             "cost": 1,
             "drafted_in": []
         },
+        "duosion": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "duskull": {
             "cost": 1,
             "drafted_in": []
@@ -5141,21 +4518,19 @@
             "cost": 1,
             "drafted_in": []
         },
+        "emolga": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "espurr": {
             "cost": 1,
-            "drafted_in": [
-                3
-            ]
+            "drafted_in": []
         },
         "exeggcute": {
             "cost": 1,
             "drafted_in": []
         },
         "farfetchd": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "farfetchdgalar": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5168,10 +4543,6 @@
             "drafted_in": []
         },
         "fennekin": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "ferroseed": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5223,6 +4594,10 @@
             "cost": 1,
             "drafted_in": []
         },
+        "fraxure": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "frigibax": {
             "cost": 1,
             "drafted_in": []
@@ -5235,21 +4610,49 @@
             "cost": 1,
             "drafted_in": []
         },
+        "frogadier": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "fuecoco": {
             "cost": 1,
             "drafted_in": []
         },
         "furfrou": {
             "cost": 1,
-            "drafted_in": [
-                5
-            ]
+            "drafted_in": []
         },
         "furret": {
             "cost": 1,
-            "drafted_in": []
+            "drafted_in": [
+                1
+            ]
         },
         "gabite": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "darumakagalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "farfetchdgalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "linoonegalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "meowthgalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "yamaskgalar": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "zigzagoongalar": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5261,10 +4664,6 @@
             "cost": 1,
             "drafted_in": []
         },
-        "geodudealola": {
-            "cost": 1,
-            "drafted_in": []
-        },
         "gible": {
             "cost": 1,
             "drafted_in": []
@@ -5273,13 +4672,17 @@
             "cost": 1,
             "drafted_in": []
         },
+        "girafarig": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "glaceon": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "glalie": {
             "cost": 1,
-            "drafted_in": [
-                2,
-                4,
-                5
-            ]
+            "drafted_in": []
         },
         "glameow": {
             "cost": 1,
@@ -5289,11 +4692,7 @@
             "cost": 1,
             "drafted_in": []
         },
-        "gloom": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "goldeen": {
+        "gogoat": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5313,18 +4712,15 @@
             "cost": 1,
             "drafted_in": []
         },
-        "grapploct": {
-            "cost": 1,
-            "drafted_in": [
-                1,
-                2
-            ]
-        },
-        "graveler": {
+        "gothorita": {
             "cost": 1,
             "drafted_in": []
         },
-        "graveleralola": {
+        "grapploct": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "graveler": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5334,15 +4730,9 @@
         },
         "greedent": {
             "cost": 1,
-            "drafted_in": [
-                1
-            ]
-        },
-        "grimer": {
-            "cost": 1,
             "drafted_in": []
         },
-        "grimeralola": {
+        "grimer": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5355,10 +4745,6 @@
             "drafted_in": []
         },
         "growlithe": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "growlithehisui": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5410,6 +4796,22 @@
             "cost": 1,
             "drafted_in": []
         },
+        "growlithehisui": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "sliggoohisui": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "voltorbhisui": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "zoruahisui": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "honedge": {
             "cost": 1,
             "drafted_in": []
@@ -5435,6 +4837,10 @@
             "drafted_in": []
         },
         "igglybuff": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "illumise": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5466,6 +4872,10 @@
             "cost": 1,
             "drafted_in": []
         },
+        "jynx": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "kabuto": {
             "cost": 1,
             "drafted_in": []
@@ -5479,10 +4889,6 @@
             "drafted_in": []
         },
         "kirlia": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "klang": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5504,10 +4910,7 @@
         },
         "kricketune": {
             "cost": 1,
-            "drafted_in": [
-                3,
-                5
-            ]
+            "drafted_in": []
         },
         "krokorok": {
             "cost": 1,
@@ -5533,6 +4936,10 @@
             "cost": 1,
             "drafted_in": []
         },
+        "leafeon": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "lechonk": {
             "cost": 1,
             "drafted_in": []
@@ -5550,10 +4957,6 @@
             "drafted_in": []
         },
         "lillipup": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "linoonegalar": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5601,6 +5004,10 @@
             "cost": 1,
             "drafted_in": []
         },
+        "machoke": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "machop": {
             "cost": 1,
             "drafted_in": []
@@ -5608,13 +5015,6 @@
         "magby": {
             "cost": 1,
             "drafted_in": []
-        },
-        "magcargo": {
-            "cost": 1,
-            "drafted_in": [
-                1,
-                3
-            ]
         },
         "magikarp": {
             "cost": 1,
@@ -5634,15 +5034,11 @@
         },
         "mantyke": {
             "cost": 1,
-            "drafted_in": [
-                1
-            ]
+            "drafted_in": []
         },
         "maractus": {
             "cost": 1,
-            "drafted_in": [
-                5
-            ]
+            "drafted_in": []
         },
         "mareanie": {
             "cost": 1,
@@ -5673,14 +5069,6 @@
             "drafted_in": []
         },
         "meowth": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "meowthalola": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "meowthgalar": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5716,15 +5104,21 @@
             "cost": 1,
             "drafted_in": []
         },
+        "misdreavus": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "monferno": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "morelull": {
             "cost": 1,
             "drafted_in": []
         },
         "morgrem": {
             "cost": 1,
-            "drafted_in": [
-                2
-            ]
+            "drafted_in": []
         },
         "mothim": {
             "cost": 1,
@@ -5738,14 +5132,11 @@
             "cost": 1,
             "drafted_in": []
         },
-        "munchlax": {
-            "cost": 1,
-            "drafted_in": [
-                2,
-                4
-            ]
-        },
         "munna": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "murkrow": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5781,10 +5172,6 @@
             "cost": 1,
             "drafted_in": []
         },
-        "ninjask": {
-            "cost": 1,
-            "drafted_in": []
-        },
         "noctowl": {
             "cost": 1,
             "drafted_in": []
@@ -5817,6 +5204,14 @@
             "cost": 1,
             "drafted_in": []
         },
+        "oinkolognef": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "oinkologne": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "omanyte": {
             "cost": 1,
             "drafted_in": []
@@ -5825,11 +5220,19 @@
             "cost": 1,
             "drafted_in": []
         },
+        "oranguru": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "oshawott": {
             "cost": 1,
             "drafted_in": []
         },
         "pachirisu": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wooperpaldea": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5874,6 +5277,10 @@
             "drafted_in": []
         },
         "pawniard": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "persian": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5925,6 +5332,10 @@
             "cost": 1,
             "drafted_in": []
         },
+        "pinsir": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "piplup": {
             "cost": 1,
             "drafted_in": []
@@ -5953,10 +5364,6 @@
             "cost": 1,
             "drafted_in": []
         },
-        "ponytagalar": {
-            "cost": 1,
-            "drafted_in": []
-        },
         "poochyena": {
             "cost": 1,
             "drafted_in": []
@@ -5970,6 +5377,10 @@
             "drafted_in": []
         },
         "prinplup": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "probopass": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5989,7 +5400,15 @@
             "cost": 1,
             "drafted_in": []
         },
+        "pyukumuku": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "quaxly": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "quaxwell": {
             "cost": 1,
             "drafted_in": []
         },
@@ -5997,11 +5416,15 @@
             "cost": 1,
             "drafted_in": []
         },
-        "raboot": {
+        "ralts": {
             "cost": 1,
             "drafted_in": []
         },
-        "ralts": {
+        "rampardos": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "raticate": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6009,15 +5432,13 @@
             "cost": 1,
             "drafted_in": []
         },
-        "rattataalola": {
+        "regigigas": {
             "cost": 1,
             "drafted_in": []
         },
         "relicanth": {
             "cost": 1,
-            "drafted_in": [
-                2
-            ]
+            "drafted_in": []
         },
         "rellor": {
             "cost": 1,
@@ -6033,9 +5454,7 @@
         },
         "riolu": {
             "cost": 1,
-            "drafted_in": [
-                2
-            ]
+            "drafted_in": []
         },
         "rockruff": {
             "cost": 1,
@@ -6067,19 +5486,17 @@
         },
         "sandile": {
             "cost": 1,
-            "drafted_in": [
-                2
-            ]
+            "drafted_in": []
         },
         "sandshrew": {
             "cost": 1,
             "drafted_in": []
         },
-        "sandshrewalola": {
+        "sandygast": {
             "cost": 1,
             "drafted_in": []
         },
-        "sandygast": {
+        "sawsbuck": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6096,10 +5513,6 @@
             "drafted_in": []
         },
         "seadra": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "seaking": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6128,6 +5541,14 @@
             "drafted_in": []
         },
         "sewaddle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "shedinja": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "shelgon": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6168,6 +5589,18 @@
             "drafted_in": []
         },
         "silicobra": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "simipour": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "simisage": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "simisear": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6215,11 +5648,11 @@
             "cost": 1,
             "drafted_in": []
         },
-        "slowpokegalar": {
+        "slugma": {
             "cost": 1,
             "drafted_in": []
         },
-        "slugma": {
+        "smeargle": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6295,7 +5728,15 @@
             "cost": 1,
             "drafted_in": []
         },
+        "squawkabilly": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "squirtle": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "stantler": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6323,6 +5764,10 @@
             "cost": 1,
             "drafted_in": []
         },
+        "sudowoodo": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "sunflora": {
             "cost": 1,
             "drafted_in": []
@@ -6333,10 +5778,7 @@
         },
         "surskit": {
             "cost": 1,
-            "drafted_in": [
-                3,
-                5
-            ]
+            "drafted_in": []
         },
         "swablu": {
             "cost": 1,
@@ -6344,17 +5786,7 @@
         },
         "swadloon": {
             "cost": 1,
-            "drafted_in": [
-                3,
-                4
-            ]
-        },
-        "swalot": {
-            "cost": 1,
-            "drafted_in": [
-                1,
-                5
-            ]
+            "drafted_in": []
         },
         "swanna": {
             "cost": 1,
@@ -6366,10 +5798,7 @@
         },
         "swirlix": {
             "cost": 1,
-            "drafted_in": [
-                3,
-                4
-            ]
+            "drafted_in": []
         },
         "tadbulb": {
             "cost": 1,
@@ -6396,6 +5825,14 @@
             "drafted_in": []
         },
         "tepig": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "thievul": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "throh": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6431,11 +5868,11 @@
             "cost": 1,
             "drafted_in": []
         },
-        "torracat": {
+        "totodile": {
             "cost": 1,
             "drafted_in": []
         },
-        "totodile": {
+        "toucannon": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6471,10 +5908,6 @@
             "cost": 1,
             "drafted_in": []
         },
-        "tynamo": {
-            "cost": 1,
-            "drafted_in": []
-        },
         "tyrogue": {
             "cost": 1,
             "drafted_in": []
@@ -6484,6 +5917,10 @@
             "drafted_in": []
         },
         "unfezant": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "unown": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6507,7 +5944,19 @@
             "cost": 1,
             "drafted_in": []
         },
+        "vespiquen": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "vibrava": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "vigoroth": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "volbeat": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6515,25 +5964,15 @@
             "cost": 1,
             "drafted_in": []
         },
-        "voltorbhisui": {
+        "vullaby": {
             "cost": 1,
             "drafted_in": []
         },
         "vulpix": {
             "cost": 1,
-            "drafted_in": [
-                4
-            ]
-        },
-        "vulpixalola": {
-            "cost": 1,
             "drafted_in": []
         },
         "wailmer": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "wailord": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6553,11 +5992,9 @@
             "cost": 1,
             "drafted_in": []
         },
-        "whirlipede": {
+        "whiscash": {
             "cost": 1,
-            "drafted_in": [
-                3
-            ]
+            "drafted_in": []
         },
         "whismur": {
             "cost": 1,
@@ -6575,6 +6012,10 @@
             "cost": 1,
             "drafted_in": []
         },
+        "wishiwashi": {
+            "cost": 1,
+            "drafted_in": []
+        },
         "woobat": {
             "cost": 1,
             "drafted_in": []
@@ -6587,7 +6028,11 @@
             "cost": 1,
             "drafted_in": []
         },
-        "wooperpaldea": {
+        "wormadam": {
+            "cost": 1,
+            "drafted_in": []
+        },
+        "wugtrio": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6600,10 +6045,6 @@
             "drafted_in": []
         },
         "yamask": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "yamaskgalar": {
             "cost": 1,
             "drafted_in": []
         },
@@ -6623,15 +6064,7 @@
             "cost": 1,
             "drafted_in": []
         },
-        "zigzagoongalar": {
-            "cost": 1,
-            "drafted_in": []
-        },
         "zorua": {
-            "cost": 1,
-            "drafted_in": []
-        },
-        "zoruahisui": {
             "cost": 1,
             "drafted_in": []
         },
